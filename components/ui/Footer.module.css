@@ -1,0 +1,17 @@
+.container {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--c-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactLinks {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.contactLinks svg {
+    width: 2rem;
+    height: 2rem;
+}

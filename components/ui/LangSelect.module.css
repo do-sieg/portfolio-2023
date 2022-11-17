@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container a {
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: 600;
+    color: var(--gray-400);
+    transition: all 0.2s 0.1s ease-in-out;
+}
+
+.container a.selected {
+    color: var(--c-primary);
+}

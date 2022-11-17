@@ -1,0 +1,14 @@
+.container {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.nameLogoContainer {
+    font-size: 1.5rem;
+}

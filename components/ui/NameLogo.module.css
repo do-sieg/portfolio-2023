@@ -1,0 +1,22 @@
+.container {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-family: Lilita One;
+    font-size: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.firstName {
+    font-size: 2em;
+    color: var(--zinc-700);
+}
+
+.lastName {
+    font-size: 1em;
+    color: white;
+    background-color: var(--zinc-700);
+    border-radius: 1.5rem;
+}

@@ -1,0 +1,68 @@
+.btn {
+    padding: 1.25rem 1.75rem;
+    font-family: inherit;
+    font-weight: var(--font-semibold);
+    box-shadow: var(--shadow-md);
+    border-radius: 1rem;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s 0.1s ease-in-out;
+}
+
+.btn:active, .btn:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.pageContainer {
+    max-width: var(--lg);
+    margin: 0 auto;
+    padding: 3rem 5rem;
+}
+
+@media (max-width: 1024px) {
+    .pageContainer {
+        max-width: var(--md);
+        padding: 2rem;
+    }
+}
+@media (max-width: 640px) {
+    .pageContainer {
+        padding: 1.5rem;
+    }
+}
+
+.pageContainer section+section {
+    margin-top: 5rem;
+}
+
+.heading {
+    composes: text-5xl from "../styles/pseudo-tailwind.css";
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: var(--font-semibold);
+    color: var(--c-secondary);
+    filter: var(--drop-shadow-md);
+}
+
+.subheading {
+    composes: text-4xl from "../styles/pseudo-tailwind.css";
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: var(--font-semibold);
+    color: var(--c-secondary);
+    filter: var(--drop-shadow-md);
+}
+
+.pageContainer p {
+    margin: 1rem 0;
+    text-indent: 1rem;
+    line-height: 1.5;
+    font-size: x-large;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.pageContainer strong,
+.pageContainer b {
+    font-weight: 400;
+}

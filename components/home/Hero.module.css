@@ -1,0 +1,40 @@
+.container {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 4rem;
+    user-select: none;
+}
+
+.container img {
+    object-fit: contain;
+    max-width: 15rem;
+    border-radius: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        font-size: 3.5rem;
+    }
+    .container img {
+        max-width: 13rem;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        font-size: 3rem;
+    }
+    .container img {
+        max-width: 11rem;
+    }
+}
+@media (max-width: 640px) {
+    .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 2.5rem;
+    }
+}

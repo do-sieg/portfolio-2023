@@ -1,0 +1,10 @@
+.container {
+    composes: btn from "../../styles/globals.module.css";
+    text-transform: uppercase;
+    font-size: larger;
+    transform: scale(0.98);
+}
+
+.container:active, .container:hover {
+    transform: scale(1);
+}
