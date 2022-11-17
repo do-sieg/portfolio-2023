@@ -13,7 +13,7 @@ export default function Layout({ children }) {
             </Head>
             <div className={styles.container}>
                 <Header />
-                {children}
+                <div style={{ flex: 1 }}>{children}</div>
                 <Footer />
             </div>
         </>
