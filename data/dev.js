@@ -10,6 +10,9 @@ export const DEV_RESUME_PATH = {
     fr: "/files/CV_Daniel_Orchanian_Dev_2022-09_FR.pdf",
     en: "/files/CV_Daniel_Orchanian_2021-11_EN.pdf",
 };
+export const DEV_EMAIL = "d.orchanian@gmail.com";
+export const DEV_LINDEKIN = "http://www.linkedin.com/in/daniel-orchanian";
+export const DEV_GITHUB = "https://github.com/do-sieg";
 
 export const DEV_TECHS = {
     html: { name: "HTML", icon: <FaHtml5 /> },

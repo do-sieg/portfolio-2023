@@ -1,0 +1,158 @@
+{
+    "do-blog": {
+        "name": "Blog",
+        "description": "A blog where I post my latest articles about programming, technologies, developer's life... and a lot of other things.",
+        "imagePath": "/images/projects/do-logo.png",
+        "tech": [
+            "html",
+            "css",
+            "js",
+            "react",
+            "next"
+        ],
+        "link": "/blog"
+    },
+    "armenianz": {
+        "name": "Armenianz",
+        "description": "A look at current events in the Armenian community around the world.",
+        "imagePath": "/images/projects/armenianz.png",
+        "tech": [
+            "html",
+            "css",
+            "js",
+            "react",
+            "next"
+        ],
+        "url": "http://armenia.nz"
+    },
+    "arpege": {
+        "name": "Arpege Engine",
+        "description": "A library of scripts and templates to create a role playing game powered by the Godot engine. In progress.",
+        "imagePath": "/images/projects/godot-logo.png",
+        "tech": [
+            "gdscript"
+        ]
+    },
+    "kentia": {
+        "name": "Agence Kentia",
+        "description": "A website about personal coaching, well-being and couple relationships.",
+        "imagePath": "/images/projects/kentia.jpg",
+        "tech": [
+            "nocode"
+        ],
+        "url": "https://www.agencekentia.com"
+    },
+    "saleth": {
+        "name": "Saleth.fr",
+        "description": "Blog and diary for an independent game development team.",
+        "imagePath": "/images/projects/saleth.jpg",
+        "tech": [
+            "html",
+            "css",
+            "php"
+        ],
+        "url": "https://saleth.fr"
+    },
+    "biochem": {
+        "name": "Biochem",
+        "description": "Presentation website of the Institute of Biochemistry in Yerevan (Armenia).",
+        "imagePath": "/images/projects/biochem.jpg",
+        "tech": [
+            "html",
+            "css",
+            "js",
+            "react"
+        ],
+        "url": "http://www.biochem.sci.am/?lang=en"
+    },
+    "coursjs": {
+        "name": "CoursJS",
+        "description": "Development courses for beginners (JavaScript-oriented, language and frameworks). This project is being redesigned and the courses will soon be integrated into a larger project.",
+        "imagePath": "/images/projects/coursjs.jpg",
+        "tech": [
+            "html",
+            "css",
+            "js",
+            "react",
+            "next"
+        ]
+    },
+    "oc2": {
+        "name": "Transform a model into a website",
+        "description": "Creating a website (design only) based on a model.",
+        "imagePath": "/images/projects/oc-logo.jpg",
+        "tech": [
+            "html",
+            "css"
+        ],
+        "url": "https://do-sieg.github.io/oc2-maquette-html-css/",
+        "repository": "https://github.com/do-sieg/oc2-maquette-html-css"
+    },
+    "oc3": {
+        "name": "Make a web page dynamic",
+        "description": "Creating a mobile-oriented website (design only), using animations.",
+        "imagePath": "/images/projects/oc-logo.jpg",
+        "tech": [
+            "html",
+            "css",
+            "sass"
+        ],
+        "url": "https://do-sieg.github.io/oc3-animations-dynamiques-css/",
+        "repository": "https://github.com/do-sieg/oc3-animations-dynamiques-css"
+    },
+    "oc4": {
+        "name": "Optimize an existing website",
+        "description": "Identifying and correcting a number of problems on an existing website.",
+        "imagePath": "/images/projects/oc-logo.jpg",
+        "tech": [
+            "html",
+            "css",
+            "js",
+            "seo"
+        ],
+        "repository": "https://github.com/do-sieg/oc4-optimisation-site-web"
+    },
+    "oc6": {
+        "name": "API for a food review app",
+        "description": "Designing a programming interface (API) to create and modify content, with security in mind.",
+        "imagePath": "/images/projects/oc-logo.jpg",
+        "tech": [
+            "node",
+            "mongo"
+        ],
+        "repository": "https://github.com/do-sieg/oc6-api-securisee-nodejs"
+    },
+    "oc7": {
+        "name": "Create a corporate social network",
+        "description": "Creating an internal social network for the employees of a company.",
+        "imagePath": "/images/projects/oc-logo.jpg",
+        "tech": [
+            "html",
+            "css",
+            "less",
+            "js",
+            "react",
+            "node",
+            "mysql"
+        ],
+        "repository": "https://github.com/do-sieg/oc7-reseau-social-nodejs-reactjs"
+    },
+    "scriptmanager": {
+        "name": "ScriptManager",
+        "description": "A full system allowing the use of external files to run as scripts for RPG Maker XP. It allows the user to export, use and import these scripts.",
+        "imagePath": "/images/projects/rmxp-hd-logo.png",
+        "tech": [
+            "ruby"
+        ],
+        "repository": "https://github.com/do-sieg/rmxp-scriptmanager"
+    },
+    "xpal": {
+        "name": "XPAL (XP Antilag System)",
+        "description": "A complete overhaul of the RPG Maker XP graphics engine to optimize the display of maps.",
+        "imagePath": "/images/projects/rmxp-hd-logo.png",
+        "tech": [
+            "ruby"
+        ],
+        "repository": "https://github.com/do-sieg/rmxp-XPAL-antilag"
+    }
+}
