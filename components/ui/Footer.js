@@ -9,7 +9,7 @@ export default function Footer() {
             <div className={styles.contactLinks}>
                 <a href={DEV_LINDEKIN} target="_blank" rel="noreferrer"><FaLinkedin /></a>
                 <a href={DEV_GITHUB} target="_blank" rel="noreferrer"><FaGithubSquare /></a>
-                <a href={DEV_EMAIL} target="_blank" rel="noreferrer"><FaEnvelopeSquare /></a>
+                <a href={`mailto:${DEV_EMAIL}`} target="_blank" rel="noreferrer"><FaEnvelopeSquare /></a>
             </div>
             <span>© {getCurrentYear()} {DEV_FULLNAME}</span>
         </footer>

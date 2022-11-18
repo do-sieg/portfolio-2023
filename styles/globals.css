@@ -10,6 +10,8 @@
 :root {
   --c-primary: var(--zinc-900);
   --c-secondary: var(--green-700);
+  --c-link: var(--orange-600);
+  --c-link-hover: var(--orange-500);
   /* --c-primary: red;
   --c-secondary: blue; */
 }

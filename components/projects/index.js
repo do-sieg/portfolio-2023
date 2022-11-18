@@ -1,23 +1,21 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { DEV_FULLNAME, DEV_GITHUB, DEV_RESUME_PATH, DEV_TECHS } from "../../data/dev";
+import { DEV_FULLNAME } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
 import ProjectCard from "./ProjectCard";
-import Prompt from "../ui/Prompt";
-import { FaFileDownload, FaGithub } from "react-icons/fa";
+import { PromptGitHub, PromptResume } from "../ui/Prompts";
 import globals from "../../styles/globals.module.css";
 import styles from "./Projects.module.css";
 
 export default function Projects() {
     const { locale } = useRouter();
-    const { ACTION_RESUME,
+    const {
         PROJECTS_TITLE,
         PROJECTS_TITLE_CLIENTS,
         PROJECTS_TITLE_OWN,
         PROJECTS_TITLE_DEMO,
         PROJECTS_TITLE_OLD,
-        PROJECT_ACTION_GITHUB,
         PROJECTS_TEXT_INTRO,
     } = useLang();
 
@@ -39,8 +37,8 @@ export default function Projects() {
                 {PROJECTS_TEXT_INTRO}
 
                 <div className={globals.promptBox}>
-                    <a href={DEV_GITHUB} target="_blank" rel="noreferrer"><Prompt><FaGithub />{PROJECT_ACTION_GITHUB}</Prompt></a>
-                    <a href={DEV_RESUME_PATH[locale]} target="_blank" rel="noreferrer"><Prompt><FaFileDownload />{ACTION_RESUME}</Prompt></a>
+                    <PromptGitHub />
+                    <PromptResume />
                 </div>
             </section>
 

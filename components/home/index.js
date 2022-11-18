@@ -1,21 +1,18 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import Hero from "./Hero";
-import { DEV_FULLNAME, DEV_RESUME_PATH, DEV_TECHS } from "../../data/dev";
+import { DEV_FULLNAME, DEV_TECHS } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
-import Prompt from "../ui/Prompt";
-import { FaCogs, FaFileDownload, FaGraduationCap, FaRocket } from "react-icons/fa";
+import Hero from "./Hero";
+import Prompt, { PromptResume } from "../ui/Prompts";
+import { FaCogs, FaGraduationCap, FaRocket } from "react-icons/fa";
 import globals from "../../styles/globals.module.css";
 import styles from "./Home.module.css";
 
 const { html, css, js, react, node, next, mysql, php, ruby, gdscript, mongo, wordpress, sass, less, git, seo } = DEV_TECHS;
 
 export default function Home() {
-    const { locale } = useRouter();
     const {
         DEV_JOBS,
-        ACTION_RESUME,
         HOME_TITLE,
         HOME_TITLE_MAIN_SKILLS,
         HOME_TITLE_OTHER_SKILLS,
@@ -56,10 +53,10 @@ export default function Home() {
                 {HOME_TEXT_INTRO_TEACH}
 
                 <div className={globals.promptBox}>
-                    <a href="#skills"><Prompt><FaCogs />{HOME_ACTION_SKILLS}</Prompt></a>
-                    <a href={DEV_RESUME_PATH[locale]} target="_blank" rel="noreferrer"><Prompt><FaFileDownload />{ACTION_RESUME}</Prompt></a>
+                    <Link href="#skills"><Prompt><FaCogs />{HOME_ACTION_SKILLS}</Prompt></Link>
+                    <PromptResume />
                     <Link href="/projects"><Prompt><FaRocket />{HOME_ACTION_PROJECTS}</Prompt></Link>
-                    <Link href="/teach"><Prompt><FaGraduationCap />{HOME_ACTION_COURSES}</Prompt></Link>
+                    <Link href="/learn"><Prompt><FaGraduationCap />{HOME_ACTION_COURSES}</Prompt></Link>
                 </div>
             </section>
 

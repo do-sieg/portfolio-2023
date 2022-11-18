@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaDoorOpen, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { DEV_TECHS } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
-import Prompt from "../ui/Prompt";
+import Prompt from "../ui/Prompts";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({ data }) {

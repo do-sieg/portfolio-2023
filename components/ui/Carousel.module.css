@@ -1,0 +1,73 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slidesContainer {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    /* grid-template-columns: repeat(3, 100%); */
+    transition: left 1s ease-in-out, opacity 3s;
+}
+
+.container button {
+    opacity: 0.5;
+    outline: none !important;
+    user-select: none;
+}
+
+.container button:not([disabled]) {
+    cursor: pointer;
+}
+
+.container button:not([disabled]):active,
+.container button:not([disabled]):hover {
+    opacity: 0.8;
+}
+
+.arrowButton {
+    position: absolute;
+    z-index: 1;
+    font-size: x-large;
+    font-weight: var(--font-extrabold);
+    background-color: transparent;
+    transition: all 0.3s 0.1s;
+    cursor: pointer;
+}
+
+.leftArrow {
+    composes: arrowButton;
+    left: 0;
+}
+
+.rightArrow {
+    composes: arrowButton;
+    right: 0;
+}
+
+.navDots {
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.navDots button {
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: large;
+    transition: all 0.3s 0.1s;
+}
+
+.navDots button.activeDot {
+    opacity: 0.8;
+}
