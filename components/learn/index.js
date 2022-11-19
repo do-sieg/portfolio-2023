@@ -18,10 +18,8 @@ export default function Learn() {
         TEXT_PHOTO_CREDITS,
         LEARN_TITLE,
         LEARN_TITLE_TEACHING,
-        LEARN_ACTION_TEACHING,
         LEARN_TEXT_INTRO,
         LEARN_TEXT_TEACHING,
-        LEARN_TEXT_ONLINE_TEACHING,
     } = useLang();
 
     return (
@@ -36,10 +34,14 @@ export default function Learn() {
 
             <section>
                 {LEARN_TEXT_INTRO}
-
-                <div className={styles.promptBox}>
-                    <PromptCourses />
+                {/* <div className={styles.promptBox}>
                     <Link href="#teaching"><Prompt><FaChalkboardTeacher />{LEARN_ACTION_TEACHING}</Prompt></Link>
+                </div> */}
+
+                {/* {LEARN_TEXT_COURSES} */}
+
+                <div className={styles.promptBoxBig}>
+                    <PromptCourses />
                 </div>
             </section>
 
@@ -48,20 +50,18 @@ export default function Learn() {
 
                 {LEARN_TEXT_TEACHING}
 
+                <div className={globals.promptBox}>
+                    {Object.entries(DEV_TEACH_LINKS).map(([key, link]) => {
+                        return <a key={key} href={link} target="_blank" rel="noreferrer"><Prompt>{key}<FaExternalLinkAlt /></Prompt></a>
+                    })}
+                </div>
+
                 <div className={styles.reviewsContainer}>
                     <Carousel autoScroll={10000}>
                         {reviews.map((review, index) => <ReviewSlide key={index} review={review} />)}
                     </Carousel>
                 </div>
 
-                {LEARN_TEXT_ONLINE_TEACHING}
-
-                <div className={globals.promptBox}>
-                    {Object.entries(DEV_TEACH_LINKS).map(([key, link]) => {
-                        return <a key={key} href={link} target="_blank" rel="noreferrer"><Prompt>{key}<FaExternalLinkAlt /></Prompt></a>
-                    })}
-                    {/* <PromptContact /> */}
-                </div>
             </section>
 
             <Credits text={TEXT_PHOTO_CREDITS} name="Olia Danilevich" link="https://www.pexels.com/@olia-danilevich/" />

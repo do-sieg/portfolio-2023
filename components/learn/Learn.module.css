@@ -16,7 +16,11 @@
     gap: 1rem;
 }
 
-.promptBox a:first-child button {
+.promptBoxBig {
+    composes: promptBox;
+}
+
+.promptBoxBig a:first-child button {
     padding: 2rem 3rem;
     font-size: x-large;
 }
