@@ -1,20 +1,27 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
-import { DEV_FULLNAME } from "../../data/dev";
+import { DEV_FULLNAME, DEV_TEACH_LINKS } from "../../data/dev";
 import { reviews } from "../../data/student_reviews";
 import { useLang } from "../../hooks/lang";
 import Prompt, { PromptCourses } from "../ui/Prompts";
 import Carousel from "../ui/Carousel";
+import Credits from "../ui/Credits";
 import ReviewSlide from "./ReviewSlide";
+import { FaChalkboardTeacher, FaExternalLinkAlt } from "react-icons/fa";
+import learnCover from "../../public/images/learn-cover.jpg";
 import globals from "../../styles/globals.module.css";
+import styles from "./Learn.module.css";
 
 export default function Learn() {
     const {
+        TEXT_PHOTO_CREDITS,
         LEARN_TITLE,
         LEARN_TITLE_TEACHING,
         LEARN_ACTION_TEACHING,
         LEARN_TEXT_INTRO,
         LEARN_TEXT_TEACHING,
+        LEARN_TEXT_ONLINE_TEACHING,
     } = useLang();
 
     return (
@@ -23,20 +30,16 @@ export default function Learn() {
                 <title>{`${DEV_FULLNAME} - ${LEARN_TITLE}`}</title>
             </Head>
 
-            <ul>
-                <li>Erreur NextJS avec ancres</li>
-                <li>Deux photos classe/online cours + Crédits</li>
-                <li>Carousel</li>
-            </ul>
+            <Image className={styles.coverImage} src={learnCover} alt={LEARN_TITLE} placeholder="blur" />
 
             <h1 className={globals.heading}>{LEARN_TITLE}</h1>
 
             <section>
                 {LEARN_TEXT_INTRO}
 
-                <div className={globals.promptBox}>
+                <div className={styles.promptBox}>
                     <PromptCourses />
-                    <Link href="#teaching"><Prompt>{LEARN_ACTION_TEACHING}</Prompt></Link>
+                    <Link href="#teaching"><Prompt><FaChalkboardTeacher />{LEARN_ACTION_TEACHING}</Prompt></Link>
                 </div>
             </section>
 
@@ -45,10 +48,23 @@ export default function Learn() {
 
                 {LEARN_TEXT_TEACHING}
 
-                <Carousel autoScroll={4000}>
-                    {reviews.map((review, index) => <ReviewSlide key={index} review={review} />)}
-                </Carousel>
+                <div className={styles.reviewsContainer}>
+                    <Carousel autoScroll={10000}>
+                        {reviews.map((review, index) => <ReviewSlide key={index} review={review} />)}
+                    </Carousel>
+                </div>
+
+                {LEARN_TEXT_ONLINE_TEACHING}
+
+                <div className={globals.promptBox}>
+                    {Object.entries(DEV_TEACH_LINKS).map(([key, link]) => {
+                        return <a key={key} href={link} target="_blank" rel="noreferrer"><Prompt>{key}<FaExternalLinkAlt /></Prompt></a>
+                    })}
+                    {/* <PromptContact /> */}
+                </div>
             </section>
+
+            <Credits text={TEXT_PHOTO_CREDITS} name="Olia Danilevich" link="https://www.pexels.com/@olia-danilevich/" />
         </main>
     );
 }

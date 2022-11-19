@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    box-shadow: var(--shadow-md);
 }
 
 .slidesContainer {
@@ -12,12 +13,11 @@
     width: 100%;
     display: grid;
     grid-template-rows: 1fr;
-    /* grid-template-columns: repeat(3, 100%); */
     transition: left 1s ease-in-out, opacity 3s;
 }
 
 .container button {
-    opacity: 0.5;
+    opacity: 0.35;
     outline: none !important;
     user-select: none;
 }

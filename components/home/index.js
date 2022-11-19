@@ -52,7 +52,7 @@ export default function Home() {
                 {HOME_TEXT_INTRO_DEV}
                 {HOME_TEXT_INTRO_TEACH}
 
-                <div className={globals.promptBox}>
+                <div className={globals.promptGrid}>
                     <Link href="#skills"><Prompt><FaCogs />{HOME_ACTION_SKILLS}</Prompt></Link>
                     <PromptResume />
                     <Link href="/projects"><Prompt><FaRocket />{HOME_ACTION_PROJECTS}</Prompt></Link>

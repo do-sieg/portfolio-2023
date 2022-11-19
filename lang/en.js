@@ -4,7 +4,10 @@ import { DEV_EMAIL } from "../data/dev";
 export const DEV_JOBS = "Web Developer & Teacher";
 
 export const ACTION_VISIT = "Visit";
+export const ACTION_CONTACT = "Contact me";
 export const ACTION_RESUME = "Download my resume";
+
+export const TEXT_PHOTO_CREDITS = "Photo Credits:";
 
 export const HOME_TITLE = "Hi, I'm Daniel.";
 export const HOME_TITLE_MAIN_SKILLS = "Main Stack";
@@ -38,27 +41,20 @@ export const PROJECTS_TEXT_INTRO = (
 export const LEARN_TITLE = "Learn Coding";
 export const LEARN_TITLE_TEACHING = "Teaching";
 export const LEARN_ACTION_COURSES = "Start a course";
-export const LEARN_ACTION_TEACHING = "Teaching";
+export const LEARN_ACTION_TEACHING = "Teaching & Online Lessons";
 export const LEARN_TEXT_INTRO = (
-    <p>In addition to being a developer, my other passion is <strong>teaching</strong>. I also provide <strong>courses</strong> for beginners to help them find their way around.</p>
+    <>
+        <p>In addition to being a developer, my other passion is <strong>teaching</strong>. I teach online and in group sessions.</p>
+        <p>I also provide <strong>courses</strong> for beginners to help them find their way around. These courses are broken down to be <b>short</b> and <b>get to the point</b>. I try to use understandable language, but I still explain technical terms so you can learn them as you go on.</p>
+        <p>I plan to cover several languages and frameworks, in the most complete way possible. Courses will be updated to reflect new developments.</p>
+    </>
 );
 export const LEARN_TEXT_TEACHING = (
     <>
-        <p>I have been a professional teacher for six years. I apply those skills today to help aspiring developers. I've conducted <strong>training sessions</strong> on web languages, frameworks and tools. If you're looking for a teacher, you can <a href={`mailto:${DEV_EMAIL}`}>contact me</a>.</p>
-        <p>I also give <strong>private lessons</strong> depending on my availability. You have a project to complete, something is confusing you, or you just want to learn something new? You can reach me on one of the platforms below or directly through <a href={`mailto:${DEV_EMAIL}`}>e-mail</a>.</p>
+        <p>I have been a professional teacher for six years. I apply those skills today to help aspiring developers.</p>
+        <p>I've conducted <strong>training sessions</strong> on web languages, frameworks and tools. If you're looking for a teacher, you can <a href={`mailto:${DEV_EMAIL}`}>contact me</a>.</p>
     </>
 );
-
-/*
-+ cv
-*/
-
-// Reviews
-
-// When I give training courses or private lessons, I often have to explain things in great detail. But that's a lot to memorize.
-
-// The courses made available here are broken down to be concise and get to the point. I try to use understandable language, explaining technical terms.
-
-// My long term goal will be to cover several languages and frameworks, in the most complete way possible. The courses will be regularly updated to reflect new developments in the various subjects.
-
-// Enjoy your reading!
+export const LEARN_TEXT_ONLINE_TEACHING = (
+    <p>I also give <strong>private lessons</strong> depending on my availability. You have a project to complete, something is confusing you, or you just want to learn something new? You can reach me on one of the platforms below or directly by <a href={`mailto:${DEV_EMAIL}`}>e-mail</a>.</p>
+);

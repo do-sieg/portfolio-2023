@@ -13,6 +13,9 @@ export const DEV_RESUME_PATH = {
 export const DEV_EMAIL = "d.orchanian@gmail.com";
 export const DEV_LINDEKIN = "http://www.linkedin.com/in/daniel-orchanian";
 export const DEV_GITHUB = "https://github.com/do-sieg";
+export const DEV_TEACH_LINKS = {
+    "Superprof": "https://www.superprof.fr/cours-distance-developpement-web-frameworks-javascript-reactjs-nodejs.html",
+};
 
 export const DEV_TECHS = {
     html: { name: "HTML", icon: <FaHtml5 /> },
