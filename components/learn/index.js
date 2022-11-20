@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import { DEV_FULLNAME, DEV_TEACH_LINKS } from "../../data/dev";
 import { reviews } from "../../data/student_reviews";
 import { useLang } from "../../hooks/lang";
@@ -34,11 +33,6 @@ export default function Learn() {
 
             <section>
                 {LEARN_TEXT_INTRO}
-                {/* <div className={styles.promptBox}>
-                    <Link href="#teaching"><Prompt><FaChalkboardTeacher />{LEARN_ACTION_TEACHING}</Prompt></Link>
-                </div> */}
-
-                {/* {LEARN_TEXT_COURSES} */}
 
                 <div className={styles.promptBoxBig}>
                     <PromptCourses />

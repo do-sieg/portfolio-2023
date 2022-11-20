@@ -21,8 +21,8 @@ export function PromptResume() {
 }
 
 export function PromptGitHub() {
-    const { PROJECT_ACTION_GITHUB } = useLang();
-    return <a href={DEV_GITHUB} target="_blank" rel="noreferrer"><Prompt><FaGithub />{PROJECT_ACTION_GITHUB}</Prompt></a>;
+    const { PROJECTS_ACTION_GITHUB } = useLang();
+    return <a href={DEV_GITHUB} target="_blank" rel="noreferrer"><Prompt><FaGithub />{PROJECTS_ACTION_GITHUB}</Prompt></a>;
 }
 
 export function PromptCourses() {

@@ -7,7 +7,7 @@ import Prompt from "../ui/Prompts";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({ data }) {
-    const { ACTION_VISIT, PROJECT_ACTION_CODE } = useLang();
+    const { ACTION_VISIT, PROJECTS_ACTION_CODE } = useLang();
 
     if (!data) return null;
 
@@ -31,7 +31,7 @@ export default function ProjectCard({ data }) {
         return (
             <>
                 {data.url && <a href={data.url}><Prompt><FaExternalLinkAlt /> {ACTION_VISIT}</Prompt></a>}
-                {data.repository && <a href={data.repository}><Prompt><FaGithub /> {PROJECT_ACTION_CODE}</Prompt></a>}
+                {data.repository && <a href={data.repository}><Prompt><FaGithub /> {PROJECTS_ACTION_CODE}</Prompt></a>}
                 {data.link && <Link href={data.link}><Prompt><FaDoorOpen /> {ACTION_VISIT}</Prompt></Link>}
             </>
         );

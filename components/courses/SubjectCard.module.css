@@ -1,0 +1,33 @@
+.container {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--neutral-100);
+    box-shadow: var(--shadow-md);
+    border-radius: 1rem 2rem 1rem;
+    transition: all 0.2s 0.1s;
+}
+
+.container:active, .container:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.title {
+    font-size: x-large;
+    font-weight: var(--font-semibold);
+    color: var(--c-secondary);
+}
+
+.description {
+    font-size: large;
+    font-weight: var(--font-light);
+}
+
+.action {
+    font-size: large;
+}
+
+.action::after {
+    content: " →";
+}

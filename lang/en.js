@@ -32,8 +32,8 @@ export const PROJECTS_TITLE_CLIENTS = "Client Projects";
 export const PROJECTS_TITLE_OWN = "Personal Projects";
 export const PROJECTS_TITLE_DEMO = "Demos";
 export const PROJECTS_TITLE_OLD = "Old Projects";
-export const PROJECT_ACTION_GITHUB = "Check on GitHub";
-export const PROJECT_ACTION_CODE = "Code";
+export const PROJECTS_ACTION_GITHUB = "Check on GitHub";
+export const PROJECTS_ACTION_CODE = "Code";
 export const PROJECTS_TEXT_INTRO = (
     <p>Here are some examples of my work as a freelancer, recent and past. You can also check my GitHub account for other projects I'm currently working on.</p>
 );
@@ -51,9 +51,18 @@ export const LEARN_TEXT_TEACHING = (
     </>
 );
 
-export const COURSE_TEXT_INTRO = (
+export const COURSES_TITLE = "Development Courses";
+export const COURSES_TEXT_INTRO = (
     <>
         <p>These courses are broken down to be <b>short</b> and <b>get to the point</b>. I try to use understandable language, but I still explain technical terms so you can learn them as you go on.</p>
         <p>I plan to cover several languages and frameworks, in the most complete way possible. Courses will be updated to reflect new developments.</p>
     </>
 );
+export const COURSES_TEXT_LESSON_AMOUNT = (value) => `${value} lesson${value > 1 ? "s" : ""}`;
+export const COURSES_TEXT_NO_COURSE = "No lessons in this language yet. Coming soon.";
+export const COURSES_TEXT_CATEGORIES = {
+    WEB_LANGUAGES: "Web Languages",
+};
+export const COURSES_TEXT_SUBJECTS = {
+    html: { name: "HTML", desc: "The language structuring all web pages." },
+};

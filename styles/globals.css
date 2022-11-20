@@ -40,3 +40,7 @@ button {
 div[data-nextjs-scroll-focus-boundary] {
   flex: 1;
 }
+
+hr {
+  border-top: 2px solid;
+}
