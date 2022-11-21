@@ -1,6 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import { DEV_EMAIL } from "../data/dev";
 
-/* eslint-disable react/no-unescaped-entities */
 export const DEV_JOBS = "Web Developer & Teacher";
 
 export const ACTION_VISIT = "Visit";
@@ -63,6 +63,18 @@ export const COURSES_TEXT_NO_COURSE = "No lessons in this language yet. Coming s
 export const COURSES_TEXT_CATEGORIES = {
     WEB_LANGUAGES: "Web Languages",
 };
-export const COURSES_TEXT_SUBJECTS = {
-    html: { name: "HTML", desc: "The language structuring all web pages." },
+export const COURSES_TEXT_LEVELS = {
+    basic: "Basic",
+    intermediate: "Intermediate",
+    advanced: "Advanced",
+};
+export const COURSES_DATA_SUBJECTS = {
+    html: {
+        name: "HTML",
+        desc: "The language structuring all web pages.",
+        intro: <p>HTML (HyperText Markup Language) is used to structure a web page and its content. It is a tag language used on all the internet, and one of the fundamentals of web development.</p>,
+        subSections: {
+            FIRST_STEPS: "First Steps"
+        },
+    },
 };

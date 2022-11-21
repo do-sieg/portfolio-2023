@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import Courses from "../../../components/courses";
-import { getAvailableCourseSubjects } from "../../../services/courses";
+import { getCourseTree } from "../../../services/courses";
 
 export function getStaticProps({ locales }) {
-    const props = { subjects: getAvailableCourseSubjects(locales) };
+    const props = { courseTree: getCourseTree(locales) };
     return { props };
 }
 
-export default function Page({ subjects }) {
+export default function Page({ courseTree }) {
     const { locale } = useRouter();
-    return <Courses langSubjects={subjects[locale]} />;
+    return <Courses langCourses={courseTree[locale]} />;
 }

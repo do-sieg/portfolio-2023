@@ -31,9 +31,9 @@ Nous allons le renommer, ainsi que son **extension**.
 ![_EXPAND_Créer un fichier HTML (2)](/images/learn/fr/html/html-create-file-2.png)
 
 > Si vous n'avez pas la possibilité de modifier les extensions, vous pouvez **changer les paramètres des dossiers** de votre ordinateur pour **afficher les extensions**.  
-Suivez les instuctions de ce lien pour effectuer cette opération : [Comment afficher l’extension d’un fichier (Windows / Mac) ?](https://www.astuces-aide-informatique.info/296/extension-fichier-windows).
+Suivez les instuctions de ce lien pour effectuer cette opération : [Comment afficher l’extension d’un fichier (Windows / Mac) ?](https://www.astuces-aide-informatique.info/296/extension-fichier-windows).
 
-Nous appellerons ce fichier **index.html**. Une fenêtre d'**avertissement** devrait apparaître :
+Nous appellerons ce fichier **index.html**. Une fenêtre d'**avertissement** devrait apparaître :
 
 ![_EXPAND_Créer un fichier HTML (3)](/images/learn/fr/html/html-create-file-3.png)
 
@@ -43,10 +43,10 @@ Confirmez et vous devriez voir le fichier renommé, avec une **icone différente
 
 > Par convention, on nomme **index** les fichiers de pages d'accueil ou de départ d'une application. Mais vous pouvez tout à fait nommer votre fichier autrement.
 
-Ouvrez le fichier avec votre éditeur de texte et entrez le texte suivant :
+Ouvrez le fichier avec votre éditeur de texte et entrez le texte suivant :
 
 ```html
-Bonjour, ça va ?
+Bonjour, ça va ?
 ```
 
 ![_EXPAND_Écrire un texte dans la page HTML (1)](/images/learn/fr/html/html-write-first-text-1.png)
@@ -65,10 +65,10 @@ Pour le moment, ce texte n'est pas mis en forme, et c'est normal.
 
 ## 3. Éditer le fichier html
 
-Changez votre texte comme suit :
+Changez votre texte comme suit :
 
 ```html
-Salut, ça roule ?
+Salut, ça roule ?
 ```
 
 En retournant sur votre page, vous verrez que **rien n'a changé**. C'est tout à fait normal.
@@ -86,4 +86,4 @@ Et voilà, vous avez créé une page HTML qui s'affiche dans le navigateur.
 
 Elle ne contient qu'un simple texte pour le moment, et on va améliorer ça. Mais ce sera pour un autre cours.
 
-À bientôt !
+À bientôt !

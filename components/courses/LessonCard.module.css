@@ -1,0 +1,50 @@
+.container {
+    overflow: hidden;
+    border-radius: 1rem 2rem 1rem;
+    background-color: var(--neutral-100);
+    box-shadow: var(--shadow-md);
+    font-size: x-large;
+    transition: all 0.3s 0.1s;
+}
+
+.container:active,
+.container:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.heading {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--neutral-500);
+    font-weight: var(--font-semibold);
+}
+
+.number {
+    color: white;
+}
+
+.level {
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+.level.basic {
+    color: var(--lime-300);
+}
+.level.intermediate {
+    color: var(--cyan-300);
+}
+.level.advanced {
+    color: var(--amber-300);
+}
+
+.title {
+    padding: 1rem 2rem;
+    font-weight: var(--font-light);
+}
+
+.title::after {
+    content: " →";
+}

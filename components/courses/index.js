@@ -5,7 +5,7 @@ import SubjectCard from "./SubjectCard";
 import globals from "../../styles/globals.module.css";
 import styles from "./Courses.module.css";
 
-export default function Courses({ langSubjects }) {
+export default function Courses({ langCourses }) {
     const {
         COURSES_TITLE,
         COURSES_TEXT_INTRO,
@@ -14,11 +14,11 @@ export default function Courses({ langSubjects }) {
     } = useLang();
 
     function renderCategories() {
-        if (Object.entries(langSubjects).length === 0) {
+        if (Object.entries(langCourses).length === 0) {
             return <span className={styles.noResults}>{COURSES_TEXT_NO_COURSE}</span>
         }
 
-        return Object.entries(langSubjects).map(([categoryId, subjects]) => {
+        return Object.entries(langCourses).map(([categoryId, subjects]) => {
             return (
                 <section key={categoryId}>
                     <h2 className={globals.subheading}>{COURSES_TEXT_CATEGORIES[categoryId]}</h2>
