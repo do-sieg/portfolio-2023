@@ -10,6 +10,11 @@ export const ACTION_RESUME = "Download my resume";
 export const TEXT_READING_TIME = (min) => `${min} min read`;
 export const TEXT_PHOTO_CREDITS = "Photo Credits:";
 
+export const NAV_ACTION_LEARN = "Learn";
+export const NAV_ACTION_COURSES = "Courses";
+export const NAV_ACTION_PROJECTS = "Projects";
+export const NAV_ACTION_BLOG = "Blog";
+
 export const HOME_TITLE = "Hi, I'm Daniel.";
 export const HOME_TITLE_MAIN_SKILLS = "Main Stack";
 export const HOME_TITLE_OTHER_SKILLS = "Other Skills";

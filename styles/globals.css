@@ -15,6 +15,7 @@
   --c-link-hover: var(--orange-500);
   /* --c-primary: red;
   --c-secondary: blue; */
+  --header-height: 7.5rem;
 }
 
 html,
@@ -23,6 +24,12 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--c-primary);
+}
+
+@media (max-width: 768px) {
+  body.mobile-menu-visible {
+      overflow-y: hidden;
+  }
 }
 
 a {

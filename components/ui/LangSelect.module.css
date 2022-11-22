@@ -4,6 +4,12 @@
     gap: 0.5rem;
 }
 
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+}
+
 .container a {
     text-transform: uppercase;
     font-size: x-large;
