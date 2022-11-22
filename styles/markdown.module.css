@@ -1,0 +1,47 @@
+.container h2 {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: var(--font-semibold);
+    color: var(--c-secondary);
+    filter: var(--drop-shadow-md);
+}
+
+.container h3 {
+    margin: 2rem 0 1rem;
+    font-size: 1.2em;
+    font-weight: var(--font-semibold);
+    color: var(--c-secondary);
+    filter: var(--drop-shadow-md);
+}
+
+.container blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 0.5rem solid var(--neutral-300);
+    font-style: italic;
+    background-color: var(--neutral-100);
+}
+
+.container blockquote p {
+    margin: 0;
+}
+
+.container blockquote p:first-of-type {
+    text-indent: 0;
+}
+
+.container code {
+    color: var(--amber-600);
+}
+
+.container pre > code {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5rem 1em;
+    font-family: var(--font-mono);
+    font-size: large;
+    background-color: var(--neutral-900);
+    color: white;
+}

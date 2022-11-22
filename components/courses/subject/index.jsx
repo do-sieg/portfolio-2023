@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { DEV_FULLNAME } from "../../data/dev";
-import { useLang } from "../../hooks/lang";
+import { DEV_FULLNAME } from "../../../data/dev";
+import { useLang } from "../../../hooks/lang";
 import LessonCard from "./LessonCard";
-import globals from "../../styles/globals.module.css";
-import styles from "./CourseSubject.module.css";
+import globals from "../../../styles/globals.module.css";
+import styles from "./Subject.module.css";
 
 export default function CourseSubject({ subject, lessonTree }) {
     const { COURSES_DATA_SUBJECTS } = useLang();

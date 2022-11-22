@@ -1,10 +1,14 @@
 import fs from "fs";
 import path from "path";
-import { mdLoad } from "./markdown";
+import { mdLoad, parseMd } from "./markdown";
 
 const COURSE_CATEGORIES = {
     WEB_LANGUAGES: ["html", "css"],
 };
+
+export const COURSE_COVER_IMAGES = {
+    html: "/images/learn/html-cover.jpg",
+}
 
 const LESSON_TREES = {
     html: {
@@ -58,7 +62,7 @@ export function getSubjectPaths(locales) {
     return paths;
 }
 
-export function getLessonTree(locale, subjectId) {
+function getSubjectLessons(locale, subjectId) {
     const subjectPath = `/data/courses/${locale}/${subjectId}`;
     const subjectLessons = fs.readdirSync(path.join(process.cwd(), subjectPath))
         .map((filename) => {
@@ -67,11 +71,35 @@ export function getLessonTree(locale, subjectId) {
             return data;
         })
         .filter(data => data.published === true);
+    return subjectLessons;
+}
 
+export function getLessonTree(locale, subjectId) {
+    const subjectLessons = getSubjectLessons(locale, subjectId);
     const tree = {};
     Object.entries(LESSON_TREES[subjectId]).forEach(([key, numbers]) => {
         tree[key] = numbers.map(n => subjectLessons.find(data => data.number === n) ?? null).filter(data => data !== null);
     });
-
     return tree;
 }
+
+export function getLessonPaths(locales) {
+    const paths = [];
+    const subjects = getSubjects(locales);
+    for (const locale of locales) {
+        for (const subjectId of subjects[locale]) {
+            const subjectLessons = getSubjectLessons(locale, subjectId);
+            paths.push(...subjectLessons.map(data => `/${locale}/learn/courses/${subjectId}/${data.slug}`))
+        }
+    }
+    return paths;
+}
+
+export function getLessonData(locale, subjectId, slug) {
+    const data = mdLoad(`/data/courses/${locale}/${subjectId}/${slug}.md`);
+    data.data.subjectId = subjectId;
+    data.data.coverImage = COURSE_COVER_IMAGES[subjectId];
+    data.html = parseMd(data.content);
+    return data;
+}
+

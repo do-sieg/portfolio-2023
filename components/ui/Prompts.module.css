@@ -1,6 +1,6 @@
 .container {
     composes: btn from "../../styles/globals.module.css";
-    font-size: larger;
+    font-size: large;
     transform: scale(0.98);
 }
 

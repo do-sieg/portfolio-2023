@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useLang } from "../../hooks/lang";
+import { useLang } from "../../../hooks/lang";
 import styles from "./LessonCard.module.css";
 
 export default function LessonCard({ subject, data }) {

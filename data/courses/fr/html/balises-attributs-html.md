@@ -17,18 +17,16 @@ On peut ensuite donner à ces balises des **attributs** pour préciser certaines
 
 ## 1. Les balises
 
-Une **balise HTML** se reconnaît aux **chevrons** qui l'entourent : **<** et **>**.
+Une **balise HTML** se reconnaît aux **chevrons** qui l'entourent : **`<balise>`**.
 
 Entre les chevrons, on retrouve le nom de la balise : `<p>`, `<a>`, `<div>`...
 
-Il existe deux types de balises : les balises **en paire** et les balises **orphelines**. 
+Il existe deux types de balises : les balises **en paire** (`<div>...</div>`) et les balises **orphelines** (`<br />`). 
 
 
 ### a. Les balises en paires
 
-Elles représentent la grande majorité des balises HTML.
-
-Ces balises fonctionnent avec un système d'**ouverture** et **fermeture** autour d'un **contenu**.
+Ces balises fonctionnent avec un système d'**ouverture** et **fermeture** autour d'un **contenu**. Elles consitutent **la grande majorité** des balises HTML.
 
 ```html
 <title>Un week-end en Bretagne</title>

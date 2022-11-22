@@ -7,8 +7,8 @@ import Prompt, { PromptCourses } from "../ui/Prompts";
 import Carousel from "../ui/Carousel";
 import Credits from "../ui/Credits";
 import ReviewSlide from "./ReviewSlide";
-import { FaChalkboardTeacher, FaExternalLinkAlt } from "react-icons/fa";
-import learnCover from "../../public/images/learn-cover.jpg";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import learnCover from "../../public/images/learn/learn-cover.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Learn.module.css";
 

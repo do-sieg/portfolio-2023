@@ -7,6 +7,7 @@ export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Contact me";
 export const ACTION_RESUME = "Download my resume";
 
+export const TEXT_READING_TIME = (min) => `${min} min read`;
 export const TEXT_PHOTO_CREDITS = "Photo Credits:";
 
 export const HOME_TITLE = "Hi, I'm Daniel.";

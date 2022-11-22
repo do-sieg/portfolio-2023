@@ -22,6 +22,8 @@
     max-width: var(--lg);
     margin: 0 auto;
     padding: 3rem 5rem;
+    font-size: x-large;
+    font-weight: 300;
 }
 
 @media (max-width: 1024px) {
@@ -63,11 +65,12 @@
 
 .pageContainer p {
     margin: 1rem 0;
-    text-indent: 1rem;
     line-height: 1.5;
-    font-size: x-large;
-    font-weight: 300;
     text-align: justify;
+}
+
+.pageContainer p:first-of-type {
+    text-indent: 1rem;
 }
 
 .pageContainer p a {
@@ -88,6 +91,12 @@
 .pageContainer strong,
 .pageContainer b {
     font-weight: 400;
+}
+
+.pageContainer ul {
+    margin: 1em 0;
+    padding-inline-start: 2.5rem;
+    list-style-type: disc;
 }
 
 .promptBox {
