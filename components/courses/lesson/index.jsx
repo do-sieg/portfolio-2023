@@ -1,11 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaChevronLeft } from "react-icons/fa";
 import { DEV_FULLNAME } from "../../../data/dev";
 import { useLang } from "../../../hooks/lang";
 import { getReadingTime } from "../../../utils/text";
+import BackLink from "../../ui/BackLink";
 import LessonInfo from "./LessonInfo";
 import globals from "../../../styles/globals.module.css";
 import markdown from "../../../styles/markdown.module.css";
@@ -21,14 +20,7 @@ export default function Lesson({ lesson }) {
                 <title>{`${DEV_FULLNAME} - ${lesson.data.title}`}</title>
             </Head>
 
-            <ul>
-                <li>images cliquables</li>
-            </ul>
-
-            <Link className={styles.backLink} href={`/learn/courses/${lesson.data.subjectId}`}>
-                <FaChevronLeft />
-                {COURSES_DATA_SUBJECTS[lesson.data.subjectId].name}
-            </Link>
+            <BackLink href={`/learn/courses/${lesson.data.subjectId}`}>{COURSES_DATA_SUBJECTS[lesson.data.subjectId].name}</BackLink>
 
             <h1 className={[globals.heading, styles.heading].join(" ")}>{lesson.data.title}</h1>
 
@@ -37,7 +29,7 @@ export default function Lesson({ lesson }) {
             </div>
 
             <div className={styles.coverImageContainer}>
-                <Image src={lesson.data.coverImage} alt={lesson.data.title} fill />
+                <Image src={lesson.data.coverImage} alt={lesson.data.title} fill priority />
             </div>
 
             <div className={markdown.container} dangerouslySetInnerHTML={{ __html: lesson.html }} />

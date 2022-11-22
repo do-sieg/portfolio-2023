@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: baseline;
+    gap: 0.125rem;
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: var(--font-normal);
+    color: var(--c-link);
+}
+
+.container svg {
+    width: 0.75rem;
+    height: 0.75rem;
+}

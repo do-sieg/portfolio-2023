@@ -1,4 +1,4 @@
-import CourseSubject from "../../../../components/courses/subject";
+import Subject from "../../../../components/courses/subject";
 import { getLessonTree, getSubjectPaths } from "../../../../services/courses";
 
 export function getStaticPaths({ locales }) {
@@ -15,5 +15,5 @@ export function getStaticProps({ locale, params }) {
 }
 
 export default function Page({ subject, lessonTree }) {
-    return <CourseSubject subject={subject} lessonTree={lessonTree} />;
+    return <Subject subject={subject} lessonTree={lessonTree} />;
 }

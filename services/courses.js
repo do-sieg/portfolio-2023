@@ -99,7 +99,7 @@ export function getLessonData(locale, subjectId, slug) {
     const data = mdLoad(`/data/courses/${locale}/${subjectId}/${slug}.md`);
     data.data.subjectId = subjectId;
     data.data.coverImage = COURSE_COVER_IMAGES[subjectId];
-    data.html = parseMd(data.content);
+    data.html = parseMd(data.content, { externalLinks: true, imagesNewTab: true });
     return data;
 }
 

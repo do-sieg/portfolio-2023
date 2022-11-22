@@ -53,6 +53,7 @@ export const LEARN_TEXT_TEACHING = (
 );
 
 export const COURSES_TITLE = "Development Courses";
+export const COURSES_ACTION_ALL_COURSES = "All Courses";
 export const COURSES_TEXT_INTRO = (
     <>
         <p>These courses are broken down to be <b>short</b> and <b>get to the point</b>. I try to use understandable language, but I still explain technical terms so you can learn them as you go on.</p>
