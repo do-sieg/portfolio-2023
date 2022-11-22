@@ -15,7 +15,7 @@ export default function Subject({ subject, lessonTree }) {
                 <title>{`${DEV_FULLNAME} - ${COURSES_DATA_SUBJECTS[subject].name}`}</title>
             </Head>
 
-            <BackLink href="/learn/courses">{COURSES_ACTION_ALL_COURSES}</BackLink>
+            <BackLink href="/courses">{COURSES_ACTION_ALL_COURSES}</BackLink>
 
             <h1 className={globals.heading}>{COURSES_DATA_SUBJECTS[subject].name}</h1>
 

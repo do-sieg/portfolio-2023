@@ -27,5 +27,5 @@ export function PromptGitHub() {
 
 export function PromptCourses() {
     const { LEARN_ACTION_COURSES } = useLang();
-    return <Link href="/learn/courses"><Prompt><FaGraduationCap />{LEARN_ACTION_COURSES}</Prompt></Link>;
+    return <Link href="/courses"><Prompt><FaGraduationCap />{LEARN_ACTION_COURSES}</Prompt></Link>;
 }

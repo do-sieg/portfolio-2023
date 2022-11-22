@@ -6,7 +6,7 @@ export default function LessonCard({ subject, data }) {
     const { COURSES_TEXT_LEVELS, COURSES_DATA_SUBJECTS } = useLang();
 
     return (
-        <Link href={`/learn/courses/${subject}/${data.slug}`}>
+        <Link href={`/courses/${subject}/${data.slug}`}>
         <div className={styles.container}>
             <div className={styles.heading}>
                 <span className={styles.number}>{COURSES_DATA_SUBJECTS[subject].name} {data.number}</span>

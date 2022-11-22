@@ -57,7 +57,7 @@ export function getSubjectPaths(locales) {
     const paths = [];
     const langSubjects = getSubjects(locales);
     Object.entries(langSubjects).forEach(([locale, subjects]) => {
-        paths.push(...subjects.map(subjectId => `/${locale}/learn/courses/${subjectId}`));
+        paths.push(...subjects.map(subjectId => `/${locale}/courses/${subjectId}`));
     });
     return paths;
 }
@@ -89,7 +89,7 @@ export function getLessonPaths(locales) {
     for (const locale of locales) {
         for (const subjectId of subjects[locale]) {
             const subjectLessons = getSubjectLessons(locale, subjectId);
-            paths.push(...subjectLessons.map(data => `/${locale}/learn/courses/${subjectId}/${data.slug}`))
+            paths.push(...subjectLessons.map(data => `/${locale}/courses/${subjectId}/${data.slug}`))
         }
     }
     return paths;

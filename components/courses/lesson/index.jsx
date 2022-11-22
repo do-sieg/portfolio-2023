@@ -20,7 +20,7 @@ export default function Lesson({ lesson }) {
                 <title>{`${DEV_FULLNAME} - ${lesson.data.title}`}</title>
             </Head>
 
-            <BackLink href={`/learn/courses/${lesson.data.subjectId}`}>{COURSES_DATA_SUBJECTS[lesson.data.subjectId].name}</BackLink>
+            <BackLink href={`/courses/${lesson.data.subjectId}`}>{COURSES_DATA_SUBJECTS[lesson.data.subjectId].name}</BackLink>
 
             <h1 className={[globals.heading, styles.heading].join(" ")}>{lesson.data.title}</h1>
 

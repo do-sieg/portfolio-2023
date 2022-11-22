@@ -1,5 +1,5 @@
-import Subject from "../../../../components/courses/subject";
-import { getLessonTree, getSubjectPaths } from "../../../../services/courses";
+import Subject from "../../../components/courses/subject";
+import { getLessonTree, getSubjectPaths } from "../../../services/courses";
 
 export function getStaticPaths({ locales }) {
     return { paths: getSubjectPaths(locales), fallback: false };

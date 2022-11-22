@@ -16,7 +16,7 @@ export default function Home() {
         HOME_TITLE,
         HOME_TITLE_MAIN_SKILLS,
         HOME_TITLE_OTHER_SKILLS,
-        HOME_ACTION_COURSES,
+        HOME_ACTION_LEARN,
         HOME_ACTION_PROJECTS,
         HOME_ACTION_SKILLS,
         HOME_TEXT_INTRO_DEV,
@@ -56,7 +56,7 @@ export default function Home() {
                     <Link href="#skills"><Prompt><FaCogs />{HOME_ACTION_SKILLS}</Prompt></Link>
                     <PromptResume />
                     <Link href="/projects"><Prompt><FaRocket />{HOME_ACTION_PROJECTS}</Prompt></Link>
-                    <Link href="/learn"><Prompt><FaGraduationCap />{HOME_ACTION_COURSES}</Prompt></Link>
+                    <Link href="/learn"><Prompt><FaGraduationCap />{HOME_ACTION_LEARN}</Prompt></Link>
                 </div>
             </section>
 

@@ -15,7 +15,7 @@ export const HOME_TITLE_MAIN_SKILLS = "Main Stack";
 export const HOME_TITLE_OTHER_SKILLS = "Other Skills";
 export const HOME_ACTION_PROJECTS = "My Projects";
 export const HOME_ACTION_SKILLS = "My Skills";
-export const HOME_ACTION_COURSES = "About Courses";
+export const HOME_ACTION_LEARN = "Learn Coding";
 export const HOME_TEXT_INTRO_DEV = (
     <>
         <p>I'm a <strong>web developer</strong>, I work in <b>companies</b> and as a <strong>freelancer</strong>.

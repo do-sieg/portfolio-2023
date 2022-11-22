@@ -1,5 +1,5 @@
-import Lesson from "../../../../components/courses/lesson";
-import { getLessonData, getLessonPaths } from "../../../../services/courses";
+import Lesson from "../../../components/courses/lesson";
+import { getLessonData, getLessonPaths } from "../../../services/courses";
 
 export function getStaticPaths({ locales }) {
     return { paths: getLessonPaths(locales), fallback: false };
