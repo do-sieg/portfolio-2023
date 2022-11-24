@@ -14,11 +14,11 @@ export default function PostCard({ post }) {
         <Link className={styles.container} href={`/blog/${post.data.slug}`}>
             {post.data.published !== true && <div className={styles.draftBadge}>{TEXT_DRAFT}</div>}
             <div className={styles.coverContainer}>
-                {post.data.coverImage && <Image src={post.data.coverImage.path} alt={post.data.title} fill />}
+                {post.data.coverImage && <Image src={post.data.coverImage.path} alt={post.data.title} fill sizes={1024} />}
             </div>
 
             <div className={styles.dataPanel}>
-                <Link className={styles.category} href={`/blog/category/${post.data.category}`}>{BLOG_TEXT_CATEGORIES[post.data.category]}</Link>
+                <div className={styles.category}>{BLOG_TEXT_CATEGORIES[post.data.category]}</div>
                 <div className={styles.title}>{post.data.title}</div>
                 <div className={styles.description}>{post.data.description}</div>
                 <PostInfo date={post.data.date} readingTime={getReadingTime(locale, post.content)} />
