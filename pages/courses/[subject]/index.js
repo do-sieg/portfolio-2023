@@ -1,11 +1,11 @@
-import Subject from "../../../components/courses/subject";
+import Subject from "../../../components/courses/subject/Subject";
 import { getLessonTree, getSubjectPaths } from "../../../services/courses";
 
 export function getStaticPaths({ locales }) {
     return { paths: getSubjectPaths(locales), fallback: false };
 }
 
-export function getStaticProps({ locale, params }) {
+export function getStaticProps({ params, locale }) {
     return {
         props: {
             subject: params.subject,

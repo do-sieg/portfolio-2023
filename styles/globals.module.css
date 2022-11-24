@@ -88,6 +88,11 @@
     border-color: var(--c-link-hover);
 }
 
+.pageContainer p svg {
+    display: inline;
+    vertical-align: baseline;
+}
+
 .pageContainer strong,
 .pageContainer b {
     font-weight: 400;

@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { mdLoad, parseMd } from "./markdown";
+import { loadMarkdown, parseMd } from "./markdown";
 
 const COURSE_CATEGORIES = {
     WEB_LANGUAGES: ["html", "css"],
@@ -66,7 +66,7 @@ function getSubjectLessons(locale, subjectId) {
     const subjectPath = `/data/courses/${locale}/${subjectId}`;
     const subjectLessons = fs.readdirSync(path.join(process.cwd(), subjectPath))
         .map((filename) => {
-            const { data } = mdLoad(subjectPath + "/" + filename);
+            const { data } = loadMarkdown(subjectPath + "/" + filename);
             data.slug = path.basename(filename, ".md");
             return data;
         })
@@ -96,7 +96,7 @@ export function getLessonPaths(locales) {
 }
 
 export function getLessonData(locale, subjectId, slug) {
-    const data = mdLoad(`/data/courses/${locale}/${subjectId}/${slug}.md`);
+    const data = loadMarkdown(`/data/courses/${locale}/${subjectId}/${slug}.md`);
     data.data.subjectId = subjectId;
     data.data.coverImage = COURSE_COVER_IMAGES[subjectId];
     data.html = parseMd(data.content, { externalLinks: true, imagesNewTab: true });

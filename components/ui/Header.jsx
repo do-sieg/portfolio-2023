@@ -13,8 +13,11 @@ export default function Header() {
             <Link href="/">
                 <div className={styles.nameLogoContainer}><NameLogo firstName={DEV_FIRSTNAME} lastName={DEV_LASTNAME} /></div>
             </Link>
+
             <Nav />
+            
             <LangSelect />
+            
             <MobileMenu>
                 <div className={styles.mobileNav}>
                     <Nav />

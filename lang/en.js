@@ -1,7 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import { DEV_EMAIL } from "../data/dev";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { DEV_EMAIL, DEV_LINDEKIN } from "../data/dev";
 
 export const DEV_JOBS = "Web Developer & Teacher";
+
+// export const LOCALE_DATE_FORMAT = "YY-M-D";
 
 export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Contact me";
@@ -9,6 +12,7 @@ export const ACTION_RESUME = "Download my resume";
 
 export const TEXT_READING_TIME = (min) => `${min} min read`;
 export const TEXT_PHOTO_CREDITS = "Photo Credits:";
+export const TEXT_DRAFT = "Draft";
 
 export const NAV_ACTION_LEARN = "Learn";
 export const NAV_ACTION_COURSES = "Courses";
@@ -85,3 +89,22 @@ export const COURSES_DATA_SUBJECTS = {
         },
     },
 };
+
+export const BLOG_TITLE = "Blog";
+export const BLOG_TITLE_RECENT = "Latest Posts";
+export const BLOG_DATE_FORMAT = (dateString) => {
+    const d = new Date(dateString);
+    const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"];
+    return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+};
+export const BLOG_ACTION_ALL_CATEGORIES = "All Posts";
+export const BLOG_TEXT_INTRO = (
+    <>
+        <p>My latest articles about programming, technologies, life as a developer... and a lot of other things.</p>
+        <p>Be sure to follow me on <a href={DEV_LINDEKIN} target="_blank" rel="noreferrer">LinkedIn <FaExternalLinkAlt /></a> to receive notifications on new content.</p>
+    </>
+);
+export const BLOG_TEXT_CATEGORIES = {
+    javascript: "JavaScript",
+    jobs: "Jobs",
+}

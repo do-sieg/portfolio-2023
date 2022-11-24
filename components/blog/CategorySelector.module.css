@@ -1,0 +1,7 @@
+.container {
+    padding: 0.5rem 1rem;
+    font-size: large;
+    color: var(--neutral-800);
+    cursor: pointer;
+    outline: none;
+}

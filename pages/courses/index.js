@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Courses from "../../components/courses";
+import Courses from "../../components/courses/Courses";
 import { getCourseTree } from "../../services/courses";
 
 export function getStaticProps({ locales }) {

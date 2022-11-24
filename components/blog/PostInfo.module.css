@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.profilePic {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: var(--font-normal);
+    color: var(--c-secondary);
+}
+
+.data {
+    font-weight: var(--font-light);
+}
+
+.date {
+    font-weight: var(--font-normal);
+}

@@ -8,7 +8,7 @@ marked.setOptions({
     highlight: (code, lang) => hljs.highlight(code, { language: lang }).value,
 });
 
-export function mdLoad(filePath) {
+export function loadMarkdown(filePath) {
     try {
         const parsed = grayMatter(fs.readFileSync(path.join(process.cwd(), filePath), 'utf8'));
         const { data, content } = parsed;
