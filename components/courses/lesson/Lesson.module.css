@@ -5,8 +5,8 @@
 
 .infoContainer {
     /* margin-bottom: 1rem; */
-    padding-top: 0.5rem;
-    border-top: 1px solid;
+    padding-top: 1rem;
+    border-top: 1px solid var(--neutral-200);
 }
 
 .coverImageContainer {

@@ -2,13 +2,15 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: large;
+    font-size: medium;
     text-transform: uppercase;
 }
 
 .profilePic {
     width: 3rem;
+    min-width: 3rem;
     height: 3rem;
+    min-height: 3rem;
     border-radius: 50%;
     object-fit: cover;
     object-position: top;

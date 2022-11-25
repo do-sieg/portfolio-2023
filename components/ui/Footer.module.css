@@ -1,6 +1,6 @@
 .container {
     padding: 0.5rem 1rem;
-    border-top: 1px solid var(--c-primary);
+    border-top: 2px solid var(--neutral-200);
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -16,6 +16,11 @@
     filter: var(--drop-shadow-md);
 }
 
+.container img {
+    display: block;
+    margin: 0 auto;
+}
+
 .container blockquote {
     margin: 1.5rem 0;
     padding: 0.75rem 1rem;

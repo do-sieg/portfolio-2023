@@ -1,5 +1,5 @@
 ---
-title: Framework JavaScript ou JavaScript "Vanilla" ?
+title: Framework ou JavaScript "Vanilla" ?
 description: Faut-il toujours utiliser un framework ? Au fait, pourquoi on utilise des frameworks ?
 date: "2022-02-17"
 category: javascript

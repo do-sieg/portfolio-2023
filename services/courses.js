@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { loadMarkdown, parseMd } from "./markdown";
+import { loadMarkdown, parseMarkdown } from "./markdown";
 
 const COURSE_CATEGORIES = {
     WEB_LANGUAGES: ["html", "css"],
@@ -89,7 +89,7 @@ export function getLessonPaths(locales) {
     for (const locale of locales) {
         for (const subjectId of subjects[locale]) {
             const subjectLessons = getSubjectLessons(locale, subjectId);
-            paths.push(...subjectLessons.map(data => `/${locale}/courses/${subjectId}/${data.slug}`))
+            paths.push(...subjectLessons.map(data => `/${locale}/courses/${subjectId}/${data.slug}`));
         }
     }
     return paths;
@@ -99,7 +99,7 @@ export function getLessonData(locale, subjectId, slug) {
     const data = loadMarkdown(`/data/courses/${locale}/${subjectId}/${slug}.md`);
     data.data.subjectId = subjectId;
     data.data.coverImage = COURSE_COVER_IMAGES[subjectId];
-    data.html = parseMd(data.content, { externalLinks: true, imagesNewTab: true });
+    data.html = parseMarkdown(data.content, { externalLinks: true, imagesNewTab: true });
     return data;
 }
 

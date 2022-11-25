@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { DEV_EMAIL, DEV_LINDEKIN } from "../data/dev";
 
@@ -108,3 +109,5 @@ export const BLOG_TEXT_CATEGORIES = {
     javascript: "JavaScript",
     jobs: "Jobs",
 }
+export const BLOG_TEXT_READ_MORE_CATEGORY = (categoryId) => <>More in <Link href={`/blog/category/${categoryId}`}>{BLOG_TEXT_CATEGORIES[categoryId]}</Link></>;
+export const BLOG_TEXT_SEE_ALL_POSTS = (n) => `${n} post${n > 1 ? "s" : ""}`;

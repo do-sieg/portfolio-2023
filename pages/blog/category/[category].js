@@ -1,14 +1,14 @@
 import Blog from "../../../components/blog/Blog";
-import { BLOG_CATEGORIES, getCategoryPosts } from "../../../services/blog";
+import { getCategories, getCategoryPaths, getCategoryPosts } from "../../../services/blog";
 
-export function getStaticPaths() {
-    return { paths: BLOG_CATEGORIES.map(category => `/blog/category/${category}`), fallback: false };
+export function getStaticPaths({ locales }) {
+    return { paths: getCategoryPaths(locales), fallback: false };
 }
 
 export function getStaticProps({ params, locale }) {
     return {
         props: {
-            categories: BLOG_CATEGORIES,
+            categories: getCategories(),
             posts: getCategoryPosts(locale, params.category),
             currentCategory: params.category,
         }

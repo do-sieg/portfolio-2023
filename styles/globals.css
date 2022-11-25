@@ -50,5 +50,5 @@ div[data-nextjs-scroll-focus-boundary] {
 }
 
 hr {
-  border-top: 2px solid;
+  border-top: 2px solid var(--neutral-200);
 }

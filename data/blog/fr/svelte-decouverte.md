@@ -120,7 +120,7 @@ Et ça a ses avantages : pas besoin de fichier supplémentaire (vous pouvez, bie
 
 - Il existe des balises très simples pour **l'affichage conditionnel**. 
 
-```
+```jsx
 {#if loading === true}
     <Loader />
 {:else if error !== null}
@@ -132,7 +132,7 @@ Et ça a ses avantages : pas besoin de fichier supplémentaire (vous pouvez, bie
 
 - Et **boucler une liste** n'est pas aussi lourd que sur React qui oblige à utiliser `Array.map()` (et l'attribut _key_...).
 
-```
+```jsx
 <div class="list">
     {#each userList as user}
         <div class="user-row">{user.name}</div>

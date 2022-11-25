@@ -1,10 +1,10 @@
 import Blog from "../../components/blog/Blog";
-import { BLOG_CATEGORIES, getRecentPosts } from "../../services/blog";
+import { getCategories, getRecentPosts } from "../../services/blog";
 
 export function getStaticProps({ locale }) {
     return {
         props: {
-            categories: BLOG_CATEGORIES,
+            categories: getCategories(),
             posts: getRecentPosts(locale, 5),
         }
     };

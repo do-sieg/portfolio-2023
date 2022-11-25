@@ -5,7 +5,15 @@ import hljs from "highlight.js";
 import { marked } from 'marked';
 
 marked.setOptions({
-    highlight: (code, lang) => hljs.highlight(code, { language: lang }).value,
+    highlight: function (code, lang) {
+        try {
+            if (lang === "") return code;
+            return hljs.highlight(code, { language: lang }).value;
+        } catch (err) {
+            console.log(err.message, { lang });
+            return code;
+        }
+    },
 });
 
 export function loadMarkdown(filePath) {
@@ -19,7 +27,7 @@ export function loadMarkdown(filePath) {
     }
 }
 
-export function parseMd(content, parseOptions = {}) {
+export function parseMarkdown(content, parseOptions = {}) {
     const options = {
         ...{
             externalLinks: false,

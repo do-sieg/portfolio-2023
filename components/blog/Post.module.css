@@ -1,0 +1,53 @@
+.heading {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.postDescription {
+    margin: 2rem 0;
+}
+
+.infoContainer {
+    padding-top: 1rem;
+    border-top: 2px solid var(--neutral-200);
+}
+
+.coverImageContainer {
+    margin-top: 1rem;
+}
+
+.postFooter {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--neutral-200);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .postFooter {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .postFooter> :nth-child(n+3) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .postFooter {
+        grid-template-columns: 1fr;
+    }
+
+    .postFooter> :nth-child(n+2) {
+        display: none;
+    }
+
+    .postFooter> :first-child {
+        width: 100%;
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+}
