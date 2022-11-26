@@ -6,14 +6,14 @@ import { useLang } from "../../hooks/lang";
 import PostInfo from "./PostInfo";
 import styles from "./PostCard.module.css";
 
-export default function PostCard({ post }) {
+export default function PostCard({ post, customClasses }) {
     const { locale } = useRouter();
     const { TEXT_DRAFT, BLOG_TEXT_CATEGORIES } = useLang();
 
     return (
         <Link className={styles.container} href={`/blog/${post.data.slug}`}>
             {post.data.published !== true && <div className={styles.draftBadge}>{TEXT_DRAFT}</div>}
-            <div className={styles.coverContainer}>
+            <div className={`${styles.coverContainer} ${customClasses?.coverContainer ?? ""}`}>
                 {post.data.coverImage && <Image src={post.data.coverImage.path} alt={post.data.title} fill sizes={1024} />}
             </div>
 

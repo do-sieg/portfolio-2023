@@ -1,0 +1,48 @@
+.container {
+    position: relative;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: var(--neutral-100); */
+}
+
+@media (max-width: 640px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.profilePic {
+    width: 10rem;
+    min-width: 10rem;
+    height: 10rem;
+    min-height: 10rem;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+    font-style: italic;
+}
+
+.authorName {
+    font-size: larger;
+    font-weight: var(--font-semibold);
+    color: var(--c-secondary);
+}
+
+.authorDesc {
+    color: var(--neutral-600);
+}
+
+.authorDesc p {
+    margin: 0;
+    text-indent: unset !important;
+}

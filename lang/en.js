@@ -99,13 +99,22 @@ export const BLOG_DATE_FORMAT = (dateString) => {
     return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 };
 export const BLOG_ACTION_ALL_CATEGORIES = "All Posts";
+export const BLOG_ACTION_DRAFTS = "Drafts";
+export const BLOG_TEXT_PROMPT = <p>Be sure to follow me on <a href={DEV_LINDEKIN} target="_blank" rel="noreferrer">LinkedIn <FaExternalLinkAlt /></a> to get notified on new content.</p>
 export const BLOG_TEXT_INTRO = (
     <>
         <p>My latest articles about programming, technologies, life as a developer... and a lot of other things.</p>
-        <p>Be sure to follow me on <a href={DEV_LINDEKIN} target="_blank" rel="noreferrer">LinkedIn <FaExternalLinkAlt /></a> to receive notifications on new content.</p>
+        {BLOG_TEXT_PROMPT}
     </>
 );
+export const BLOG_TEXT_AUTHOR_DESC = (
+    <>
+        <p>I'm a developer and teacher, and there's a lot of things in my line of work I like to write about.</p>
+        {BLOG_TEXT_PROMPT}
+    </>
+)
 export const BLOG_TEXT_CATEGORIES = {
+    draft: "Brouillons",
     javascript: "JavaScript",
     jobs: "Jobs",
 }

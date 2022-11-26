@@ -17,7 +17,23 @@ function getPosts(locale) {
                 markdown.data.slug = path.basename(filename, ".md");
                 return markdown;
             })
-            .filter(post => post.data.published === true || process.env.NODE_ENV === "development")
+            .filter(post => post.data.published === true)
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+    } catch (err) {
+        throw err;
+    }
+}
+
+export function getDrafts(locale) {
+    try {
+        const localePath = path.join(process.cwd(), BLOG_PATH, locale);
+        return fs.readdirSync(localePath)
+            .map((filename) => {
+                const markdown = loadMarkdown(path.join(BLOG_PATH, locale, filename));
+                markdown.data.slug = path.basename(filename, ".md");
+                return markdown;
+            })
+            .filter(post => post.data.published !== true)
             .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
     } catch (err) {
         throw err;
@@ -40,6 +56,9 @@ export function getCategories() {
 export function getCategoryPaths(locales) {
     const paths = [];
     for (const locale of locales) {
+        if (process.env.NODE_ENV === "development") {
+            paths.push(`/${locale}/blog/category/draft`);
+        }
         paths.push(...BLOG_CATEGORIES.map(category => `/${locale}/blog/category/${category}`));
     }
     return paths;
@@ -47,6 +66,9 @@ export function getCategoryPaths(locales) {
 
 export function getCategoryPosts(locale, categoryId) {
     try {
+        if (process.env.NODE_ENV === "development" && categoryId === "draft") {
+            return getDrafts(locale);
+        }
         return getPosts(locale).filter(post => post.data.category === categoryId);
     } catch (err) {
         console.error(err.message);
@@ -91,12 +113,6 @@ export function getSimilarPosts(locale, categoryId, currentPostSlug, limit = 10)
 
 /*
 
-export async function getSinglePost({ pathname, locale, slug }) {
-    const markdown = await loadMarkdown(path.join(pathname, `${slug}.md`), true);
-    markdown.data.readingTime = getReadingTime(locale, markdown.content);
-    markdown.data.tags = convertTags(markdown.data.tags);
-    return addDefaultAuthor(markdown);
-}
 
 export async function getPosts({
     pathname,
@@ -160,31 +176,10 @@ export async function getPosts({
     }
 }
 
-function getReadingTime(locale, text) {
-    if (!locale) {
-        console.error("getReadingTime: locale wasn't provided");
-        return undefined;
-    }
-
-    const averageWordsPerMinute = {
-        en: 228,
-        fr: 195,
-    }[locale ?? "en"];
-    const wordCount = text.replace(/[^\w ]/g, "").split(/\s+/).length;
-    return Math.ceil(wordCount / averageWordsPerMinute);
-}
-
 function convertTags(tags) {
     if (!tags) return [];
     if (Array.isArray(tags)) return tags;
     return tags.split(",").map(tag => tag.trim());
-}
-
-function addDefaultAuthor(post) {
-    if (post.data && !post.data.author) {
-        post.data.author = blogConfig.defaultAuthor ?? { id: "", name: "", picture: "" };
-    }
-    return post;
 }
 
 */

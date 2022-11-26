@@ -5,6 +5,7 @@
 
 .postDescription {
     margin: 2rem 0;
+    font-style: italic;
 }
 
 .infoContainer {
@@ -17,13 +18,17 @@
 }
 
 .postFooter {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     padding-top: 2rem;
     border-top: 2px solid var(--neutral-200);
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+.postCardCoverContainer {
+    min-height: 12rem;
 }
 
 @media (max-width: 1024px) {
@@ -33,6 +38,10 @@
 
     .postFooter> :nth-child(n+3) {
         display: none;
+    }
+
+    .postCardCoverContainer {
+        min-height: 14rem;
     }
 }
 
