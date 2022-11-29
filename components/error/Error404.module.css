@@ -1,0 +1,29 @@
+.container {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container h1 {
+    font-size: 6rem;
+    font-weight: var(--font-bold);
+    color: var(--c-secondary);
+}
+
+.message {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: xx-large;
+}
+
+@media (max-width: 640px) {
+    .container h1 {
+        font-size: 4rem;
+    }
+    .message {
+        font-size: x-large;
+    }
+}

@@ -20,6 +20,10 @@ export const NAV_ACTION_COURSES = "Courses";
 export const NAV_ACTION_PROJECTS = "Projects";
 export const NAV_ACTION_BLOG = "Blog";
 
+export const ERR_404_TITLE = "404";
+export const ERR_404_ACTION_HOME = "Home Page";
+export const ERR_404_TEXT_MESSAGE = "Page not found";
+
 export const HOME_TITLE = "Hi, I'm Daniel.";
 export const HOME_TITLE_MAIN_SKILLS = "Main Stack";
 export const HOME_TITLE_OTHER_SKILLS = "Other Skills";
