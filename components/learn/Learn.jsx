@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
-import { DEV_FULLNAME, DEV_TEACH_LINKS } from "../../data/dev";
+import { DEV_TEACH_LINKS } from "../../data/dev";
 import { reviews } from "../../data/student_reviews";
 import { useLang } from "../../hooks/lang";
+import HeadMeta from "../meta/HeadMeta";
 import Prompt, { PromptCourses } from "../ui/Prompts";
 import Carousel from "../ui/Carousel";
 import Credits from "../ui/Credits";
@@ -23,9 +23,7 @@ export default function Learn() {
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${LEARN_TITLE}`}</title>
-            </Head>
+            <HeadMeta name="title" content={LEARN_TITLE} />
 
             <Image className={styles.coverImage} src={learnCover} alt={LEARN_TITLE} placeholder="blur" />
 

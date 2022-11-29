@@ -1,9 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { DEV_FULLNAME } from "../../../data/dev";
 import { useLang } from "../../../hooks/lang";
 import { getReadingTime } from "../../../utils/text";
+import HeadMeta from "../../meta/HeadMeta";
 import BackLink from "../../ui/BackLink";
 import LessonInfo from "./LessonInfo";
 import globals from "../../../styles/globals.module.css";
@@ -16,9 +15,11 @@ export default function Lesson({ lesson }) {
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${lesson.data.title}`}</title>
-            </Head>
+            <HeadMeta name="type" content="article" />
+            <HeadMeta name="title" content={lesson.data.title} />
+            {lesson.data.coverImage &&
+                <HeadMeta name="image" content={process.env.NEXT_PUBLIC_HOST + lesson.data.coverImage} />
+            }
 
             <BackLink href={`/courses/${lesson.data.subjectId}`}>{COURSES_DATA_SUBJECTS[lesson.data.subjectId].name}</BackLink>
 

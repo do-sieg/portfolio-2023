@@ -1,5 +1,13 @@
 export const reviews = [
     {
+        name: "Florian R.",
+        text: {
+            fr: "Daniel est un professeur agréable et accessible. Il prend bien le temps d'expliquer les choses et permet d'avancer sur des projets.",
+            en: "Daniel is a pleasant and accessible teacher. He takes the time to explain things and allows us to move forward on projects.",
+        },
+        score: 5,
+    },
+    {
         name: "Assel D.",
         text: {
             fr: "Daniel m'a beaucoup aidé avec les cours Java et JavaScript. Ses explications sont claires et j'en suis satisfaite. Je recommande vivement ! Merci beaucoup, Daniel, pour ton aide !",
@@ -23,6 +31,14 @@ export const reviews = [
         },
         score: 5,
     },
+    {
+        name: "Nicolas",
+        text: {
+            fr: "Bonne méthode. Symphatique en plus. Parfait.",
+            en: "Nice method. And friendly too. Perfect.",
+        },
+        score: 5,
+    },
     // {
     //     name: "Diane",
     //     text: {
@@ -36,14 +52,6 @@ export const reviews = [
         text: {
             fr: "J'ai pris deux leçons avec Daniel l'été dernier, j'étais débutant en JavaScript et je bloquais sur un projet avec de multiples filtres de recherche. Il m'a aidé à mettre cela en place tout en prenant le temps de bien détailler et m'expliquer ce qui était fait. Aucun doute sur ses compétences donc, allez-y les yeux fermés !",
             en: "I took two lessons with Daniel last summer, I was a beginner in JavaScript and I was stuck on a project with multiple search filters. He helped me set it up while taking the time to explain what was being done. No doubt about his skills, so go with your eyes closed!",
-        },
-        score: 5,
-    },
-    {
-        name: "Florian R.",
-        text: {
-            fr: "Daniel est un professeur agréable et accessible. Il prend bien le temps d'expliquer les choses et permet d'avancer sur des projets.",
-            en: "Daniel is a pleasant and accessible teacher. He takes the time to explain things and allows us to move forward on projects.",
         },
         score: 5,
     },

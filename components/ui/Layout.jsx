@@ -1,16 +1,21 @@
 
 import Head from "next/head";
-import Footer from "./Footer.jsx";
-import Header from "./Header.jsx";
+import { DEV_FULLNAME } from "../../data/dev";
+import HeadMeta from "../meta/HeadMeta";
+import Footer from "./Footer";
+import Header from "./Header";
 import styles from "./Layout.module.css";
 
 export default function Layout({ children }) {
     return (
         <>
             <Head>
-                <meta content="width=device-width, initial-scale=1" name="viewport" />
-                <link rel="icon" href="/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
+            <HeadMeta name="title" content={DEV_FULLNAME} />
+            <HeadMeta name="type" content="website" />
+
             <div className={styles.container}>
                 <Header />
                 <div style={{ flex: 1 }}>{children}</div>

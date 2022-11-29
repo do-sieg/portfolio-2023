@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Link from "next/link";
 import { DEV_FULLNAME, DEV_TECHS } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
+import HeadMeta from "../meta/HeadMeta";
 import Hero from "./Hero";
 import Prompt, { PromptResume } from "../ui/Prompts";
 import { FaCogs, FaGraduationCap, FaRocket } from "react-icons/fa";
@@ -40,9 +40,7 @@ export default function Home() {
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${DEV_JOBS}`}</title>
-            </Head>
+            <HeadMeta name="title" content={`${DEV_FULLNAME} - ${DEV_JOBS}`} />
 
             <Hero style={{ marginBottom: "5rem" }} />
 

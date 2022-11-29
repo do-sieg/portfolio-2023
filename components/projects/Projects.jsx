@@ -1,8 +1,7 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { DEV_FULLNAME } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
+import HeadMeta from "../meta/HeadMeta";
 import ProjectCard from "./ProjectCard";
 import { PromptGitHub, PromptResume } from "../ui/Prompts";
 import globals from "../../styles/globals.module.css";
@@ -27,9 +26,7 @@ export default function Projects() {
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${PROJECTS_TITLE}`}</title>
-            </Head>
+            <HeadMeta name="title" content={PROJECTS_TITLE} />
 
             <h1 className={globals.heading}>{PROJECTS_TITLE}</h1>
 

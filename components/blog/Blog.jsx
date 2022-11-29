@@ -1,6 +1,5 @@
-import Head from "next/head";
-import { DEV_FULLNAME } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
+import HeadMeta from "../meta/HeadMeta";
 import CategorySelector from "./CategorySelector";
 import PostCard from "./PostCard";
 import globals from "../../styles/globals.module.css";
@@ -16,9 +15,7 @@ export default function Blog({ categories = [], posts = [], currentCategory = nu
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${currentCategory ? BLOG_TEXT_CATEGORIES[currentCategory] : BLOG_TITLE}`}</title>
-            </Head>
+            <HeadMeta name="title" content={currentCategory ? BLOG_TEXT_CATEGORIES[currentCategory] : BLOG_TITLE} />
 
             <h1 className={globals.heading}>{currentCategory ? BLOG_TEXT_CATEGORIES[currentCategory] : BLOG_TITLE}</h1>
 

@@ -1,6 +1,5 @@
-import Head from "next/head";
-import { DEV_FULLNAME } from "../../../data/dev";
 import { useLang } from "../../../hooks/lang";
+import HeadMeta from "../../meta/HeadMeta";
 import BackLink from "../../ui/BackLink";
 import LessonCard from "./LessonCard";
 import globals from "../../../styles/globals.module.css";
@@ -11,9 +10,7 @@ export default function Subject({ subject, lessonTree }) {
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${COURSES_DATA_SUBJECTS[subject].name}`}</title>
-            </Head>
+            <HeadMeta name="title" content={COURSES_DATA_SUBJECTS[subject].name} />
 
             <BackLink href="/courses">{COURSES_ACTION_ALL_COURSES}</BackLink>
 

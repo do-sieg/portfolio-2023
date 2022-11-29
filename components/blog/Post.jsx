@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
 import { useRouter } from "next/router";
-import { DEV_FULLNAME } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
 import { getReadingTime } from "../../utils/text";
+import HeadMeta from "../meta/HeadMeta";
+import HeadLocaleAlt from "../meta/HeadLocaleAlt";
 import Author from "./Author";
 import BackLink from "../ui/BackLink";
 import PostCard from "./PostCard";
@@ -14,18 +14,21 @@ import markdown from "../../styles/markdown.module.css";
 import styles from "./Post.module.css";
 
 export default function Post({ post, similarPostsData }) {
-    const { locale, asPath } = useRouter();
+    const { locale } = useRouter();
     const { BLOG_TEXT_CATEGORIES } = useLang();
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${post.data.title}`}</title>
-                <link key={locale} rel="alternate" hreflang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.slug}`} />
-                {post.data.translations && Object.keys(post.data.translations).map((locale) => {
-                    return <link key={locale} rel="alternate" hreflang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.translations[locale]}`} />
-                })}
-            </Head>
+            <HeadMeta name="type" content="article" />
+            <HeadMeta name="title" content={post.data.title} />
+            <HeadMeta name="description" content={post.data.description} />
+            {post.data.coverImage?.path &&
+                <HeadMeta name="image" content={process.env.NEXT_PUBLIC_HOST + post.data.coverImage?.path} />
+            }
+            <HeadLocaleAlt lang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.slug}`} />
+            {post.data.translations && Object.keys(post.data.translations).map((locale) => {
+                return <HeadLocaleAlt key={locale} lang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.translations[locale]}`} />
+            })}
 
             <BackLink href={`/blog/category/${post.data.category}`}>{BLOG_TEXT_CATEGORIES[post.data.category]}</BackLink>
 

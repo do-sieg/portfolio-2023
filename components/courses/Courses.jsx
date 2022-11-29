@@ -1,6 +1,5 @@
-import Head from "next/head";
-import { DEV_FULLNAME } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
+import HeadMeta from "../meta/HeadMeta";
 import SubjectCard from "./SubjectCard";
 import globals from "../../styles/globals.module.css";
 import styles from "./Courses.module.css";
@@ -34,9 +33,7 @@ export default function Courses({ langCourses }) {
 
     return (
         <main className={globals.pageContainer}>
-            <Head>
-                <title>{`${DEV_FULLNAME} - ${COURSES_TITLE}`}</title>
-            </Head>
+            <HeadMeta name="title" content={COURSES_TITLE} />
 
             <h1 className={globals.heading}>{COURSES_TITLE}</h1>
 
