@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 import { useLang } from "../../hooks/lang";
+import { useScrollRead } from "../../hooks/scroll";
 import { getReadingTime } from "../../utils/text";
 import HeadMeta from "../meta/HeadMeta";
 import HeadLocaleAlt from "../meta/HeadLocaleAlt";
+import ReadingProgress from "../ui/ReadingProgress";
 import Author from "./Author";
 import BackLink from "../ui/BackLink";
 import PostCard from "./PostCard";
@@ -15,49 +17,54 @@ import styles from "./Post.module.css";
 
 export default function Post({ post, similarPostsData }) {
     const { locale } = useRouter();
+    const scrolled = useScrollRead();
     const { BLOG_TEXT_CATEGORIES } = useLang();
 
     return (
-        <main className={globals.pageContainer}>
-            <HeadMeta name="type" content="article" />
-            <HeadMeta name="title" content={post.data.title} />
-            <HeadMeta name="description" content={post.data.description} />
-            {post.data.coverImage?.path &&
-                <HeadMeta name="image" content={process.env.NEXT_PUBLIC_HOST + post.data.coverImage?.path} />
-            }
-            <HeadLocaleAlt lang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.slug}`} />
-            {post.data.translations && Object.keys(post.data.translations).map((locale) => {
-                return <HeadLocaleAlt key={locale} lang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.translations[locale]}`} />
-            })}
+        <>
+            <ReadingProgress progress={scrolled} />
 
-            <BackLink href={`/blog/category/${post.data.category}`}>{BLOG_TEXT_CATEGORIES[post.data.category]}</BackLink>
+            <main className={globals.pageContainer}>
+                <HeadMeta name="type" content="article" />
+                <HeadMeta name="title" content={post.data.title} />
+                <HeadMeta name="description" content={post.data.description} />
+                {post.data.coverImage?.path &&
+                    <HeadMeta name="image" content={process.env.NEXT_PUBLIC_HOST + post.data.coverImage?.path} />
+                }
+                <HeadLocaleAlt lang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.slug}`} />
+                {post.data.translations && Object.keys(post.data.translations).map((locale) => {
+                    return <HeadLocaleAlt key={locale} lang={locale} href={`${process.env.NEXT_PUBLIC_HOST}/${locale}/blog/${post.data.translations[locale]}`} />
+                })}
 
-            <h1 className={[globals.heading, styles.heading].join(" ")}>{post.data.title}</h1>
+                <BackLink href={`/blog/category/${post.data.category}`}>{BLOG_TEXT_CATEGORIES[post.data.category]}</BackLink>
 
-            <div className={styles.postDescription}>{post.data.description}</div>
+                <h1 className={[globals.heading, styles.heading].join(" ")}>{post.data.title}</h1>
 
-            <div className={styles.infoContainer}>
-                <PostInfo date={post.data.date} readingTime={getReadingTime(locale, post.content)} />
-            </div>
+                <div className={styles.postDescription}>{post.data.description}</div>
 
-            <div className={styles.coverImageContainer}>
-                <img src={post.data.coverImage?.path} alt={post.data.title} />
-            </div>
-
-            <div className={markdown.container} dangerouslySetInnerHTML={{ __html: post.html }} />
-
-            <hr />
-
-            <Author />
-
-            {similarPostsData.posts.length > 0 && (
-                <div className={styles.postFooter}>
-                    <SimilarPostsCard data={similarPostsData} />
-                    {similarPostsData.posts.slice(0, 3).map((post, index) => {
-                        return <PostCard key={index} post={post} customClasses={{ coverContainer: styles.postCardCoverContainer }} />
-                    })}
+                <div className={styles.infoContainer}>
+                    <PostInfo date={post.data.date} readingTime={getReadingTime(locale, post.content)} />
                 </div>
-            )}
-        </main>
+
+                <div className={styles.coverImageContainer}>
+                    <img src={post.data.coverImage?.path} alt={post.data.title} />
+                </div>
+
+                <div className={markdown.container} dangerouslySetInnerHTML={{ __html: post.html }} />
+
+                <hr />
+
+                <Author />
+
+                {similarPostsData.posts.length > 0 && (
+                    <div className={styles.postFooter}>
+                        <SimilarPostsCard data={similarPostsData} />
+                        {similarPostsData.posts.slice(0, 3).map((post, index) => {
+                            return <PostCard key={index} post={post} customClasses={{ coverContainer: styles.postCardCoverContainer }} />
+                        })}
+                    </div>
+                )}
+            </main>
+        </>
     );
 }
