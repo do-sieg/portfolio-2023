@@ -4,9 +4,9 @@ import NameLogo from "../ui/NameLogo";
 import profilePic from "../../public/images/dev-profile.jpg";
 import styles from "./Hero.module.css";
 
-export default function Hero({ style }) {
+export default function Hero() {
     return (
-        <div className={styles.container} style={style}>
+        <div className={styles.container}>
             <Image src={profilePic} alt={DEV_FULLNAME} placeholder="blur" />
             
             <NameLogo firstName={DEV_FIRSTNAME} lastName={DEV_LASTNAME} />

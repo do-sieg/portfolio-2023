@@ -1,11 +1,14 @@
 .heading {
     margin: 1rem 0;
     text-align: left;
+    transform-origin: left;
 }
 
 .postDescription {
     margin: 2rem 0;
     font-style: italic;
+    opacity: 0;
+    animation: fade 1s 0.1s forwards;
 }
 
 .infoContainer {
@@ -15,6 +18,8 @@
 
 .coverImageContainer {
     margin-top: 1rem;
+    opacity: 0;
+    animation: fade 0.5s 0.1s forwards, scaleIn 1s;
 }
 
 .postFooter {
@@ -58,5 +63,25 @@
         width: 100%;
         max-width: 25rem;
         margin: 0 auto;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
     }
 }

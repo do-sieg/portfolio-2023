@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useLang } from "../../hooks/lang";
+import { useResetAnimations } from "../../hooks/transition";
 import HeadMeta from "../meta/HeadMeta";
 import ProjectCard from "./ProjectCard";
 import { PromptGitHub, PromptResume } from "../ui/Prompts";
@@ -9,6 +10,7 @@ import styles from "./Projects.module.css";
 
 export default function Projects() {
     const { locale } = useRouter();
+    const { resetRef } = useResetAnimations([locale]);
     const {
         PROJECTS_TITLE,
         PROJECTS_TITLE_CLIENTS,
@@ -28,9 +30,9 @@ export default function Projects() {
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={PROJECTS_TITLE} />
 
-            <h1 className={globals.heading}>{PROJECTS_TITLE}</h1>
+            <h1 ref={resetRef} className={globals.heading}>{PROJECTS_TITLE}</h1>
 
-            <section>
+            <section ref={resetRef}>
                 {PROJECTS_TEXT_INTRO}
 
                 <div className={globals.promptBox}>
@@ -39,7 +41,7 @@ export default function Projects() {
                 </div>
             </section>
 
-            <section>
+            <section ref={resetRef}>
                 <h2 className={globals.subheading}>{PROJECTS_TITLE_CLIENTS}</h2>
                 <div className={styles.cardsContainer}>
                     <ProjectCard data={projects.armenianz} />
@@ -49,7 +51,7 @@ export default function Projects() {
                 </div>
             </section>
 
-            <section>
+            <section ref={resetRef}>
                 <h2 className={globals.subheading}>{PROJECTS_TITLE_OWN}</h2>
                 <div className={styles.cardsContainer}>
                     <ProjectCard data={projects["do-blog"]} />
@@ -59,7 +61,7 @@ export default function Projects() {
                 </div>
             </section>
 
-            <section>
+            <section ref={resetRef}>
                 <h2 className={globals.subheading}>{PROJECTS_TITLE_DEMO}</h2>
                 <div className={styles.cardsContainer}>
                     <ProjectCard data={projects.oc7} />
@@ -70,7 +72,7 @@ export default function Projects() {
                 </div>
             </section>
 
-            <section>
+            <section ref={resetRef}>
                 <h2 className={globals.subheading}>{PROJECTS_TITLE_OLD}</h2>
                 <div className={styles.cardsContainer}>
                     <ProjectCard data={projects.coursjs} />

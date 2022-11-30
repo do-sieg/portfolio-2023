@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 import { useLang } from "../../hooks/lang";
+import { useResetAnimations } from "../../hooks/transition";
 import { useScrollRead } from "../../hooks/scroll";
 import { getReadingTime } from "../../utils/text";
 import HeadMeta from "../meta/HeadMeta";
@@ -17,6 +18,7 @@ import styles from "./Post.module.css";
 
 export default function Post({ post, similarPostsData }) {
     const { locale } = useRouter();
+    const { resetRef } = useResetAnimations([locale]);
     const scrolled = useScrollRead();
     const { BLOG_TEXT_CATEGORIES } = useLang();
 
@@ -24,7 +26,7 @@ export default function Post({ post, similarPostsData }) {
         <>
             <ReadingProgress progress={scrolled} />
 
-            <main className={globals.pageContainer}>
+            <main ref={resetRef} className={globals.pageContainer}>
                 <HeadMeta name="type" content="article" />
                 <HeadMeta name="title" content={post.data.title} />
                 <HeadMeta name="description" content={post.data.description} />

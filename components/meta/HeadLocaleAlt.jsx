@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 export default function HeadLocaleAlt({ lang, href }) {
     const { locale } = useRouter();
-    console.log({ locale });
 
     return (
         <Head>

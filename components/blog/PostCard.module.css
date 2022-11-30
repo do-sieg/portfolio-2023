@@ -8,9 +8,12 @@
     background-color: var(--neutral-100);
     box-shadow: var(--shadow-md);
     transition: all 0.3s 0.1s;
+    opacity: 0;
+    animation: fade 0.5s 0.1s forwards, scaleIn 1s;
 }
 
-.container:active, .container:hover {
+.container:active,
+.container:hover {
     box-shadow: var(--shadow-lg);
 }
 
@@ -39,6 +42,7 @@
     .container:first-child {
         flex-direction: column;
     }
+
     .coverContainer {
         min-height: 22rem;
     }
@@ -105,4 +109,24 @@
     font-weight: var(--font-semibold);
     background-color: var(--red-600);
     color: white;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }

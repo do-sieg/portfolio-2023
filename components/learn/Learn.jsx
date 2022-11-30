@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { DEV_TEACH_LINKS } from "../../data/dev";
 import { reviews } from "../../data/student_reviews";
 import { useLang } from "../../hooks/lang";
+import { useResetAnimations } from "../../hooks/transition";
 import HeadMeta from "../meta/HeadMeta";
 import Prompt, { PromptCourses } from "../ui/Prompts";
 import Carousel from "../ui/Carousel";
@@ -13,6 +15,8 @@ import globals from "../../styles/globals.module.css";
 import styles from "./Learn.module.css";
 
 export default function Learn() {
+    const { locale } = useRouter();
+    const { resetRef } = useResetAnimations([locale]);
     const {
         TEXT_PHOTO_CREDITS,
         LEARN_TITLE,
@@ -27,9 +31,9 @@ export default function Learn() {
 
             <Image className={styles.coverImage} src={learnCover} alt={LEARN_TITLE} placeholder="blur" />
 
-            <h1 className={globals.heading}>{LEARN_TITLE}</h1>
+            <h1 ref={resetRef} className={globals.heading}>{LEARN_TITLE}</h1>
 
-            <section>
+            <section ref={resetRef}>
                 {LEARN_TEXT_INTRO}
 
                 <div className={styles.promptBoxBig}>
@@ -37,7 +41,7 @@ export default function Learn() {
                 </div>
             </section>
 
-            <section id="teaching">
+            <section id="teaching" ref={resetRef}>
                 <h2 className={globals.subheading}>{LEARN_TITLE_TEACHING}</h2>
 
                 {LEARN_TEXT_TEACHING}

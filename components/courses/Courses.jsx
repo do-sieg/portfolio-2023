@@ -1,10 +1,14 @@
+import { useRouter } from "next/router";
 import { useLang } from "../../hooks/lang";
+import { useResetAnimations } from "../../hooks/transition";
 import HeadMeta from "../meta/HeadMeta";
 import SubjectCard from "./SubjectCard";
 import globals from "../../styles/globals.module.css";
 import styles from "./Courses.module.css";
 
 export default function Courses({ langCourses }) {
+    const { locale } = useRouter();
+    const { resetRef } = useResetAnimations([locale]);
     const {
         COURSES_TITLE,
         COURSES_TEXT_INTRO,
@@ -19,7 +23,7 @@ export default function Courses({ langCourses }) {
 
         return Object.entries(langCourses).map(([categoryId, subjects]) => {
             return (
-                <section key={categoryId}>
+                <section key={categoryId} ref={resetRef}>
                     <h2 className={globals.subheading}>{COURSES_TEXT_CATEGORIES[categoryId]}</h2>
                     <div className={styles.cardsContainer}>
                         {Object.entries(subjects).map(([subjectId, amount]) => {
@@ -35,9 +39,9 @@ export default function Courses({ langCourses }) {
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={COURSES_TITLE} />
 
-            <h1 className={globals.heading}>{COURSES_TITLE}</h1>
+            <h1 ref={resetRef} className={globals.heading}>{COURSES_TITLE}</h1>
 
-            <section>
+            <section ref={resetRef}>
                 {COURSES_TEXT_INTRO}
             </section>
 

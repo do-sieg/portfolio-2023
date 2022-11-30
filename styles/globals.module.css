@@ -51,6 +51,7 @@
     font-weight: var(--font-semibold);
     color: var(--c-secondary);
     filter: var(--drop-shadow-md);
+    animation: fade 0.5s, scaleIn 0.5s;
 }
 
 .subheading {
@@ -61,12 +62,14 @@
     font-weight: var(--font-semibold);
     color: var(--c-secondary);
     filter: var(--drop-shadow-md);
+    animation: fade 0.5s, scaleIn 0.5s;
 }
 
 .pageContainer p {
     margin: 1rem 0;
     line-height: 1.5;
     text-align: justify;
+    animation: fade 0.5s, moveUp 1s;
 }
 
 .pageContainer p:first-of-type {
@@ -111,12 +114,16 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    opacity: 0;
+    animation: fade 0.5s 0.1s forwards, scaleIn 1s;
 }
 
 .promptGrid {
     composes: promptBox;
     display: grid;
     grid-template-columns: repeat(2, minmax(10rem, 20rem));
+    opacity: 0;
+    animation: fade 0.5s 0.1s forwards, scaleIn 1s;
 }
 
 @media (max-width: 640px) {
@@ -124,6 +131,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     .promptGrid {
         grid-template-columns: minmax(10rem, 20rem);
     }
@@ -134,4 +142,44 @@
     display: flex;
     width: 100%;
     height: 100%;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(2rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleOut {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
