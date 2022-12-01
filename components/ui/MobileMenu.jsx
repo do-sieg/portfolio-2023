@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./MobileMenu.module.css";
 
 export default function MobileMenu({ children }) {
-    const { asPath } = useRouter();
+    const { locale, asPath } = useRouter();
     const [isMenuOpen, setIsMenuOpen] = useState();
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function MobileMenu({ children }) {
 
     useEffect(() => {
         setIsMenuOpen(false);
-    }, [asPath])
+    }, [locale, asPath])
 
     const handleToggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
