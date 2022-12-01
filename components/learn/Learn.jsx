@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import cn from "classnames";
 import { DEV_TEACH_LINKS } from "../../data/dev";
 import { reviews } from "../../data/student_reviews";
 import { useLang } from "../../hooks/lang";
@@ -36,7 +37,7 @@ export default function Learn() {
             <section ref={resetRef}>
                 {LEARN_TEXT_INTRO}
 
-                <div className={styles.promptBoxBig}>
+                <div className={cn(globals.promptBox, styles.promptBoxBig)}>
                     <PromptCourses />
                 </div>
             </section>
