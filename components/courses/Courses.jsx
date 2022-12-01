@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
+import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
-import { useResetAnimations } from "../../hooks/transition";
 import HeadMeta from "../meta/HeadMeta";
 import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";

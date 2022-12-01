@@ -1,7 +1,7 @@
 import { DiRuby } from "react-icons/di";
 import { FaCss3, FaGitAlt, FaHtml5, FaJsSquare, FaLess, FaNodeJs, FaPaperPlane, FaPhp, FaReact, FaSass, FaSearchengin, FaWordpress } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
-import { SiGodotengine, SiMongodb, SiNextdotjs } from "react-icons/si";
+import { SiGodotengine, SiMariadbfoundation, SiMongodb, SiNextdotjs, SiSvelte } from "react-icons/si";
 
 export const DEV_FIRSTNAME = "Daniel";
 export const DEV_LASTNAME = "Orchanian";
@@ -25,8 +25,10 @@ export const DEV_TECHS = {
     node: { name: "NodeJS", icon: <FaNodeJs /> },
     next: { name: "NextJS", icon: <SiNextdotjs /> },
     mysql: { name: "MySQL", icon: <GrMysql /> },
-    php: { name: "MySQL", icon: <FaPhp /> },
+    maria: { name: "MariaDB", icon: <SiMariadbfoundation /> },
+    php: { name: "PHP", icon: <FaPhp /> },
     ruby: { name: "Ruby", icon: <DiRuby /> },
+    svelte: { name: "Svelte", icon: <SiSvelte /> },
     gdscript: { name: "GDScript", icon: <SiGodotengine /> },
     mongo: { name: "MongoDB", icon: <SiMongodb /> },
     wordpress: { name: "Wordpress", icon: <FaWordpress /> },
@@ -35,4 +37,4 @@ export const DEV_TECHS = {
     git: { name: "Git", icon: <FaGitAlt /> },
     seo: { name: "SEO", icon: <FaSearchengin /> },
     nocode: { name: "No Code", icon: <FaPaperPlane /> },
-}
+};

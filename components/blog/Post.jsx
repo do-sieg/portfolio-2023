@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
+import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
-import { useResetAnimations } from "../../hooks/transition";
 import { useScrollRead } from "../../hooks/scroll";
 import { getReadingTime } from "../../utils/text";
 import HeadMeta from "../meta/HeadMeta";

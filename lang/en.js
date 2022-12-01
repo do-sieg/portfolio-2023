@@ -25,21 +25,29 @@ export const ERR_404_ACTION_HOME = "Home Page";
 export const ERR_404_TEXT_MESSAGE = "Page not found";
 
 export const HOME_TITLE = "Hi, I'm Daniel.";
-export const HOME_TITLE_MAIN_SKILLS = "Main Stack";
-export const HOME_TITLE_OTHER_SKILLS = "Other Skills";
+export const HOME_TITLE_DEV = "I'm a web developer...";
+export const HOME_TITLE_TEACH = "I also teach...";
+export const HOME_TITLE_SKILLS_MAIN = "Main Skills";
+export const HOME_TITLE_SKILLS_OTHER = "Other Skills";
 export const HOME_ACTION_PROJECTS = "My Projects";
 export const HOME_ACTION_SKILLS = "My Skills";
 export const HOME_ACTION_LEARN = "Learn Coding";
 export const HOME_TEXT_INTRO_DEV = (
     <>
-        <p>I'm a <strong>web developer</strong>, I work in <b>companies</b> and as a <strong>freelancer</strong>.
-            My experience on both fronts has taught me to meet all kinds of needs, for all types of projects.</p>
+        <p>... working in <b>companies</b> and as a <strong>freelancer</strong>.
+            My experience on both fronts has taught me to meet all kinds of needs, for various projects.</p>
         <p><b>Hiring</b>? Looking for a professional to <strong>build a website</strong>?
-            I bring you the <strong>expertise</strong> you need to achieve <strong>the best results</strong>.</p>
+            I bring you the <strong>expertise</strong> you need to achieve <b>the best results</b>.</p>
     </>
 );
 export const HOME_TEXT_INTRO_TEACH = (
-    <p>I also <strong>teach</strong>. Whether in a group or individually, I help my students achieve their potential on their way to success.</p>
+    <p>... in a <b>classroom</b> or <strong>private sessions</strong>, face-to-face or <strong>online</strong>. I help my students achieve their potential on their way to success. Check the link below to learn more.</p>
+);
+export const HOME_TEXT_INTRO_SKILLS_MAIN = (
+    <p>I'm a <strong>fullstack web developer</strong>. I work in both <strong>frontend</strong> (HTML, CSS, JavaScript & frameworks) and <strong>backend</strong> (NodeJS, NextJS), including <strong>databases</strong> (MySQL/MariaDB & MongoDB).</p>
+);
+export const HOME_TEXT_INTRO_SKILLS_OTHER = (
+    <p>Here are other languages, frameworks and tools I have learned over the years, or discovered recently.</p>
 );
 
 export const PROJECTS_TITLE = "My Projects";

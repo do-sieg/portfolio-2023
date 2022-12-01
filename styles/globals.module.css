@@ -39,37 +39,57 @@
     }
 }
 
+.pageContainer section {
+    animation: fade 0.5s, moveUp 1s;
+}
+
 .pageContainer section+section {
     margin-top: 5rem;
 }
 
-.heading {
+.heading, .pageContainer h1 {
     /* DOUBLER AVEC H1 une fois le composes parti */
-    composes: text-5xl from "../styles/pseudo-tailwind.css";
     margin-bottom: 2rem;
     text-align: center;
+    font-size: var(--text-5xl);
     font-weight: var(--font-semibold);
     color: var(--c-secondary);
     filter: var(--drop-shadow-md);
     animation: fade 0.5s, scaleIn 0.5s;
 }
 
-.subheading {
+.subheading, .pageContainer h2 {
     /* DOUBLER AVEC H2 une fois le composes parti */
-    composes: text-4xl from "../styles/pseudo-tailwind.css";
     margin-bottom: 1.5rem;
     text-align: center;
+    font-size: var(--text-4xl);
     font-weight: var(--font-semibold);
     color: var(--c-secondary);
     filter: var(--drop-shadow-md);
     animation: fade 0.5s, scaleIn 0.5s;
 }
+
+.inlineSubheading {
+    display: inline;
+    font-size: var(--text-3xl) !important;
+    font-weight: var(--font-semibold);
+    color: var(--c-secondary);
+    filter: var(--drop-shadow-md);
+    animation: fade 0.5s, scaleIn 0.5s;
+}
+/* 
+.inlineSubheading+p {
+    display: inline;
+}
+
+.inlineSubheading+p::before {
+    content: " ";
+} */
 
 .pageContainer p {
     margin: 1rem 0;
     line-height: 1.5;
     text-align: justify;
-    animation: fade 0.5s, moveUp 1s;
 }
 
 .pageContainer p:first-of-type {
@@ -130,6 +150,11 @@
     .promptBox {
         flex-direction: column;
         align-items: center;
+    }
+
+    .promptBox a,
+    .promptBox button {
+        width: 100%;
     }
 
     .promptGrid {
