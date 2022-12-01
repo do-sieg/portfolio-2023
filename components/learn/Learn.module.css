@@ -1,17 +1,3 @@
-.coverImage {
-    object-fit: cover;
-    height: 18rem;
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fade 0.5s 0.1s forwards, scaleOut 1s;
-}
-
-@media (max-width: 640px) {
-    .coverImage {
-        height: 12rem;
-    }
-}
-
 .promptBox {
     display: flex;
     flex-direction: column;
@@ -49,16 +35,6 @@
 @keyframes scaleIn {
     from {
         transform: scale(0.8);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
-
-@keyframes scaleOut {
-    from {
-        transform: scale(1.2);
     }
 
     to {

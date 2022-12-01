@@ -3,8 +3,11 @@ import { useEffect, useState } from "react";
 import { useLang } from "../../hooks/lang";
 import { useResetAnimations } from "../../hooks/transition";
 import HeadMeta from "../meta/HeadMeta";
-import ProjectCard from "./ProjectCard";
+import Credits from "../ui/Credits";
+import PageCover from "../ui/PageCover";
 import { PromptGitHub, PromptResume } from "../ui/Prompts";
+import ProjectCard from "./ProjectCard";
+import coverImg from "../../public/images/page-covers/projects-cover.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Projects.module.css";
 
@@ -12,6 +15,7 @@ export default function Projects() {
     const { locale } = useRouter();
     const { resetRef } = useResetAnimations([locale]);
     const {
+        TEXT_PHOTO_CREDITS,
         PROJECTS_TITLE,
         PROJECTS_TITLE_CLIENTS,
         PROJECTS_TITLE_OWN,
@@ -29,6 +33,8 @@ export default function Projects() {
     return (
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={PROJECTS_TITLE} />
+
+            <PageCover src={coverImg} alt={PROJECTS_TITLE} />
 
             <h1 ref={resetRef} className={globals.heading}>{PROJECTS_TITLE}</h1>
 
@@ -79,6 +85,9 @@ export default function Projects() {
                 </div>
             </section>
 
+            <div style={{ marginTop: "2rem" }}>
+                <Credits text={TEXT_PHOTO_CREDITS} name="Tranmautritam" link="https://www.pexels.com@tranmautritam/" />
+            </div>
         </main>
     );
 }

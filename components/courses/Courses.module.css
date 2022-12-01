@@ -6,6 +6,7 @@
 }
 
 .cardsContainer {
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 48%));
     justify-content: center;

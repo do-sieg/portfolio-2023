@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 
-// Dependencies are optional, reset can be used manually
+// Use resetRef as a ref to any element you want to reset animations
+// Use reset to manually reset animations
+// Pass resetDependencies as parameters to reset animations when dependencies change
 export function useResetAnimations(resetDependencies = []) {
     const [registeredAnimations, setRegisteredAnimations] = useState([]);
     
     useEffect(() => {
-        // Don't reset on empty dependencies (mounting)
-        if (resetDependencies.length > 0) {
-            reset()
+        // Don't reset animations on first render
+        if (registeredAnimations.length > 0) {
+            reset();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, resetDependencies);

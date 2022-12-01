@@ -17,8 +17,8 @@ import markdown from "../../styles/markdown.module.css";
 import styles from "./Post.module.css";
 
 export default function Post({ post, similarPostsData }) {
-    const { locale } = useRouter();
-    const { resetRef } = useResetAnimations([locale]);
+    const { locale, asPath } = useRouter();
+    const { resetRef } = useResetAnimations([locale, asPath]);
     const scrolled = useScrollRead();
     const { BLOG_TEXT_CATEGORIES } = useLang();
 

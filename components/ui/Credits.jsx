@@ -1,5 +1,6 @@
 const styles = {
     container: {
+        fontSize: "large",
         fontStyle: "italic",
     },
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useLang } from "../../../hooks/lang";
 import { useScrollRead } from "../../../hooks/scroll";
+import { useResetAnimations } from "../../../hooks/transition";
 import { getReadingTime } from "../../../utils/text";
 import HeadMeta from "../../meta/HeadMeta";
 import BackLink from "../../ui/BackLink";
@@ -12,7 +13,8 @@ import markdown from "../../../styles/markdown.module.css";
 import styles from "./Lesson.module.css";
 
 export default function Lesson({ lesson }) {
-    const { locale } = useRouter();
+    const { locale, asPath } = useRouter();
+    const { resetRef } = useResetAnimations([locale, asPath]);
     const scrolled = useScrollRead();
     const { COURSES_DATA_SUBJECTS } = useLang();
 
@@ -20,7 +22,7 @@ export default function Lesson({ lesson }) {
         <>
             <ReadingProgress progress={scrolled} />
 
-            <main className={globals.pageContainer}>
+            <main ref={resetRef} className={globals.pageContainer}>
                 <HeadMeta name="type" content="article" />
                 <HeadMeta name="title" content={lesson.data.title} />
                 {lesson.data.coverImage &&

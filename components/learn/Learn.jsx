@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { DEV_TEACH_LINKS } from "../../data/dev";
 import { reviews } from "../../data/student_reviews";
@@ -8,9 +7,10 @@ import HeadMeta from "../meta/HeadMeta";
 import Prompt, { PromptCourses } from "../ui/Prompts";
 import Carousel from "../ui/Carousel";
 import Credits from "../ui/Credits";
+import PageCover from "../ui/PageCover";
 import ReviewSlide from "./ReviewSlide";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import learnCover from "../../public/images/learn/learn-cover.jpg";
+import coverImg from "../../public/images/page-covers/learn-cover.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Learn.module.css";
 
@@ -29,7 +29,7 @@ export default function Learn() {
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={LEARN_TITLE} />
 
-            <Image className={styles.coverImage} src={learnCover} alt={LEARN_TITLE} placeholder="blur" />
+            <PageCover src={coverImg} alt={LEARN_TITLE} />
 
             <h1 ref={resetRef} className={globals.heading}>{LEARN_TITLE}</h1>
 
@@ -57,10 +57,9 @@ export default function Learn() {
                         {reviews.map((review, index) => <ReviewSlide key={index} review={review} />)}
                     </Carousel>
                 </div>
-
             </section>
 
-            <Credits text={TEXT_PHOTO_CREDITS} name="Olia Danilevich" link="https://www.pexels.com/@olia-danilevich/" />
+            <Credits text={TEXT_PHOTO_CREDITS} name="Andrea Piacquadio" link="https://www.pexels.com/@olly/" />
         </main>
     );
 }
