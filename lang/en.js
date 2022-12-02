@@ -7,6 +7,8 @@ export const DEV_JOBS = "Web Developer & Teacher";
 
 // export const LOCALE_DATE_FORMAT = "YY-M-D";
 
+export const ACTION_BACK = "Back";
+export const ACTION_SEND = "Send";
 export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Contact me";
 export const ACTION_RESUME = "Download my resume";
@@ -23,6 +25,8 @@ export const NAV_ACTION_BLOG = "Blog";
 export const ERR_404_TITLE = "404";
 export const ERR_404_ACTION_HOME = "Home Page";
 export const ERR_404_TEXT_MESSAGE = "Page not found";
+export const ERR_FORM_REQUIRED = "This field is required";
+export const ERR_FORM_NOT_VALID_EMAIL = "Please input a valid e-mail adress";
 
 export const HOME_TITLE = "Hi, I'm Daniel.";
 export const HOME_TITLE_DEV = "I'm a web developer...";
@@ -132,3 +136,11 @@ export const BLOG_TEXT_CATEGORIES = {
 }
 export const BLOG_TEXT_READ_MORE_CATEGORY = (categoryId) => <>More in <Link href={`/blog/category/${categoryId}`}>{BLOG_TEXT_CATEGORIES[categoryId]}</Link></>;
 export const BLOG_TEXT_SEE_ALL_POSTS = (n) => `${n} post${n > 1 ? "s" : ""}`;
+
+export const CONTACT_TITLE = "Contact Me";
+export const CONTACT_LABEL_EMAIL = "E-mail";
+export const CONTACT_LABEL_SUBJECT = "Subject";
+export const CONTACT_LABEL_TEXT = "Message";
+export const CONTACT_TEXT_REMAINING_CHARACTERS = (text, max) => `${text.length}/${max}`;
+export const CONTACT_TEXT_LOADING = "Sending email...";
+export const CONTACT_TEXT_SUCCESS = "Thanks for your message. I'll contact you back as soon as possible.";

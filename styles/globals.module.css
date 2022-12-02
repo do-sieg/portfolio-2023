@@ -5,6 +5,7 @@
     gap: 0.5rem;
     padding: 1rem 1.75rem;
     font-family: inherit;
+    font-size: var(--text-lg);
     font-weight: var(--font-semibold);
     box-shadow: var(--shadow-md);
     border-radius: 1rem;
@@ -117,8 +118,30 @@
 }
 
 .pageContainer strong,
-.pageContainer b {
+.pageContainer b,
+.pageContainer label {
     font-weight: 400;
+}
+
+.pageContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pageContainer form button {
+    width: fit-content;
+    align-self: center;
+}
+
+.pageContainer input, .pageContainer textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--neutral-500);
+    border-radius: 0.25rem;
+    resize: none;
+    box-shadow: var(--shadow-inner);
+    font-family: unset;
+    font-size: inherit;
 }
 
 .pageContainer ul {
