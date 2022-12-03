@@ -37,12 +37,12 @@ export const HOME_ACTION_PROJECTS = "My Projects";
 export const HOME_ACTION_SKILLS = "My Skills";
 export const HOME_ACTION_LEARN = "Learn Coding";
 export const HOME_TEXT_INTRO_DEV = (
-    <>
-        <p>... working in <b>companies</b> and as a <strong>freelancer</strong>.
-            My experience on both fronts has taught me to meet all kinds of needs, for various projects.</p>
-        <p><b>Hiring</b>? Looking for a professional to <strong>build a website</strong>?
-            I bring you the <strong>expertise</strong> you need to achieve <b>the best results</b>.</p>
-    </>
+    <p>... working in <b>companies</b> and as a <strong>freelancer</strong>.
+        My experience on both fronts has taught me to meet all kinds of needs, for various projects.</p>
+);
+export const HOME_TEXT_INTRO_HIRE = (
+    <p><b>Hiring</b>? Looking for a professional to <strong>build a website</strong>?
+        I bring you the <strong>expertise</strong> you need to achieve <b>the best results</b>.</p>
 );
 export const HOME_TEXT_INTRO_TEACH = (
     <p>... in a <b>classroom</b> or <strong>private sessions</strong>, face-to-face or <strong>online</strong>. I help my students achieve their potential on their way to success. Check the link below to learn more.</p>
@@ -74,7 +74,7 @@ export const LEARN_TEXT_INTRO = (
 export const LEARN_TEXT_TEACHING = (
     <>
         <p>I have been a professional teacher for six years. I apply those skills today to help aspiring developers.</p>
-        <p>I've conducted <strong>training sessions</strong> on web languages, frameworks and tools. I also help with <strong>private sessions</strong> depending on my availability. If you're looking for a teacher, you can <a href={`mailto:${DEV_EMAIL}`}>contact me</a>.</p>
+        <p>I've conducted <strong>training sessions</strong> on web languages, frameworks and tools. I also help with <strong>private sessions</strong> depending on my availability. If you're looking for a teacher, you can <a href={`mailto:${DEV_EMAIL}`}>contact me directly</a>.</p>
     </>
 );
 

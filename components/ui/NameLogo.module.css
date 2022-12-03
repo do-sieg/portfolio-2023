@@ -16,7 +16,7 @@
 
 .lastName {
     font-size: 1em;
-    color: white;
     background-color: var(--zinc-700);
+    color: hsl(0, 0%, 100%, 95%);
     border-radius: 1.5rem;
 }

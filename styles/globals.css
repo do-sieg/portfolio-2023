@@ -14,7 +14,15 @@
   --c-link-hover: var(--orange-500);
   /* --c-primary: red;
   --c-secondary: blue; */
+  --socialbar-height: 2.5rem;
   --header-height: 7.5rem;
+
+}
+
+@media (max-width: 640px) {
+  :root {
+    --socialbar-height: 2rem;
+  }
 }
 
 html,
@@ -27,7 +35,7 @@ body {
 
 @media (max-width: 768px) {
   body.mobile-menu-visible {
-      overflow-y: hidden;
+    overflow-y: hidden;
   }
 }
 

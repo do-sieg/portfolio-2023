@@ -5,7 +5,7 @@ import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
 import Hero from "./Hero";
-import Prompt, { PromptResume } from "../ui/Prompts";
+import Prompt, { PromptContact, PromptResume } from "../ui/Prompts";
 import { FaCogs, FaGraduationCap, FaRocket } from "react-icons/fa";
 import globals from "../../styles/globals.module.css";
 import styles from "./Home.module.css";
@@ -26,6 +26,7 @@ export default function Home() {
         HOME_ACTION_PROJECTS,
         HOME_ACTION_SKILLS,
         HOME_TEXT_INTRO_DEV,
+        HOME_TEXT_INTRO_HIRE,
         HOME_TEXT_INTRO_TEACH,
         HOME_TEXT_INTRO_SKILLS_MAIN,
         HOME_TEXT_INTRO_SKILLS_OTHER,
@@ -63,7 +64,14 @@ export default function Home() {
                 <div className={globals.promptBox}>
                     <Link href="#skills"><Prompt><FaCogs />{HOME_ACTION_SKILLS}</Prompt></Link>
                     <Link href="/projects"><Prompt><FaRocket />{HOME_ACTION_PROJECTS}</Prompt></Link>
+                </div>
+            </section>
+
+            <section ref={resetRef}>
+                {HOME_TEXT_INTRO_HIRE}
+                <div className={globals.promptBox}>
                     <PromptResume />
+                    <PromptContact />
                 </div>
             </section>
 

@@ -5,7 +5,7 @@ import { reviews } from "../../data/student_reviews";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
-import Prompt, { PromptCourses } from "../ui/Prompts";
+import Prompt, { PromptContact, PromptCourses } from "../ui/Prompts";
 import Carousel from "../ui/Carousel";
 import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
@@ -51,6 +51,7 @@ export default function Learn() {
                     {Object.entries(DEV_TEACH_LINKS).map(([key, link]) => {
                         return <a key={key} href={link} target="_blank" rel="noreferrer"><Prompt>{key}<FaExternalLinkAlt /></Prompt></a>
                     })}
+                    <PromptContact />
                 </div>
 
                 <div className={styles.reviewsContainer}>

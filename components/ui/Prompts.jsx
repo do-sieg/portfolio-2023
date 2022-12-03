@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaFileDownload, FaGithub, FaGraduationCap } from "react-icons/fa";
+import { FaEnvelope, FaFileDownload, FaGithub, FaGraduationCap } from "react-icons/fa";
 import { DEV_GITHUB, DEV_RESUME_PATH } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
 import styles from "./Prompts.module.css";
@@ -9,10 +9,10 @@ export default function Prompt({ children }) {
     return <button className={styles.container}>{children}</button>
 }
 
-// export function PromptContact() {
-//     const { ACTION_CONTACT } = useLang();
-//     return <a href={`mailto:${DEV_EMAIL}`} target="_blank" rel="noreferrer"><Prompt><FaEnvelope />{ACTION_CONTACT}</Prompt></a>;
-// }
+export function PromptContact() {
+    const { ACTION_CONTACT } = useLang();
+    return <Link href="/contact"><Prompt><FaEnvelope />{ACTION_CONTACT}</Prompt></Link>;
+}
 
 export function PromptResume() {
     const {locale} = useRouter();

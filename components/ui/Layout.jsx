@@ -4,6 +4,7 @@ import { DEV_FULLNAME } from "../../data/dev";
 import HeadMeta from "../meta/HeadMeta";
 import Footer from "./Footer";
 import Header from "./Header";
+import SocialBar from "./SocialBar";
 import styles from "./Layout.module.css";
 
 export default function Layout({ children }) {
@@ -17,6 +18,7 @@ export default function Layout({ children }) {
             <HeadMeta name="type" content="website" />
 
             <div className={styles.container}>
+                <SocialBar />
                 <Header />
                 <div style={{ flex: 1 }}>{children}</div>
                 <Footer />
