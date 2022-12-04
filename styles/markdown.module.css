@@ -26,7 +26,7 @@
     padding: 0.75rem 1rem;
     border-left: 0.5rem solid var(--neutral-300);
     font-style: italic;
-    background-color: var(--neutral-100);
+    background-color: var(--c-back-2);
 }
 
 .container blockquote p {
@@ -47,6 +47,6 @@
     padding: 0.5rem 1em;
     font-family: var(--font-mono);
     font-size: large;
-    background-color: var(--neutral-900);
+    background-color: var(--neutral-800);
     color: white;
 }

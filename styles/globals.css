@@ -8,20 +8,46 @@
 }
 
 :root {
+  --headerbar-height: 2.5rem;
+  --header-height: 7.5rem;
+  --c-back: white;
+  --c-back-2: var(--zinc-100);
+  --c-back-3: var(--zinc-200);
+  --c-reverse-back-2: var(--zinc-800);
+  --c-back-filter: hsl(0, 0%, 100%, 70%);
+  --c-back-filter-2: hsla(0, 0%, 0%, 0.72);
   --c-primary: var(--zinc-900);
+  --c-reverse-primary: white;
   --c-secondary: var(--green-700);
   --c-link: var(--orange-600);
   --c-link-hover: var(--orange-500);
+  --c-btn-back: var(--zinc-200);
+  --c-progressbar: var(--lime-400);
+  --c-progressbar-full: var(--lime-300);
   /* --c-primary: red;
   --c-secondary: blue; */
-  --socialbar-height: 2.5rem;
-  --header-height: 7.5rem;
+}
 
+.dark-mode {
+  --c-back: var(--zinc-900);
+  --c-back-2: var(--zinc-800);
+  --c-back-3: var(--zinc-700);
+  --c-reverse-back-2: var(--zinc-100);
+  --c-back-filter: hsl(0, 0%, 0%, 70%);
+  --c-back-filter-2: hsla(0, 0%, 30%, 0.72);
+  --c-primary: white;
+  --c-reverse-primary: var(--zinc-900);
+  --c-secondary: var(--green-500);
+  --c-link: var(--orange-400);
+  --c-link-hover: var(--orange-300);
+  --c-btn-back: var(--zinc-700);
+  --c-progressbar: var(--lime-600);
+  --c-progressbar-full: var(--lime-500);
 }
 
 @media (max-width: 640px) {
   :root {
-    --socialbar-height: 2rem;
+    --headerbar-height: 2rem;
   }
 }
 
@@ -30,6 +56,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-sans);
+  background-color: var(--c-back);
   color: var(--c-primary);
 }
 
@@ -57,5 +84,5 @@ div[data-nextjs-scroll-focus-boundary] {
 }
 
 hr {
-  border-top: 2px solid var(--neutral-200);
+  border-top: 2px solid var(--c-back-3);
 }

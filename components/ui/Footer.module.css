@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--neutral-100);
+    background-color: var(--c-back-2);
 }
 
 .contactLinks {
@@ -14,10 +14,10 @@
 .contactLinks svg {
     width: 2rem;
     height: 2rem;
-    fill: var(--zinc-700);
+    fill: var(--c-primary);
 }
 
 .copyright {
     font-weight: var(--font-semibold);
-    color: var(--zinc-700);
+    color: var(--c-primary);
 }

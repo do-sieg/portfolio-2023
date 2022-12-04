@@ -2,7 +2,7 @@
     height: 100%;
     overflow: hidden;
     border-radius: 1rem 2rem 1rem;
-    background-color: var(--neutral-100);
+    background-color: var(--c-back-2);
     box-shadow: var(--shadow-md);
     font-size: x-large;
     transition: all 0.3s 0.1s;

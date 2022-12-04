@@ -39,7 +39,7 @@
 }
 
 .authorDesc {
-    color: var(--neutral-600);
+    color: var(--c-reverse-back-2);
 }
 
 .authorDesc p {

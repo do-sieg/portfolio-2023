@@ -13,7 +13,7 @@
 
 .infoContainer {
     padding-top: 1rem;
-    border-top: 2px solid var(--neutral-200);
+    border-top: 2px solid var(--c-back-3);
 }
 
 .coverImageContainer {
@@ -25,7 +25,7 @@
 .postFooter {
     /* margin-top: 2rem; */
     padding-top: 2rem;
-    border-top: 2px solid var(--neutral-200);
+    border-top: 2px solid var(--c-back-3);
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);

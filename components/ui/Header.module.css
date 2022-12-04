@@ -1,13 +1,14 @@
 .container {
     position: sticky;
-    top: var(--socialbar-height);;
+    top: var(--headerbar-height);;
     z-index: 10;
     height: var(--header-height);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(0, 0%, 100%, 70%);
+    /* background-color: hsl(0, 0%, 100%, 70%); */
+    background-color: var(--c-back-filter);
     backdrop-filter: blur(1rem);
     box-shadow: var(--shadow-lg);
 }

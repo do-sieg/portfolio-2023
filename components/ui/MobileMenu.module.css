@@ -4,7 +4,7 @@
     height: min-content;
     padding: 0;
     background-color: transparent;
-    color: var(--neutral-500);
+    color: var(--c-primary);
     cursor: pointer;
     outline: none !important;
 }
@@ -20,8 +20,8 @@
     top: 100%;
     left: 0;
     width: 100%;
-    height: calc(100vh - var(--header-height) - var(--socialbar-height));
-    background-color: white;
+    height: calc(100vh - var(--header-height) - var(--headerbar-height));
+    background-color: var(--c-back);
 }
 
 @media (max-width: 768px) {

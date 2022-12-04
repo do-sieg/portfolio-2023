@@ -12,6 +12,7 @@
     user-select: none;
     cursor: pointer;
     transition: all 0.2s 0.1s ease-in-out;
+    background-color: var(--c-btn-back);
 }
 
 .btn:active,
@@ -137,12 +138,14 @@
 
 .pageContainer input, .pageContainer textarea {
     padding: 0.5rem;
-    border: 1px solid var(--neutral-500);
+    border: 1px solid var(--c-back-3);
     border-radius: 0.25rem;
     resize: none;
-    box-shadow: var(--shadow-inner);
+    /* box-shadow: var(--shadow-inner); */
     font-family: unset;
     font-size: inherit;
+    color: var(--c-primary);
+    background-color: var(--c-back-2);
 }
 
 .pageContainer ul {

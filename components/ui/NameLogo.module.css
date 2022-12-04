@@ -2,21 +2,23 @@
     max-width: fit-content;
     display: flex;
     flex-direction: column;
-    font-family: Lilita One;
-    font-size: inherit;
     text-align: center;
     text-transform: uppercase;
+    font-family: Lilita One;
+    font-size: inherit;
     font-weight: 700;
+    user-select: none;
 }
 
 .firstName {
     font-size: 2em;
-    color: var(--zinc-700);
+    color: var(--c-primary);
 }
 
 .lastName {
     font-size: 1em;
-    background-color: var(--zinc-700);
-    color: hsl(0, 0%, 100%, 95%);
+    /* color: hsl(0, 0%, 100%, 95%); */
+    background-color: var(--c-primary);
+    color: var(--c-back);
     border-radius: 1.5rem;
 }

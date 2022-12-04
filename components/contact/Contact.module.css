@@ -6,7 +6,7 @@
     align-self: flex-end;
     font-size: var(--text-base);
     font-weight: var(--font-semibold);
-    color: var(--neutral-600);
+    color: var(--c-primary);
 }
 
 .max {
@@ -15,7 +15,7 @@
 
 .formLabel {
     font-size: var(--text-xl);
-    color: var(--neutral-800);
+    color: var(--c-primary);
 }
 
 .formError {

@@ -1,23 +1,4 @@
-import nodemailer from "nodemailer";
-
-async function sendEmail(mailOptions) {
-	return new Promise((resolve, reject) => {
-		const transporter = nodemailer.createTransport({
-			service: "gmail",
-			auth: {
-				user: process.env.NODEMAILER_USER,
-				pass: process.env.NODEMAILER_PASS,
-			}
-		});
-		transporter.sendMail(mailOptions, (err, info) => {
-			if (err) {
-				reject(err);
-			} else {
-				resolve({ message: "Email sent: " + info.response });
-			}
-		});
-	});
-}
+import { sendEmail } from "../../services/email";
 
 export default async function handler(req, res) {
 	try {
