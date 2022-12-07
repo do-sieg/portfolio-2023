@@ -5,14 +5,12 @@ import { DEV_EMAIL, DEV_LINDEKIN } from "../data/dev";
 
 export const DEV_JOBS = "Web Developer & Teacher";
 
-// export const LOCALE_DATE_FORMAT = "YY-M-D";
-
 export const ACTION_BACK = "Back";
 export const ACTION_SEND = "Send";
 export const ACTION_ACCEPT = "Accept";
 export const ACTION_REFUSE = "Refuse";
 export const ACTION_VISIT = "Visit";
-export const ACTION_CONTACT = "Contact me";
+export const ACTION_CONTACT = "Email me";
 export const ACTION_RESUME = "Download my resume";
 
 export const TEXT_READING_TIME = (min) => `${min} min read`;
@@ -76,11 +74,11 @@ export const LEARN_ACTION_COURSES = "Start a course";
 export const LEARN_TEXT_INTRO = (
     <p>In addition to being a developer, my other passion is <strong>teaching</strong>. I teach online and in group sessions. I also provide <strong>courses</strong> for beginners to help them find their way around.</p>
 );
-export const LEARN_TEXT_TEACHING = (
-    <>
-        <p>I have been a professional teacher for six years. I apply those skills today to help aspiring developers.</p>
-        <p>I've conducted <strong>training sessions</strong> on web languages, frameworks and tools. I also help with <strong>private sessions</strong> depending on my availability. If you're looking for a teacher, you can <a href={`mailto:${DEV_EMAIL}`}>contact me directly</a>.</p>
-    </>
+export const LEARN_TEXT_TEACHING_1 = (
+    <p>I have been a professional teacher for six years. I apply those skills today to help aspiring developers.</p>
+);
+export const LEARN_TEXT_TEACHING_2 = (
+    <p>I conduct <strong>training sessions</strong> on web languages, frameworks and tools. I also help with <strong>private sessions</strong> depending on my availability. If you're looking for a teacher, you can <a href={`mailto:${DEV_EMAIL}`}>contact me directly</a>.</p>
 );
 
 export const COURSES_TITLE = "Development Courses";

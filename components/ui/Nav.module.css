@@ -13,8 +13,19 @@
 
 .container ul {
     display: flex;
+    align-items: center;
     gap: 2rem;
     font-size: larger;
     font-weight: var(--font-semibold);
-    filter: (var(--drop-shadow-lg));
+    filter: var(--drop-shadow-sm);
+}
+
+.featuredLink {
+    color: var(--c-link);
+    cursor: pointer;
+    transition: all 0.3s 0.1s;
+}
+
+.featuredLink:active, .featuredLink:hover {
+    color: var(--c-link-hover);
 }

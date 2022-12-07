@@ -14,12 +14,10 @@ export default function SettingsProvider({ children }) {
         }[localStorage.getItem("accept-settings")] ?? null;
         setAcceptSettings(storageAcceptSettings);
 
-        // if (storageAcceptSettings) {
         setDarkMode({
             "on": true,
             "off": false,
         }[localStorage.getItem("dark-mode")] ?? false);
-        // }
     }, []);
 
     useEffect(() => {

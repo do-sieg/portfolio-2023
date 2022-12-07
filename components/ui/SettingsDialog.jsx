@@ -19,14 +19,12 @@ export default function SettingsDialog() {
     }
 
     return (
-        <>
-            <div className={styles.container}>
-                {TEXT_ACCEPT_SETTINGS}
-                <div className={styles.actions}>
-                    <Prompt onClick={handleAccept}>{ACTION_ACCEPT}</Prompt>
-                    <Prompt onClick={handleRefuse}>{ACTION_REFUSE}</Prompt>
-                </div>
+        <div className={styles.container}>
+            {TEXT_ACCEPT_SETTINGS}
+            <div className={styles.actions}>
+                <Prompt onClick={handleAccept}>{ACTION_ACCEPT}</Prompt>
+                <Prompt onClick={handleRefuse}>{ACTION_REFUSE}</Prompt>
             </div>
-        </>
+        </div>
     );
 }
