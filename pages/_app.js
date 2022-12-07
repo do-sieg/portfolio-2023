@@ -1,10 +1,13 @@
-import Layout from "../components/ui/Layout.jsx";
+import SettingsProvider from "../components/context/SettingsProvider";
+import Layout from "../components/ui/Layout";
 import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+	return (
+		<SettingsProvider>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</SettingsProvider>
+	);
 }

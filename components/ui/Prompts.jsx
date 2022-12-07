@@ -5,8 +5,8 @@ import { DEV_GITHUB, DEV_RESUME_PATH } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
 import styles from "./Prompts.module.css";
 
-export default function Prompt({ children }) {
-    return <button className={styles.container}>{children}</button>
+export default function Prompt({ children, onClick = () => {} }) {
+    return <button onClick={onClick} className={styles.container}>{children}</button>
 }
 
 export function PromptContact() {

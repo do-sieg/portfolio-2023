@@ -1,28 +1,13 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { FaEnvelopeSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { MdLightMode, MdModeNight } from "react-icons/md";
 import { DEV_GITHUB, DEV_LINDEKIN } from "../../data/dev";
+import { SettingsContext } from "../context/SettingsProvider";
 import styles from "./HeaderBar.module.css";
 
-function useDarkMode() {
-    // STOCKAGE DANS UN SECOND TEMPS
-    const [isDarkMode, setDarkMode] = useState(false);
-
-    useEffect(() => {
-        console.log({ isDarkMode });
-        if (isDarkMode) {
-            document.body.classList.add("dark-mode");
-        } else {
-            document.body.classList.remove("dark-mode");
-        }
-    }, [isDarkMode]);
-
-    return [isDarkMode, setDarkMode];
-}
-
 export default function HeaderBar() {
-    const [isDarkMode, setDarkMode] = useDarkMode();
+    const { acceptSettings, resetAcceptSettings, isDarkMode, toggleDarkMode } = useContext(SettingsContext);
     const ModeIcon = isDarkMode ? MdLightMode : MdModeNight;
 
     return (
@@ -33,7 +18,7 @@ export default function HeaderBar() {
                 <Link href="/contact"><FaEnvelopeSquare /></Link>
             </div>
             <div className={styles.userSettings}>
-                <ModeIcon style={{ cursor: "pointer" }} onClick={() => setDarkMode(!isDarkMode)} />
+                <ModeIcon style={{ cursor: "pointer", userSelect: "none" }} onClick={acceptSettings ? toggleDarkMode : resetAcceptSettings} />
             </div>
         </div>
     );

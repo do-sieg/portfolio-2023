@@ -1,0 +1,25 @@
+.container {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    min-height: 10rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--c-back-2);
+    font-size: var(--text-lg);
+}
+
+.container p {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}

@@ -3,7 +3,8 @@
     top: var(--headerbar-height);;
     z-index: 10;
     height: var(--header-height);
-    padding: 1rem 2rem;
+    max-height: var(--header-height);
+    padding: 0 2rem 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;

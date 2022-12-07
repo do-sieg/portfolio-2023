@@ -9,6 +9,8 @@ export const DEV_JOBS = "Web Developer & Teacher";
 
 export const ACTION_BACK = "Back";
 export const ACTION_SEND = "Send";
+export const ACTION_ACCEPT = "Accept";
+export const ACTION_REFUSE = "Refuse";
 export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Contact me";
 export const ACTION_RESUME = "Download my resume";
@@ -16,6 +18,9 @@ export const ACTION_RESUME = "Download my resume";
 export const TEXT_READING_TIME = (min) => `${min} min read`;
 export const TEXT_PHOTO_CREDITS = "Photo Credits:";
 export const TEXT_DRAFT = "Draft";
+export const TEXT_ACCEPT_SETTINGS = (
+    <p>This website uses cookies only to run features. None of your data is stored. We still need your confirmation to store functional cookies on your side.</p>
+);
 
 export const NAV_ACTION_LEARN = "Learn";
 export const NAV_ACTION_COURSES = "Courses";
