@@ -3,86 +3,88 @@
 @import "./hljs/vs2015.css";
 
 @font-face {
-  font-family: "Lilita One";
-  src: url("./fonts/LilitaOne-Regular.ttf");
+	font-family: "Lilita One";
+	src: url("./fonts/LilitaOne-Regular.ttf");
 }
 
 :root {
-  --headerbar-height: 2.5rem;
-  --header-height: 6.5rem;
-  --c-back: white;
-  --c-back-2: var(--zinc-100);
-  --c-back-3: var(--zinc-200);
-  --c-reverse-back-2: var(--zinc-800);
-  --c-back-filter: hsl(0, 0%, 100%, 70%);
-  --c-back-filter-2: hsla(0, 0%, 0%, 0.72);
-  --c-primary: var(--zinc-900);
-  --c-reverse-primary: white;
-  --c-secondary: var(--green-700);
-  --c-link: var(--orange-600);
-  --c-link-hover: var(--orange-500);
-  --c-btn-back: var(--zinc-200);
-  --c-progressbar: var(--lime-400);
-  --c-progressbar-full: var(--lime-300);
-  /* --c-primary: red;
+	--headerbar-height: 2.5rem;
+	--header-height: 6.5rem;
+	--c-back: white;
+	--c-back-2: var(--zinc-100);
+	--c-back-3: var(--zinc-200);
+	--c-reverse-back-2: var(--zinc-800);
+	--c-back-filter: hsl(0, 0%, 100%, 70%);
+	--c-back-filter-2: hsla(0, 0%, 0%, 0.72);
+	--c-primary: var(--zinc-900);
+	--c-primary-2: var(--zinc-800);
+	--c-reverse-primary: white;
+	--c-secondary: var(--green-700);
+	--c-link: var(--orange-600);
+	--c-link-hover: var(--orange-500);
+	--c-btn-back: var(--zinc-200);
+	--c-progressbar: var(--lime-400);
+	--c-progressbar-full: var(--lime-300);
+	/* --c-primary: red;
   --c-secondary: blue; */
 }
 
 .dark-mode {
-  --c-back: var(--zinc-900);
-  --c-back-2: var(--zinc-800);
-  --c-back-3: var(--zinc-700);
-  --c-reverse-back-2: var(--zinc-100);
-  --c-back-filter: hsl(0, 0%, 0%, 70%);
-  --c-back-filter-2: hsla(0, 0%, 30%, 0.72);
-  --c-primary: white;
-  --c-reverse-primary: var(--zinc-900);
-  --c-secondary: var(--green-500);
-  --c-link: var(--orange-400);
-  --c-link-hover: var(--orange-300);
-  --c-btn-back: var(--zinc-700);
-  --c-progressbar: var(--lime-600);
-  --c-progressbar-full: var(--lime-500);
+	--c-back: var(--zinc-900);
+	--c-back-2: var(--zinc-800);
+	--c-back-3: var(--zinc-700);
+	--c-reverse-back-2: var(--zinc-100);
+	--c-back-filter: hsl(0, 0%, 0%, 70%);
+	--c-back-filter-2: hsla(0, 0%, 30%, 0.72);
+	--c-primary: white;
+	--c-primary-2: var(--zinc-100);
+	--c-reverse-primary: var(--zinc-900);
+	--c-secondary: var(--green-500);
+	--c-link: var(--orange-400);
+	--c-link-hover: var(--orange-300);
+	--c-btn-back: var(--zinc-700);
+	--c-progressbar: var(--lime-600);
+	--c-progressbar-full: var(--lime-500);
 }
 
 @media (max-width: 640px) {
-  :root {
-    --headerbar-height: 2rem;
-  }
+	:root {
+		--headerbar-height: 2rem;
+	}
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-sans);
-  background-color: var(--c-back);
-  color: var(--c-primary);
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-sans);
+	background-color: var(--c-back);
+	color: var(--c-primary);
 }
 
 @media (max-width: 768px) {
-  body.mobile-menu-visible {
-    overflow-y: hidden;
-  }
+	body.mobile-menu-visible {
+		overflow-y: hidden;
+	}
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 button {
-  color: inherit;
+	color: inherit;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 div[data-nextjs-scroll-focus-boundary] {
-  flex: 1;
+	flex: 1;
 }
 
 hr {
-  border-top: 2px solid var(--c-back-3);
+	border-top: 2px solid var(--c-back-3);
 }

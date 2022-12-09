@@ -4,7 +4,7 @@
     border-radius: 1rem 2rem 1rem;
     background-color: var(--c-back-2);
     box-shadow: var(--shadow-md);
-    font-size: x-large;
+    font-size: var(--text-xl);
     transition: all 0.3s 0.1s;
     opacity: 0;
     animation: fade 0.5s 0.1s forwards, scaleIn 1s;
@@ -16,41 +16,38 @@
 }
 
 .heading {
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--neutral-500);
+    box-shadow: var(--shadow-sm);
     font-weight: var(--font-semibold);
-}
-
-.number {
-    color: white;
+    color: var(--c-primary-2);
 }
 
 .level {
     text-transform: uppercase;
-    font-size: medium;
+    font-size: var(--text-base);
 }
 
 .level.basic {
-    color: var(--lime-300);
+    color: var(--lime-500);
 }
 
 .level.intermediate {
-    color: var(--cyan-300);
+    color: var(--cyan-500);
 }
 
 .level.advanced {
-    color: var(--amber-300);
+    color: var(--amber-500);
 }
 
-.title {
-    padding: 1rem 2rem;
-    font-weight: var(--font-light);
+.body {
+    padding: 0.5rem 1.5rem 0.75rem;
+    font-weight: var(--font-normal);
 }
 
-.title::after {
+.body::after {
     content: " →";
 }
 

@@ -12,7 +12,7 @@ export default function LessonCard({ subject, data }) {
                 <span className={styles.number}>{COURSES_DATA_SUBJECTS[subject].name} {data.number}</span>
                 <span className={`${styles.level} ${styles[data.level]}`}>{COURSES_TEXT_LEVELS[data.level]}</span>
             </div>
-            <div className={styles.title}>{data.title}</div>
+            <div className={styles.body}>{data.title}</div>
         </div>
         </Link>
     );

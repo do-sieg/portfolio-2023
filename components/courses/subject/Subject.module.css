@@ -4,3 +4,9 @@
     justify-content: center;
     gap: 1rem;
 }
+
+@media (max-width: 768px) {
+    .cardGrid {
+        grid-template-columns: minmax(0, 30rem);
+    }
+}
