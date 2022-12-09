@@ -21,18 +21,20 @@ export default function SettingsProvider({ children }) {
     }, []);
 
     useEffect(() => {
-        if (acceptSettings === true) {
-            localStorage.setItem("accept-settings", "yes");
-        } else {
-            if (acceptSettings === false) {
-                localStorage.setItem("accept-settings", "no");
+        if (acceptSettings !== undefined) {
+            if (acceptSettings === true) {
+                localStorage.setItem("accept-settings", "yes");
+            } else {
+                clearSettings();
+                if (acceptSettings === false) {
+                    localStorage.setItem("accept-settings", "no");
+                }
             }
-            clearSettings();
         }
     }, [acceptSettings]);
 
     useEffect(() => {
-        if (acceptSettings) {
+        if (acceptSettings && isDarkMode !== undefined) {
             if (isDarkMode === true) {
                 localStorage.setItem("dark-mode", "on");
                 document.body.classList.add("dark-mode");
