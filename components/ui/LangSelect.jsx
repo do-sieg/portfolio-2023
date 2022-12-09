@@ -1,19 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useLangAltLinks } from "../../hooks/lang";
 import styles from "./LangSelect.module.css";
 
 export default function LangSelect() {
-    const { locales, locale, asPath } = useRouter();
-    const [langLinks, setLangLinks] = useState({});
+    const { locales, locale, pathname, asPath } = useRouter();
+    const [langLinks] = useLangAltLinks([
+        "/courses/[subject]/[slug]",
+    ].includes(pathname) ? null : {});
+    console.log({pathname, langLinks});
 
-    useEffect(() => {
-        const links = {};
-        Array.from(document.querySelectorAll("head link[hreflang]")).forEach((link) => {
-            links[link.hreflang] = link.href;
-        })
-        setLangLinks(links);
-    }, [locale, asPath]);
+    if (langLinks === null) return null;
 
     return (
         <div className={styles.container}>
