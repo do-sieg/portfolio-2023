@@ -8,7 +8,7 @@ import styles from "./HeaderBar.module.css";
 
 export default function HeaderBar() {
     const { acceptSettings, resetAcceptSettings, isDarkMode, toggleDarkMode } = useContext(SettingsContext);
-    const ModeIcon = isDarkMode ? MdLightMode : MdModeNight;
+    const ModeIcon = isDarkMode ? MdModeNight : MdLightMode;
 
     return (
         <div className={styles.container}>
