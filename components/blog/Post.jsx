@@ -9,6 +9,7 @@ import HeadLocaleAlt from "../meta/HeadLocaleAlt";
 import ReadingProgress from "../ui/ReadingProgress";
 import Author from "./Author";
 import BackLink from "../ui/BackLink";
+import Credits from "../ui/Credits";
 import PostCard from "./PostCard";
 import PostInfo from "./PostInfo";
 import SimilarPostsCard from "./SimilarPostsCard";
@@ -20,7 +21,7 @@ export default function Post({ post, similarPostsData }) {
     const { locale, asPath } = useRouter();
     const { resetRef } = useResetAnimations([locale, asPath]);
     const scrolled = useScrollRead();
-    const { BLOG_TEXT_CATEGORIES } = useLang();
+    const { TEXT_PHOTO_CREDITS, BLOG_TEXT_CATEGORIES } = useLang();
 
     return (
         <>
@@ -57,6 +58,10 @@ export default function Post({ post, similarPostsData }) {
                 <hr />
 
                 <Author />
+
+                {post.data.coverImage?.authorName &&
+                    <Credits text={TEXT_PHOTO_CREDITS} name={post.data.coverImage.authorName} link={post.data.coverImage.authorUrl ?? null} />
+                }
 
                 {similarPostsData.posts.length > 0 && (
                     <div className={styles.postFooter}>

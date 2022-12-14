@@ -22,6 +22,10 @@
     animation: fade 0.5s 0.1s forwards, scaleIn 1s;
 }
 
+.coverImageContainer img {
+    width: 100%;
+}
+
 .postFooter {
     /* margin-top: 2rem; */
     padding-top: 2rem;

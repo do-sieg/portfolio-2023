@@ -20,12 +20,16 @@
     filter: var(--drop-shadow-sm);
 }
 
-.featuredLink {
-    color: var(--c-link);
-    cursor: pointer;
-    transition: all 0.3s 0.1s;
+.newContent {
+    position: relative;
+    margin-right: 1rem;
 }
 
-.featuredLink:active, .featuredLink:hover {
-    color: var(--c-link-hover);
+.newContent::after {
+    content: "NEW";
+    position: absolute;
+    top: -10%;
+    left: calc(100% + 0.25rem);
+    font-size: var(--text-sm);
+    color: var(--c-secondary);
 }

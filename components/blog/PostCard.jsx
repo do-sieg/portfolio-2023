@@ -21,7 +21,9 @@ export default function PostCard({ post, customClasses }) {
                 <div className={styles.category}>{BLOG_TEXT_CATEGORIES[post.data.category]}</div>
                 <div className={styles.title}>{post.data.title}</div>
                 <div className={styles.description}>{post.data.description}</div>
-                <PostInfo date={post.data.date} readingTime={getReadingTime(locale, post.content)} />
+                <div className={styles.infoContainer}>
+                    <PostInfo date={post.data.date} readingTime={getReadingTime(locale, post.content)} />
+                </div>
             </div>
         </Link>
     );

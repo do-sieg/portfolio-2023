@@ -4,7 +4,8 @@ description: Ou comment perdre beaucoup de temps et d'argent en croyant en gagne
 date: "2022-12-13"
 category: code
 coverImage:
-    path: /images/blog/covers/todo-refactor-epic-fail.jpg
+    path: /images/blog/covers/fr/todo-refactor-epic-fail.jpg
+    authorName: Disney
 published: true
 ---
 
@@ -62,11 +63,9 @@ Quelques mois plus tard, le client est revenu vers nous. L'autre développeur a 
 
 J'en veux pour preuve le commentaire que vous voyez en image de couverture (j'avais pris la photo à l'époque)...
 
-```js
-// TODO refactor this epic programing fail
-```
+![TODO refactor this epic programing fail](/images/blog/posts/todo-refactor-epic-fail.jpg)
 
-Il savait qu'il avait produit un bug impossible à maintenir. Mais il a préféré aller vite (peut-être une contrainte du client ?).
+Il savait qu'il avait produit un code impossible à maintenir. Mais il a préféré aller vite (peut-être une contrainte du client ?).
 
 
 ## Mais à quel prix ?

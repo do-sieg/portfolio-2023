@@ -90,6 +90,10 @@
     font-size: large;
 }
 
+.infoContainer {
+    margin-top: 0.5rem;
+}
+
 .draftBadge {
     position: absolute;
     z-index: 1;
