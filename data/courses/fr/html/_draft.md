@@ -7,8 +7,25 @@ published: false
 ---
 
 
+Il est important que le contenu d'une page internet soit **structuré**.
+
+Prenons le code suivant :
+```html
+<body>
+    Un week-end en Bretagne
+
+    Je suis allé en Bretagne. Il a plu.
+</body>
+```
+
+La première ligne est un **titre**, alors que la suivante s'apparente à du **texte**. 
+
+C'est important pour les visiteurs, mais aussi pour le référencement (voir plus bas).
 
 
+C'est important d'un point de vue visuel mais aussi pour les moteurs de recherche qui vont scanner la page.
+
+> Le référencement de votre page dépend entre autres de la clarté de sa structure.
 <!-- 
 
 La page web affichée

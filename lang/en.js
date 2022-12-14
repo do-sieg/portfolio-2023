@@ -105,7 +105,8 @@ export const COURSES_DATA_SUBJECTS = {
         desc: "The language structuring all web pages.",
         intro: <p>HTML (HyperText Markup Language) is used to structure a web page and its content. It is a tag language used on all the internet, and one of the fundamentals of web development.</p>,
         subSections: {
-            FIRST_STEPS: "First Steps"
+            FIRST_STEPS: "First Steps",
+            BASIC_TAGS: "Basic Tags",
         },
     },
 };

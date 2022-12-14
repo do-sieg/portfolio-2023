@@ -13,6 +13,7 @@ export const COURSE_COVER_IMAGES = {
 const LESSON_TREES = {
     html: {
         FIRST_STEPS: [101, 102, 103],
+        BASIC_TAGS: [111, 112],
     },
 };
 
