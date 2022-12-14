@@ -10,7 +10,6 @@ import globals from "../../styles/globals.module.css";
 import styles from "./Contact.module.css";
 
 const MAX_MESSAGE_LENGTH = 2000;
-const defaultFormErrors = { email: "", subject: "", text: "" };
 
 export default function Contact() {
     const { locale, push } = useRouter();
@@ -43,18 +42,14 @@ export default function Contact() {
     const handleChangeText = e => setText(e.target.value.substr(0, MAX_MESSAGE_LENGTH));
 
     function checkFormValues() {
-        const errors = { ...defaultFormErrors };
+        const errors = {};
 
-        if (email.length === 0) {
-            errors.email = ERR_FORM_REQUIRED;
-        } else if (!validator.isEmail(email)) {
-            errors.email = ERR_FORM_NOT_VALID_EMAIL;
-        }
+        if (email.length === 0) errors.email = ERR_FORM_REQUIRED;
+        else if (!validator.isEmail(email)) errors.email = ERR_FORM_NOT_VALID_EMAIL;
         if (subject.length === 0) errors.subject = ERR_FORM_REQUIRED;
         if (text.length === 0) errors.text = ERR_FORM_REQUIRED;
 
-        const success = Object.values(errors).every(msg => msg.length === 0);
-        return { success, errors };
+        return { success: Object.values.length === 0, errors };
     }
 
     async function handleSubmit(e) {
