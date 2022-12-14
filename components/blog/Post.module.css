@@ -1,6 +1,6 @@
 .heading {
     margin: 1rem 0;
-    text-align: left;
+    text-align: left !important;
     transform-origin: left;
 }
 

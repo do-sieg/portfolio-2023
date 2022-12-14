@@ -1,6 +1,6 @@
 ---
 title: Svelte - Premières impressions
-description: "Suite à un petit ras-le-bol avec React, j'ai essayé Svelte et j'en suis bien heureux."
+description: Suite à un petit ras-le-bol avec React, j'ai essayé Svelte et j'en suis bien heureux.
 date: "2022-09-07"
 category: javascript
 coverImage:

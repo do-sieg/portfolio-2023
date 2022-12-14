@@ -135,6 +135,7 @@ export const BLOG_TEXT_AUTHOR_DESC = (
 )
 export const BLOG_TEXT_CATEGORIES = {
     draft: "Brouillons",
+    code: "Code",
     javascript: "JavaScript",
     jobs: "Jobs",
 }

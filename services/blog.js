@@ -4,6 +4,7 @@ import { loadMarkdown, parseMarkdown } from "./markdown";
 
 const BLOG_PATH = "/data/blog/";
 const BLOG_CATEGORIES = [
+    "code",
     "javascript",
     "jobs",
 ];

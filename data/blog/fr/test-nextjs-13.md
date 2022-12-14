@@ -1,6 +1,6 @@
 ---
 title: J'ai essayé NextJS 13...
-description: "... et ça ne s'est pas très bien passé."
+description: ... et ça ne s'est pas très bien passé.
 date: "2022-12-08"
 category: javascript
 coverImage:
