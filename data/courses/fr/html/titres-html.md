@@ -59,9 +59,13 @@ Les **sous-titres** suivent la même logique, gràce aux balises `h2`, `h3`, `h4
 Résultat :
 ![Résultat](/images/learn/fr/html/html-112-output.png)
 
-Tout comme `h1`, les balises `h2` à `h6` ont des tailles de police et des marges déterminées par le navigateur. Le texte est en gras. Ces propriétés sont modifiables grâce au CSS.
+Tout comme `h1`, les balises `h2` à `h6` ont un style par défaut défini par le navigateur et qu'on peut modifier grâce au CSS.
+
+![Styles de titres](/images/learn/fr/html/html-112-styles.png)
 
 > S'il est possible d'aller jusqu'au niveau 6 (`h6`), on recommande généralement de s'en tenir aux trois premiers niveaux afin d'éviter des pages au contenu indigeste (ce qui ferait fuir le visiteur).
+
+> Cependant, il faut prendre en compte votre contenu : si vous mettez en ligne un article universitaire, il est logique d'utiliser tous les niveaux à votre disposition.
 
 
 ## Conclusion
