@@ -16,6 +16,8 @@
 
 .container p {
     flex: 1;
+    max-width: var(--md);
+    margin: 0 auto;
 }
 
 .actions {

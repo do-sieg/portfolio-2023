@@ -6,7 +6,7 @@ import styles from "./SettingsDialog.module.css";
 
 export default function SettingsDialog() {
     const { setAcceptSettings } = useContext(SettingsContext);
-    const { ACTION_ACCEPT, ACTION_REFUSE, TEXT_ACCEPT_SETTINGS } = useLang();
+    const { ACTION_ACCEPT_SETTINGS, ACTION_REFUSE_SETTINGS, TEXT_ACCEPT_SETTINGS } = useLang();
 
     function handleAccept(e) {
         e.preventDefault();
@@ -22,8 +22,8 @@ export default function SettingsDialog() {
         <div className={styles.container}>
             {TEXT_ACCEPT_SETTINGS}
             <div className={styles.actions}>
-                <Prompt onClick={handleAccept}>{ACTION_ACCEPT}</Prompt>
-                <Prompt onClick={handleRefuse}>{ACTION_REFUSE}</Prompt>
+                <Prompt onClick={handleAccept}>{ACTION_ACCEPT_SETTINGS}</Prompt>
+                <Prompt onClick={handleRefuse}>{ACTION_REFUSE_SETTINGS}</Prompt>
             </div>
         </div>
     );

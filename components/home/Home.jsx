@@ -16,7 +16,7 @@ export default function Home() {
     const { locale } = useRouter();
     const { resetRef } = useResetAnimations([locale]);
     const {
-        DEV_JOBS,
+        TEXT_DEV_JOBS,
         HOME_TITLE,
         HOME_TITLE_DEV,
         HOME_TITLE_TEACH,
@@ -49,7 +49,7 @@ export default function Home() {
 
     return (
         <main className={globals.pageContainer}>
-            <HeadMeta name="title" content={`${DEV_FULLNAME} - ${DEV_JOBS}`} />
+            <HeadMeta name="title" content={`${DEV_FULLNAME} - ${TEXT_DEV_JOBS}`} />
 
             <div className={styles.heroContainer}>
                 <Hero />

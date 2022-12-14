@@ -8,7 +8,6 @@ export default function LangSelect() {
     const [langLinks] = useLangAltLinks([
         "/courses/[subject]/[slug]",
     ].includes(pathname) ? null : {});
-    console.log({pathname, langLinks});
 
     if (langLinks === null) return null;
 

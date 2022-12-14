@@ -3,21 +3,20 @@ import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { DEV_EMAIL, DEV_LINDEKIN } from "../data/dev";
 
-export const DEV_JOBS = "Web Developer & Teacher";
-
 export const ACTION_BACK = "Back";
 export const ACTION_SEND = "Send";
-export const ACTION_ACCEPT = "Accept";
-export const ACTION_REFUSE = "Refuse";
+export const ACTION_ACCEPT_SETTINGS = "I accept";
+export const ACTION_REFUSE_SETTINGS = "No thanks";
 export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Email me";
 export const ACTION_RESUME = "Download my resume";
 
+export const TEXT_DEV_JOBS = "Web Developer & Teacher";
 export const TEXT_READING_TIME = (min) => `${min} min read`;
 export const TEXT_PHOTO_CREDITS = "Photo Credits:";
 export const TEXT_DRAFT = "Draft";
 export const TEXT_ACCEPT_SETTINGS = (
-    <p>This website uses cookies only to run features. None of your data is stored. We still need your confirmation to store functional cookies on your side.</p>
+    <p>This website uses cookies only to run features. None of your personal data is stored. We still need your confirmation to store functional cookies on your side.</p>
 );
 
 export const NAV_ACTION_LEARN = "Learn";
@@ -29,7 +28,7 @@ export const ERR_404_TITLE = "404";
 export const ERR_404_ACTION_HOME = "Home Page";
 export const ERR_404_TEXT_MESSAGE = "Page not found";
 export const ERR_FORM_REQUIRED = "This field is required";
-export const ERR_FORM_NOT_VALID_EMAIL = "Please input a valid e-mail adress";
+export const ERR_FORM_NOT_VALID_EMAIL = "Please enter a valid e-mail adress";
 
 export const HOME_TITLE = "Hi, I'm Daniel.";
 export const HOME_TITLE_DEV = "I'm a web developer...";
@@ -143,7 +142,7 @@ export const BLOG_TEXT_READ_MORE_CATEGORY = (categoryId) => <>More in <Link href
 export const BLOG_TEXT_SEE_ALL_POSTS = (n) => `${n} post${n > 1 ? "s" : ""}`;
 
 export const CONTACT_TITLE = "Contact Me";
-export const CONTACT_LABEL_EMAIL = "E-mail";
+export const CONTACT_LABEL_EMAIL = "Email";
 export const CONTACT_LABEL_SUBJECT = "Subject";
 export const CONTACT_LABEL_TEXT = "Message";
 export const CONTACT_TEXT_REMAINING_CHARACTERS = (text, max) => `${text.length}/${max}`;

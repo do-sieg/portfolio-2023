@@ -13,7 +13,7 @@ const MAX_MESSAGE_LENGTH = 2000;
 const defaultFormErrors = { email: "", subject: "", text: "" };
 
 export default function Contact() {
-    const { locale } = useRouter();
+    const { locale, push } = useRouter();
     const { resetRef } = useResetAnimations([locale]);
     const {
         ACTION_BACK,
@@ -103,12 +103,7 @@ export default function Contact() {
                 <HeadMeta name="title" content={CONTACT_TITLE} />
                 <div className={styles.messageContainer}>
                     <span>{CONTACT_TEXT_SUCCESS}</span>
-                    <button className={globals.btn} onClick={() => {
-                        setSuccess(false);
-                        setEmail("");
-                        setSubject("");
-                        setText("");
-                    }}>{ACTION_BACK}</button>
+                    <button className={globals.btn} onClick={() => push("/")}>{ACTION_BACK}</button>
                 </div>
             </main>
         );
