@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaEnvelope, FaFileDownload, FaGithub, FaGraduationCap } from "react-icons/fa";
-import { DEV_GITHUB, DEV_RESUME_PATH } from "../../data/dev";
+import { FaEnvelope, FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+import { DEV_GITHUB, DEV_LINDEKIN, DEV_RESUME_PATH } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
 import styles from "./Prompts.module.css";
 
@@ -20,12 +20,12 @@ export function PromptResume() {
     return <a href={DEV_RESUME_PATH[locale]} target="_blank" rel="noreferrer"><Prompt><FaFileDownload />{ACTION_RESUME}</Prompt></a>;
 }
 
+export function PromptLinkedIn() {
+    const { ACTION_LINKEDIN } = useLang();
+    return <a href={DEV_LINDEKIN} target="_blank" rel="noreferrer"><Prompt><FaLinkedin />{ACTION_LINKEDIN}</Prompt></a>;
+}
+
 export function PromptGitHub() {
     const { PROJECTS_ACTION_GITHUB } = useLang();
     return <a href={DEV_GITHUB} target="_blank" rel="noreferrer"><Prompt><FaGithub />{PROJECTS_ACTION_GITHUB}</Prompt></a>;
-}
-
-export function PromptCourses() {
-    const { LEARN_ACTION_COURSES } = useLang();
-    return <Link href="/courses"><Prompt><FaGraduationCap />{LEARN_ACTION_COURSES}</Prompt></Link>;
 }

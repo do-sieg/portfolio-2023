@@ -8,7 +8,7 @@ export const ACTION_SEND = "Envoyer";
 export const ACTION_ACCEPT_SETTINGS = "J'ai compris";
 export const ACTION_REFUSE_SETTINGS = "Non merci";
 export const ACTION_VISIT = "Visiter";
-export const ACTION_CONTACT = "Me contacter par e-mail";
+export const ACTION_CONTACT = "E-mail";
 export const ACTION_RESUME = "Télécharger mon CV";
 
 export const TEXT_DEV_JOBS = "Développeur/Formateur Web";
@@ -68,25 +68,30 @@ export const PROJECTS_TEXT_INTRO = (
 );
 
 export const LEARN_TITLE = "Apprenez à coder";
-export const LEARN_TITLE_TEACHING = "Formations et cours en ligne";
-export const LEARN_ACTION_COURSES = "Commencer un cours";
+export const LEARN_TITLE_TEACHING = "Formations et cours particuliers";
 export const LEARN_TEXT_INTRO = (
-    <p>En plus de mon activité de développeur, mon autre passion est <strong>l'enseignement</strong>. J'interviens en ligne et dans le cadre de <strong>formations</strong> en groupe. Je mets aussi des <strong>cours</strong> à disposition des débutants pour les aider à s'y retrouver un peu.</p>
+    <p>
+        En plus de mon activité de développeur, mon autre passion est <strong>l'enseignement</strong>.
+        J'ai travaillé comme enseignant pendant six ans.
+        Je mets à profit cette expérience aujourd'hui pour accompagner les développeurs dans leur parcours.
+    </p>
 );
-export const LEARN_TEXT_TEACHING_1 = (
-    <p>J'ai été enseignant en secondaire pendant six ans. Je mets à profit cette expérience aujourd'hui pour accompagner les développeurs dans leur parcours.</p>
-);
-export const LEARN_TEXT_TEACHING_2 = (
-    <p>Je donne des <strong>formations</strong> sur les langages du web, les frameworks et autres outils. Je donne aussi des <strong>cours particuliers</strong> en fonction de ma disponibilité. Vous pouvez me <a href={`mailto:${DEV_EMAIL}`}>contacter directement</a> si vous cherchez un professeur.</p>
+export const LEARN_TEXT_TEACHING = (
+    <>
+        <p>Je suis <strong>formateur</strong> sur les langages du web, les frameworks et autres outils. J'interviens en ligne et dans le cadre de <strong>formations</strong> en groupe.</p>
+        <p>Je donne aussi des <strong>cours particuliers</strong> en fonction de ma disponibilité.</p>
+        <p>Si vous cherchez un professeur, vous pouvez me contacter sur l'une des plate-formes suivantes, ou par e-mail.</p>
+    </>
 );
 
 export const COURSES_TITLE = "Cours de développement";
+export const COURSES_ACTION_LEARN = "Intéressé(e) par des cours particuliers ?";
 export const COURSES_ACTION_ALL_COURSES = "Tous les cours";
-export const COURSES_TEXT_INTRO = (
-    <>
-        <p>Les cours que je mets à disposition ici sont découpés de façon à être <b>concis</b> et <b>aller à l'essentiel</b>. J'essaie d'utiliser un langage clair, tout en expliquant les termes techniques pour que vous puissiez les apprendre en cours de route.</p>
-        <p>Mon objectif à long terme sera de couvrir plusieurs langages et frameworks, de la façon la plus complète possible. Les cours seront régulièrement mis à jour pour refléter les nouveautés des différents sujets.</p>
-    </>
+export const COURSES_TEXT_INTRO_1 = (
+    <p>Les cours que je mets à disposition ici sont découpés de façon à être <b>concis</b> et <b>aller à l'essentiel</b>. J'essaie d'utiliser un langage clair, tout en expliquant les termes techniques pour que vous puissiez les apprendre en cours de route.</p>
+);
+export const COURSES_TEXT_INTRO_2 = (
+    <p>Mon objectif à long terme sera de couvrir plusieurs langages et frameworks, de la façon la plus complète possible. Les cours seront régulièrement mis à jour pour refléter les nouveautés des différents sujets.</p>
 );
 export const COURSES_TEXT_LESSON_AMOUNT = (value) => `${value} cours`;
 export const COURSES_TEXT_NO_COURSE = "Les cours dans cette langue seront bientôt disponibles.";

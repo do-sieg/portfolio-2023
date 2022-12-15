@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
@@ -15,7 +16,9 @@ export default function Courses({ langCourses }) {
     const {
         TEXT_PHOTO_CREDITS,
         COURSES_TITLE,
-        COURSES_TEXT_INTRO,
+        COURSES_ACTION_LEARN,
+        COURSES_TEXT_INTRO_1,
+        COURSES_TEXT_INTRO_2,
         COURSES_TEXT_NO_COURSE,
         COURSES_TEXT_CATEGORIES,
     } = useLang();
@@ -48,7 +51,11 @@ export default function Courses({ langCourses }) {
             <h1 ref={resetRef} className={globals.heading}>{COURSES_TITLE}</h1>
 
             <section ref={resetRef}>
-                {COURSES_TEXT_INTRO}
+                {COURSES_TEXT_INTRO_1}
+
+                <Link href="/learn" className={styles.learnPrompt}>{COURSES_ACTION_LEARN}</Link>
+                
+                {COURSES_TEXT_INTRO_2}
             </section>
 
             {renderCategories()}

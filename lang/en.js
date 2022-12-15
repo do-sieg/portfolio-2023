@@ -10,6 +10,7 @@ export const ACTION_REFUSE_SETTINGS = "No thanks";
 export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Email me";
 export const ACTION_RESUME = "Download my resume";
+export const ACTION_LINKEDIN = "LinkedIn";
 
 export const TEXT_DEV_JOBS = "Web Developer & Teacher";
 export const TEXT_READING_TIME = (min) => `${min} min read`;
@@ -72,24 +73,29 @@ export const PROJECTS_TEXT_INTRO = (
 
 export const LEARN_TITLE = "Learn Coding";
 export const LEARN_TITLE_TEACHING = "Teaching & Online Lessons";
-export const LEARN_ACTION_COURSES = "Start a course";
 export const LEARN_TEXT_INTRO = (
-    <p>In addition to being a developer, my other passion is <strong>teaching</strong>. I teach online and in group sessions. I also provide <strong>courses</strong> for beginners to help them find their way around.</p>
+    <p>
+        In addition to being a developer, my other passion is <strong>teaching</strong>.
+        I have been a professional teacher for six years.
+        I apply those skills today to help aspiring developers.
+    </p>
 );
-export const LEARN_TEXT_TEACHING_1 = (
-    <p>I have been a professional teacher for six years. I apply those skills today to help aspiring developers.</p>
-);
-export const LEARN_TEXT_TEACHING_2 = (
-    <p>I conduct <strong>training sessions</strong> on web languages, frameworks and tools. I also help with <strong>private sessions</strong> depending on my availability. If you're looking for a teacher, you can <a href={`mailto:${DEV_EMAIL}`}>contact me directly</a>.</p>
+export const LEARN_TEXT_TEACHING = (
+    <>
+        <p>I conduct <strong>training sessions</strong> on web languages, frameworks and tools. I teach online and in group sessions.</p>
+        <p>I also help with <strong>private sessions</strong> depending on my availability.</p>
+        <p>If you are looking for a teacher, you can contact me on one of the following platforms, or by e-mail.</p>
+    </>
 );
 
 export const COURSES_TITLE = "Development Courses";
+export const COURSES_ACTION_LEARN = "Looking for private lessons?";
 export const COURSES_ACTION_ALL_COURSES = "All Courses";
-export const COURSES_TEXT_INTRO = (
-    <>
-        <p>These courses are broken down to be <b>short</b> and <b>get to the point</b>. I try to use understandable language, but I still explain technical terms so you can learn them as you go on.</p>
-        <p>I plan to cover several languages and frameworks, in the most complete way possible. Courses will be updated to reflect new developments.</p>
-    </>
+export const COURSES_TEXT_INTRO_1 = (
+    <p>These courses are broken down to be <b>short</b> and <b>get to the point</b>. I try to use understandable language, but I still explain technical terms so you can learn them as you go on.</p>
+);
+export const COURSES_TEXT_INTRO_2 = (
+    <p>I plan to cover several languages and frameworks, in the most complete way possible. Courses will be updated to reflect new developments.</p>
 );
 export const COURSES_TEXT_LESSON_AMOUNT = (value) => `${value} lesson${value > 1 ? "s" : ""}`;
 export const COURSES_TEXT_NO_COURSE = "No lessons in this language yet. Coming soon.";
