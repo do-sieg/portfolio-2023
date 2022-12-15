@@ -1,5 +1,5 @@
-import { GoogleAnalytics } from "nextjs-google-analytics";
 import SettingsProvider from "../components/context/SettingsProvider";
+import Analytics from "../components/meta/Analytics";
 import Layout from "../components/ui/Layout";
 import "../styles/globals.css";
 
@@ -7,10 +7,7 @@ export default function MyApp({ Component, pageProps }) {
 	return (
 		<SettingsProvider>
 			<Layout>
-				<GoogleAnalytics
-					gaMeasurementId="G-446BYMFFEK"
-					trackPageViews={{ ignoreHashChange: true }}
-				/>
+				<Analytics />
 				<Component {...pageProps} />
 			</Layout>
 		</SettingsProvider>
