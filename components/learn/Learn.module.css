@@ -4,7 +4,7 @@
 }
 
 .reviewsContainer {
-    margin: 1rem 0;
+    margin: 2rem 0;
     opacity: 0;
     animation: fade 0.5s 0.1s forwards, scaleIn 1s;
 }

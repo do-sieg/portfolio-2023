@@ -16,7 +16,10 @@ export const TEXT_READING_TIME = (min) => `${min} min read`;
 export const TEXT_PHOTO_CREDITS = "Photo Credits:";
 export const TEXT_DRAFT = "Draft";
 export const TEXT_ACCEPT_SETTINGS = (
-    <p>This website uses cookies only to run features. None of your personal data is stored. We still need your confirmation to store functional cookies on your side.</p>
+    <p>
+        We use our own and third-party cookies to improve your experience and to analyze the use of our website.
+        If you agree with our use of cookies, click <b>{ACTION_ACCEPT_SETTINGS}</b>.
+    </p>
 );
 
 export const NAV_ACTION_LEARN = "Learn";

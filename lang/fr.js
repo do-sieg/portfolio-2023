@@ -16,7 +16,10 @@ export const TEXT_READING_TIME = (min) => `${min} min de lecture`;
 export const TEXT_PHOTO_CREDITS = "Crédits Photo :";
 export const TEXT_DRAFT = "Brouillon";
 export const TEXT_ACCEPT_SETTINGS = (
-    <p>Ce site web utilise des cookies uniquement pour son bon fonctionnement. Vos données personnelles ne sont pas stockées. Votre autorisation est requise pour ces cookies fonctionnels.</p>
+    <p>
+        Nous utilisons nos propres cookies et ceux de tiers pour améliorer votre expérience et analyser l'utilisation de notre site web.
+        Pour accepter notre utilisation des cookies, cliquez sur <b>{ACTION_ACCEPT_SETTINGS}</b>.
+    </p>
 );
 
 export const NAV_ACTION_LEARN = "Apprendre";
@@ -41,8 +44,8 @@ export const HOME_TEXT_INTRO_DEV = (
         Mon double parcours m'a appris à répondre à toutes sortes de besoins, pour tous types de projets.</p>
 );
 export const HOME_TEXT_INTRO_HIRE = (
-    <p><b>Vous recrutez</b> ? Vous cherchez un professionnel pour <strong>réaliser un site</strong>?
-       Je vous fournis l'<strong>expertise</strong> que vous recherchez pour maximiser <b>vos résultats</b>.</p>
+    <p><b>Vous recrutez</b> ? Vous recherchez un professionnel pour <strong>réaliser un site</strong> ?
+        Je vous offre l'<strong>expertise</strong> pour maximiser <b>vos résultats</b>.</p>
 );
 export const HOME_TEXT_INTRO_TEACH = (
     <p>... en <b>groupe</b> ou lors de <strong>cours particuliers</strong>, en présentiel ou <strong>en ligne</strong>. J'aide mes élèves à réaliser leur potentiel. Consultez le lien ci-dessous pour en savoir plus.</p>

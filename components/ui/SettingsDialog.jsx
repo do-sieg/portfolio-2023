@@ -22,8 +22,8 @@ export default function SettingsDialog() {
         <div className={styles.container}>
             {TEXT_ACCEPT_SETTINGS}
             <div className={styles.actions}>
-                <Prompt onClick={handleAccept}>{ACTION_ACCEPT_SETTINGS}</Prompt>
                 <Prompt onClick={handleRefuse}>{ACTION_REFUSE_SETTINGS}</Prompt>
+                <Prompt onClick={handleAccept}>{ACTION_ACCEPT_SETTINGS}</Prompt>
             </div>
         </div>
     );
