@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import cn from "classnames";
-import { DEV_TEACH_LINKS } from "../../data/dev";
+import { DEV_TECHS, DEV_TEACH_LINKS } from "../../data/dev";
 import { reviews } from "../../data/student_reviews";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
 import Prompt, { PromptContact, PromptLinkedIn } from "../ui/Prompts";
+import SkillsList from "../ui/SkillsList";
 import Carousel from "../ui/Carousel";
 import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
@@ -14,6 +14,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import coverImg from "../../public/images/page-covers/learn-cover.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Learn.module.css";
+
+const { html, css, js, react, node, next, mysql, maria, php, ruby, svelte, gdscript, mongo, wordpress, sass, less, git, seo } = DEV_TECHS;
 
 export default function Learn() {
     const { locale } = useRouter();
@@ -24,6 +26,7 @@ export default function Learn() {
         LEARN_TITLE_TEACHING,
         LEARN_TEXT_INTRO,
         LEARN_TEXT_TEACHING,
+        LEARN_TEXT_CONTACT,
     } = useLang();
 
     return (
@@ -48,6 +51,11 @@ export default function Learn() {
                 <h2 className={globals.subheading}>{LEARN_TITLE_TEACHING}</h2>
 
                 {LEARN_TEXT_TEACHING}
+                
+                <SkillsList elements={[html, css, js, react, node, next]} />
+                <SkillsList elements={[mysql, maria, php, git, seo]} />
+
+                {LEARN_TEXT_CONTACT}
 
                 <div className={globals.promptBox}>
                     {Object.entries(DEV_TEACH_LINKS).map(([key, link]) => {

@@ -82,10 +82,12 @@ export const LEARN_TEXT_INTRO = (
 );
 export const LEARN_TEXT_TEACHING = (
     <>
-        <p>I conduct <strong>training sessions</strong> on web languages, frameworks and tools. I teach online and in group sessions.</p>
-        <p>I also help with <strong>private sessions</strong> depending on my availability.</p>
-        <p>If you are looking for a teacher, you can contact me on one of the following platforms, or by e-mail.</p>
+        <p>I conduct <strong>training sessions</strong> on web languages, frameworks and tools. I teach online or in group sessions.</p>
+        <p>I also provide <strong>private lessons</strong> depending on my availability.</p>
     </>
+);
+export const LEARN_TEXT_CONTACT = (
+    <p>If you are looking for a teacher, you can contact me on one of the following platforms, or by e-mail.</p>
 );
 
 export const COURSES_TITLE = "Development Courses";

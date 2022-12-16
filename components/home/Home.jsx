@@ -6,6 +6,7 @@ import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
 import Hero from "./Hero";
 import Prompt, { PromptContact, PromptResume } from "../ui/Prompts";
+import SkillsList from "../ui/SkillsList";
 import { FaCogs, FaGraduationCap, FaRocket } from "react-icons/fa";
 import globals from "../../styles/globals.module.css";
 import styles from "./Home.module.css";
@@ -31,21 +32,6 @@ export default function Home() {
         HOME_TEXT_INTRO_SKILLS_MAIN,
         HOME_TEXT_INTRO_SKILLS_OTHER,
     } = useLang();
-
-    function renderTechs(list) {
-        return (
-            <div className={styles.skillsContainer}>
-                {list.map(({ name, icon }, index) => {
-                    return (
-                        <div key={index} className={styles.tech}>
-                            {icon}
-                            <span>{name}</span>
-                        </div>
-                    );
-                })}
-            </div>
-        );
-    }
 
     return (
         <main className={globals.pageContainer}>
@@ -88,15 +74,14 @@ export default function Home() {
                 <h2 className={globals.subheading}>{HOME_TITLE_SKILLS_MAIN}</h2>
                 {HOME_TEXT_INTRO_SKILLS_MAIN}
 
-                {renderTechs([html, css, js, react, node, next, mysql, maria, mongo, sass, less, git, seo])}
-
+                <SkillsList elements={[html, css, js, react, node, next, mysql, maria, mongo, sass, less, git, seo]} />
             </section>
 
             <section ref={resetRef}>
                 <h2 className={globals.subheading}>{HOME_TITLE_SKILLS_OTHER}</h2>
                 {HOME_TEXT_INTRO_SKILLS_OTHER}
 
-                {renderTechs([php, ruby, svelte, wordpress, gdscript])}
+                <SkillsList elements={[php, ruby, svelte, wordpress, gdscript]} />
             </section>
         </main>
     );

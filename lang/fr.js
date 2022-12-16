@@ -78,10 +78,12 @@ export const LEARN_TEXT_INTRO = (
 );
 export const LEARN_TEXT_TEACHING = (
     <>
-        <p>Je suis <strong>formateur</strong> sur les langages du web, les frameworks et autres outils. J'interviens en ligne et dans le cadre de <strong>formations</strong> en groupe.</p>
+        <p>Je suis <strong>formateur</strong> sur les langages du web, les frameworks et autres outils. J'interviens en ligne ou dans le cadre de <strong>formations</strong> en groupe.</p>
         <p>Je donne aussi des <strong>cours particuliers</strong> en fonction de ma disponibilité.</p>
-        <p>Si vous cherchez un professeur, vous pouvez me contacter sur l'une des plate-formes suivantes, ou par e-mail.</p>
     </>
+);
+export const LEARN_TEXT_CONTACT = (
+    <p>Si vous cherchez un professeur, vous pouvez me contacter sur l'une des plate-formes suivantes, ou par e-mail.</p>
 );
 
 export const COURSES_TITLE = "Cours de développement";
