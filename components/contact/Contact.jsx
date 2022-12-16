@@ -49,7 +49,7 @@ export default function Contact() {
         if (subject.length === 0) errors.subject = ERR_FORM_REQUIRED;
         if (text.length === 0) errors.text = ERR_FORM_REQUIRED;
 
-        return { success: Object.values.length === 0, errors };
+        return { success: Object.values(errors).length === 0, errors };
     }
 
     async function handleSubmit(e) {
@@ -60,7 +60,7 @@ export default function Contact() {
             if (!success) return;
 
             setLoading(true);
-            const response = await axios.post("/api/contact", { from: email, subject, text });
+            await axios.post("/api/contact", { from: email, subject, text });
             setSuccess(true);
         } catch (err) {
             console.error(err.message);
