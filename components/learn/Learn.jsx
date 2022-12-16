@@ -15,7 +15,7 @@ import coverImg from "../../public/images/page-covers/learn-cover.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Learn.module.css";
 
-const { html, css, js, react, node, next, mysql, maria, php, ruby, svelte, gdscript, mongo, wordpress, sass, less, git, seo } = DEV_TECHS;
+const { html, css, js, react, node, next, mysql, maria, php, git, seo } = DEV_TECHS;
 
 export default function Learn() {
     const { locale } = useRouter();

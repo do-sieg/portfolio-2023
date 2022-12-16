@@ -61,7 +61,6 @@ export default function Contact() {
 
             setLoading(true);
             const response = await axios.post("/api/contact", { from: email, subject, text });
-            console.log(response.data.message);
             setSuccess(true);
         } catch (err) {
             console.error(err.message);

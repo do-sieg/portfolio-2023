@@ -8,6 +8,7 @@ const BLOG_CATEGORIES = [
     "javascript",
     "jobs",
 ];
+export const POSTS_PER_PAGE = 5;
 
 function getPosts(locale) {
     try {
@@ -43,10 +44,32 @@ export function getDrafts(locale) {
 
 export function getRecentPosts(locale, limit = 1) {
     try {
-        return getPosts(locale).slice(0, limit);
+        return getPagePosts(locale, 1, limit);
     } catch (err) {
         console.error(err.message);
         return [];
+    }
+}
+
+export function getPagePosts(locale, page = 1, perPage = 1) {
+    try {
+        const posts = getPosts(locale);
+        const offset = (page - 1) * perPage;
+        return { posts: posts.slice(offset, perPage + offset), count: posts.length };
+    } catch (err) {
+        console.error(err.message);
+        return { posts: [], count: 0 };
+    }
+}
+
+export function getCategoryPagePosts(locale, categoryId, page = 1, perPage = 1) {
+    try {
+        const posts = getCategoryPosts(locale, categoryId);
+        const offset = (page - 1) * perPage;
+        return { posts: posts.slice(offset, perPage + offset), count: posts.length };
+    } catch (err) {
+        console.error(err.message);
+        return { posts: [], count: 0 };
     }
 }
 

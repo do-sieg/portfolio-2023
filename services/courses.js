@@ -31,7 +31,7 @@ export function getCourseTree(locales) {
                     tree[locale][category][dirName] = entries.length;
                 }
             });
-        } catch (err) { console.log(err.message) }
+        } catch (err) { console.error(err.message) }
     }
     return tree;
 }
@@ -48,7 +48,7 @@ function getSubjects(locales) {
                     subjects[locale].push(dirName);
                 }
             });
-        } catch (err) { console.log(err.message) }
+        } catch (err) { console.error(err.message) }
     }
     return subjects;
 }

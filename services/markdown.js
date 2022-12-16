@@ -10,7 +10,7 @@ marked.setOptions({
             if (lang === "") return code;
             return hljs.highlight(code, { language: lang }).value;
         } catch (err) {
-            console.log(err.message, { lang });
+            console.error(err.message, { lang });
             return code;
         }
     },
@@ -22,7 +22,7 @@ export function loadMarkdown(filePath) {
         const { data, content } = parsed;
         return { data, content };
     } catch (err) {
-        console.log(err.message);
+        console.error(err.message);
         return { data: {}, content: "" };
     }
 }

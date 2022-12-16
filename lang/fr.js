@@ -10,6 +10,7 @@ export const ACTION_REFUSE_SETTINGS = "Non merci";
 export const ACTION_VISIT = "Visiter";
 export const ACTION_CONTACT = "E-mail";
 export const ACTION_RESUME = "Télécharger mon CV";
+export const ACTION_LOAD_MORE = "Voir plus de posts";
 
 export const TEXT_DEV_JOBS = "Développeur/Formateur Web";
 export const TEXT_READING_TIME = (min) => `${min} min de lecture`;

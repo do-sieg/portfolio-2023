@@ -11,6 +11,7 @@ export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Email me";
 export const ACTION_RESUME = "Download my resume";
 export const ACTION_LINKEDIN = "LinkedIn";
+export const ACTION_LOAD_MORE = "Load More";
 
 export const TEXT_DEV_JOBS = "Web Developer & Teacher";
 export const TEXT_READING_TIME = (min) => `${min} min read`;
