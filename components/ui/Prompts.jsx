@@ -9,23 +9,27 @@ export default function Prompt({ children, onClick = () => {} }) {
     return <button onClick={onClick} className={styles.container}>{children}</button>
 }
 
+export function PromptLink({ children, href }) {
+    return <Link href={href} className={styles.container}>{children}</Link>
+}
+
 export function PromptContact() {
     const { ACTION_CONTACT } = useLang();
-    return <Link href="/contact"><Prompt><FaEnvelope />{ACTION_CONTACT}</Prompt></Link>;
+    return <PromptLink href="/contact"><FaEnvelope />{ACTION_CONTACT}</PromptLink>;
 }
 
 export function PromptResume() {
     const {locale} = useRouter();
     const { ACTION_RESUME } = useLang();
-    return <a href={DEV_RESUME_PATH[locale]} target="_blank" rel="noreferrer"><Prompt><FaFileDownload />{ACTION_RESUME}</Prompt></a>;
+    return <a className={styles.container} href={DEV_RESUME_PATH[locale]} target="_blank" rel="noreferrer"><FaFileDownload />{ACTION_RESUME}</a>;
 }
 
 export function PromptLinkedIn() {
     const { ACTION_LINKEDIN } = useLang();
-    return <a href={DEV_LINDEKIN} target="_blank" rel="noreferrer"><Prompt><FaLinkedin />{ACTION_LINKEDIN}</Prompt></a>;
+    return <a className={styles.container} href={DEV_LINDEKIN} target="_blank" rel="noreferrer"><FaLinkedin />{ACTION_LINKEDIN}</a>;
 }
 
 export function PromptGitHub() {
     const { PROJECTS_ACTION_GITHUB } = useLang();
-    return <a href={DEV_GITHUB} target="_blank" rel="noreferrer"><Prompt><FaGithub />{PROJECTS_ACTION_GITHUB}</Prompt></a>;
+    return <a className={styles.container} href={DEV_GITHUB} target="_blank" rel="noreferrer"><FaGithub />{PROJECTS_ACTION_GITHUB}</a>;
 }

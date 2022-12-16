@@ -14,7 +14,7 @@ export default function PostCard({ post, customClasses }) {
         <Link className={styles.container} href={`/blog/${post.data.slug}`}>
             {post.data.published !== true && <div className={styles.draftBadge}>{TEXT_DRAFT}</div>}
             <div className={`${styles.coverContainer} ${customClasses?.coverContainer ?? ""}`}>
-                {post.data.coverImage && <Image src={post.data.coverImage.path} alt={post.data.title} fill sizes={1024} />}
+                {post.data.coverImage && <Image src={post.data.coverImage.path} alt={post.data.title} fill sizes="1024px" />}
             </div>
 
             <div className={styles.dataPanel}>

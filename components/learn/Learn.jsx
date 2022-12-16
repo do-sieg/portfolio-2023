@@ -4,7 +4,7 @@ import { reviews } from "../../data/student_reviews";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
-import Prompt, { PromptContact, PromptLinkedIn } from "../ui/Prompts";
+import { PromptContact, PromptLinkedIn } from "../ui/Prompts";
 import SkillsList from "../ui/SkillsList";
 import Carousel from "../ui/Carousel";
 import Credits from "../ui/Credits";
@@ -13,6 +13,7 @@ import ReviewSlide from "./ReviewSlide";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import coverImg from "../../public/images/page-covers/learn-cover.jpg";
 import globals from "../../styles/globals.module.css";
+import promptStyles from "../ui/Prompts.module.css";
 import styles from "./Learn.module.css";
 
 const { html, css, js, react, node, next, mysql, maria, php, git, seo } = DEV_TECHS;
@@ -59,7 +60,7 @@ export default function Learn() {
 
                 <div className={globals.promptBox}>
                     {Object.entries(DEV_TEACH_LINKS).map(([key, link]) => {
-                        return <a key={key} href={link} target="_blank" rel="noreferrer"><Prompt>{key}<FaExternalLinkAlt /></Prompt></a>
+                        return <a key={key} className={promptStyles.container} href={link} target="_blank" rel="noreferrer">{key}<FaExternalLinkAlt /></a>
                     })}
                     <PromptLinkedIn />
                     <PromptContact />

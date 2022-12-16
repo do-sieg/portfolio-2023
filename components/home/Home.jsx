@@ -1,11 +1,10 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { DEV_FULLNAME, DEV_TECHS } from "../../data/dev";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
 import Hero from "./Hero";
-import Prompt, { PromptContact, PromptResume } from "../ui/Prompts";
+import Prompt, { PromptContact, PromptLink, PromptResume } from "../ui/Prompts";
 import SkillsList from "../ui/SkillsList";
 import { FaCogs, FaGraduationCap, FaRocket } from "react-icons/fa";
 import globals from "../../styles/globals.module.css";
@@ -48,8 +47,8 @@ export default function Home() {
                 {HOME_TEXT_INTRO_DEV}
 
                 <div className={globals.promptBox}>
-                    <Link href="#skills"><Prompt><FaCogs />{HOME_ACTION_SKILLS}</Prompt></Link>
-                    <Link href="/projects"><Prompt><FaRocket />{HOME_ACTION_PROJECTS}</Prompt></Link>
+                    <PromptLink href="#skills"><FaCogs />{HOME_ACTION_SKILLS}</PromptLink>
+                    <PromptLink href="/projects"><FaRocket />{HOME_ACTION_PROJECTS}</PromptLink>
                 </div>
             </section>
 
@@ -66,7 +65,7 @@ export default function Home() {
                 {HOME_TEXT_INTRO_TEACH}
 
                 <div className={globals.promptBox}>
-                    <Link href="/learn"><Prompt><FaGraduationCap />{HOME_ACTION_LEARN}</Prompt></Link>
+                    <PromptLink href="/learn"><FaGraduationCap />{HOME_ACTION_LEARN}</PromptLink>
                 </div>
             </section>
 

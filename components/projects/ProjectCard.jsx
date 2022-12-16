@@ -40,7 +40,7 @@ export default function ProjectCard({ data }) {
     return (
         <div className={styles.container}>
             <div className={styles.title}>{data.name}</div>
-            <div className={styles.thumbnail}><Image src={data.imagePath} alt={data.name} fill sizes={300} /></div>
+            <div className={styles.thumbnail}><Image src={data.imagePath} alt={data.name} fill sizes="300px" /></div>
             <div className={styles.techs}>{renderTechIcons()}</div>
             <div className={styles.description}>{data.description}</div>
             <div className={styles.actions}>{renderActions()}</div>

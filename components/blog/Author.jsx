@@ -12,7 +12,7 @@ export default function Author() {
             <Image className={styles.profilePic} src={profilePic} alt={DEV_FULLNAME} placeholder="blur" />
             <div className={styles.rightPanel}>
                 {/* <span className={styles.authorName}>{DEV_FULLNAME}</span> */}
-                <span className={styles.authorDesc}>{BLOG_TEXT_AUTHOR_DESC}</span>
+                <div className={styles.authorDesc}>{BLOG_TEXT_AUTHOR_DESC}</div>
             </div>
         </div>
     );
