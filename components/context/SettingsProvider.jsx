@@ -68,8 +68,7 @@ export default function SettingsProvider({ children }) {
             toggleDarkMode,
         }}>
             {acceptSettings === null && <SettingsDialog />}
-            {/* Delay children rendering to get dark mode styles */}
-            {isDarkMode !== undefined && children}
+            {children}
         </SettingsContext.Provider>
     )
 }
