@@ -6,7 +6,7 @@ export function getStaticPaths({ locales }) {
 }
 
 export function getStaticProps({ params, locale }) {
-    const { posts, count } = getCategoryPagePosts(locale, params.category, 1, 3);
+    const { posts, count } = getCategoryPagePosts(locale, params.category, 1, 5);
     return {
         props: {
             categories: getCategories(),

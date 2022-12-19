@@ -26,7 +26,7 @@ function getPosts(locale) {
     }
 }
 
-export function getDrafts(locale) {
+function getDrafts(locale) {
     try {
         const localePath = path.join(process.cwd(), BLOG_PATH, locale);
         return fs.readdirSync(localePath)

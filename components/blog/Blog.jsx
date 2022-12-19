@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useResetAnimations } from "../../hooks/animation";
@@ -29,18 +30,25 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
     const [pageNumber, setPageNumber] = useState(1);
 
     useEffect(() => {
+        loadPagePosts(1);
+    }, [currentCategory]);
+
+    useEffect(() => {
         if (totalCount !== count) {
-            reloadPosts();
+            reloadDisplayedPosts();
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [totalCount]);
 
-    async function loadNextPosts(nextPageNumber) {
+    async function loadPagePosts(nextPageNumber) {
         try {
             const response = await axios.post(`/api/blog/${nextPageNumber}`, { locale, currentCategory, perPage });
             if (response.data.posts.length > 0) {
                 setPageNumber(nextPageNumber);
-                setDisplayedPosts(prevState => [...prevState, ...response.data.posts]);
+                if (nextPageNumber === 1) {
+                    setDisplayedPosts(response.data.posts);
+                } else {
+                    setDisplayedPosts(prevState => [...prevState, ...response.data.posts]);
+                }
             }
             setTotalCount(response.data.count);
         } catch (err) {
@@ -48,7 +56,7 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
         }
     }
 
-    async function reloadPosts(max = pageNumber) {
+    async function reloadDisplayedPosts(max = pageNumber) {
         try {
             const newPosts = [];
             for (let i = 1; i <= max; i++) {
@@ -67,7 +75,7 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
 
     async function handleLoadMore(e) {
         e.preventDefault();
-        loadNextPosts(pageNumber + 1);
+        loadPagePosts(pageNumber + 1);
     }
 
     return (
