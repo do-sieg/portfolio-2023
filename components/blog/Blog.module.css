@@ -1,6 +1,6 @@
 .categorySelectorWrapper {
     width: fit-content;
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem auto;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
     overflow: hidden;

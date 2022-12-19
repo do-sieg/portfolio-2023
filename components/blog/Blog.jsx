@@ -84,20 +84,25 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
 
             <PageCover src={coverImg} alt={BLOG_TITLE} />
 
-            <h1 ref={resetRef} className={globals.heading}>{currentCategory ? BLOG_TEXT_CATEGORIES[currentCategory] : BLOG_TITLE}</h1>
-
             {currentCategory === null &&
-                <section ref={resetRef}>
-                    {BLOG_TEXT_INTRO}
-                </section>
+                <>
+                    <h1 ref={resetRef} className={globals.heading}>{BLOG_TITLE}</h1>
+                    <section ref={resetRef}>
+                        {BLOG_TEXT_INTRO}
+                    </section>
+                </>
             }
 
             <section ref={resetRef}>
-                {currentCategory === null && <h2 className={globals.subheading}>{BLOG_TITLE_RECENT}</h2>}
-
                 <div className={styles.categorySelectorWrapper}>
                     <CategorySelector categories={categories} currentCategory={currentCategory} />
                 </div>
+
+                {currentCategory === null ?
+                    <h2 className={globals.subheading}>{BLOG_TITLE_RECENT}</h2>
+                    :
+                    <h1 ref={resetRef} className={globals.heading}>{BLOG_TEXT_CATEGORIES[currentCategory]}</h1>
+                }
 
                 <div className={styles.postsGrid}>
                     {displayedPosts.map((post, index) => {
