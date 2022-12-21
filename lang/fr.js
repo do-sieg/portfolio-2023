@@ -22,6 +22,7 @@ export const TEXT_ACCEPT_SETTINGS = (
         Pour accepter notre utilisation des cookies, cliquez sur <b>{ACTION_ACCEPT_SETTINGS}</b>.
     </p>
 );
+export const TEXT_SEARCH_RESULTS_FOR = (value) => `Résultats de recherche pour '${value}'`;
 
 export const NAV_ACTION_LEARN = "Apprendre";
 export const NAV_ACTION_COURSES = "Cours";
@@ -147,6 +148,7 @@ export const BLOG_TEXT_CATEGORIES = {
 }
 export const BLOG_TEXT_READ_MORE_CATEGORY = (categoryId) => <>Articles dans <Link href={`/blog/category/${categoryId}`}>{BLOG_TEXT_CATEGORIES[categoryId]}</Link></>;
 export const BLOG_TEXT_SEE_ALL_POSTS = (n) => `Voir les ${n} article${n > 1 ? "s" : ""}`;
+export const BLOG_TEXT_NO_SEARCH_RESULTS = "Aucun résultat pour cette recherche.";
 
 export const CONTACT_TITLE = "Contact";
 export const CONTACT_LABEL_EMAIL = "E-mail";

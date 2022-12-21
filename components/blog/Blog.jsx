@@ -1,36 +1,37 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import axios from "axios";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
-import { FaSearch } from "react-icons/fa";
 import HeadMeta from "../meta/HeadMeta";
 import Prompt from "../ui/Prompts";
 import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
+import SearchBar from "./SearchBar";
 import CategorySelector from "./CategorySelector";
 import PostCard from "./PostCard";
 import coverImg from "../../public/images/page-covers/blog-cover.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Blog.module.css";
-import axios from "axios";
 
 export default function Blog({ categories = [], posts = [], count = 0, perPage = 1, currentCategory = null }) {
     const { locale } = useRouter();
     const { resetRef } = useResetAnimations([locale, currentCategory]);
     const {
         ACTION_LOAD_MORE,
+        TEXT_SEARCH_RESULTS_FOR,
         TEXT_PHOTO_CREDITS,
         BLOG_TITLE,
         BLOG_TITLE_RECENT,
         BLOG_TEXT_INTRO,
         BLOG_TEXT_CATEGORIES,
+        BLOG_TEXT_NO_SEARCH_RESULTS,
     } = useLang();
     const [displayedPosts, setDisplayedPosts] = useState(posts);
     const [totalCount, setTotalCount] = useState(count);
     const [pageNumber, setPageNumber] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
-    const searchRef = useRef(null);
 
     useEffect(() => {
         loadPagePosts(1);
@@ -79,16 +80,12 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
         }
     }
 
-    async function handleSearch(e) {
-        e.preventDefault();
-        try {
-            if (e.type === "keyup" && e.keyCode !== 13) {
-                return;
-            }
-            setSearchTerm(searchRef.current.value);
-        } catch (err) {
-            console.error("Couldn't search posts: ", err.message);
-        }
+    async function handleSearch(value) {
+        setSearchTerm(value);
+    }
+
+    function handleClearSearch() {
+        setSearchTerm("");
     }
 
     async function handleLoadMore(e) {
@@ -102,31 +99,21 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
 
             <PageCover src={coverImg} alt={BLOG_TITLE} />
 
-            {currentCategory === null &&
-                <>
-                    <h1 ref={resetRef} className={globals.heading}>{BLOG_TITLE}</h1>
-                    <section ref={resetRef}>
-                        {BLOG_TEXT_INTRO}
-                    </section>
-                </>
+            <h1 ref={resetRef} className={globals.heading}>{currentCategory ? BLOG_TEXT_CATEGORIES[currentCategory] : BLOG_TITLE}</h1>
+
+            {!currentCategory &&
+                <section ref={resetRef}>
+                    {BLOG_TEXT_INTRO}
+                </section>
             }
 
-            <section ref={resetRef}>
-                <div className={styles.toolbar}>
-                    <div className={styles.searchContainer}>
-                        <input ref={searchRef} type="search" onKeyUp={handleSearch} onInput={(e) => {
-                            if (e.target.value === "") handleSearch(e);
-                        }} />
-                        <button className={globals.btn} onClick={handleSearch}><FaSearch /></button>
-                    </div>
-                    <CategorySelector categories={categories} currentCategory={currentCategory} />
-                </div>
+            <div className={styles.toolbar}>
+                <SearchBar onSearch={handleSearch} onClear={handleClearSearch} />
+                <CategorySelector categories={categories} currentCategory={currentCategory} />
+            </div>
 
-                {currentCategory === null ?
-                    <h2 className={globals.subheading}>{BLOG_TITLE_RECENT}</h2>
-                    :
-                    <h1 ref={resetRef} className={globals.heading}>{BLOG_TEXT_CATEGORIES[currentCategory]}</h1>
-                }
+            <section ref={resetRef}>
+                <h2 className={globals.subheading}>{searchTerm ? TEXT_SEARCH_RESULTS_FOR(searchTerm) : BLOG_TITLE_RECENT}</h2>
 
                 <div className={styles.postsGrid}>
                     {displayedPosts.map((post, index) => {
@@ -139,6 +126,8 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
                         <Prompt onClick={handleLoadMore}>{ACTION_LOAD_MORE}</Prompt>
                     </div>
                 }
+
+                {displayedPosts.length === 0 && <p style={{ textAlign: "center" }}>{BLOG_TEXT_NO_SEARCH_RESULTS}</p>}
             </section>
 
             <div style={{ marginTop: "2rem" }}>

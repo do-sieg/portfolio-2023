@@ -5,22 +5,6 @@
     box-shadow: var(--shadow-sm);
 }
 
-.toolbar .searchContainer {
-    flex: 2;
-    display: flex;
-}
-
-.toolbar .searchContainer button {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.toolbar .searchContainer input {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    outline: none;
-}
-
 .toolbar select {
     flex: 1;
 }

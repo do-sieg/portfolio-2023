@@ -23,6 +23,7 @@ export const TEXT_ACCEPT_SETTINGS = (
         If you agree with our use of cookies, click <b>{ACTION_ACCEPT_SETTINGS}</b>.
     </p>
 );
+export const TEXT_SEARCH_RESULTS_FOR = (value) => `Search results for '${value}'`;
 
 export const NAV_ACTION_LEARN = "Learn";
 export const NAV_ACTION_COURSES = "Courses";
@@ -152,6 +153,7 @@ export const BLOG_TEXT_CATEGORIES = {
 }
 export const BLOG_TEXT_READ_MORE_CATEGORY = (categoryId) => <>More in <Link href={`/blog/category/${categoryId}`}>{BLOG_TEXT_CATEGORIES[categoryId]}</Link></>;
 export const BLOG_TEXT_SEE_ALL_POSTS = (n) => `${n} post${n > 1 ? "s" : ""}`;
+export const BLOG_TEXT_NO_SEARCH_RESULTS = "Couldn't match any article.";
 
 export const CONTACT_TITLE = "Contact Me";
 export const CONTACT_LABEL_EMAIL = "Email";
