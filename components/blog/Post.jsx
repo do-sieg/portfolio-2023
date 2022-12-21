@@ -62,8 +62,8 @@ export default function Post({ post, similarPostsData }) {
                 {post.data.coverImage?.authorName &&
                     <Credits
                         text={TEXT_PHOTO_CREDITS}
-                        name={post.data.coverImage.authorName.split(",").map(name => name.trim())}
-                        link={post.data.coverImage.authorUrl.split(",").map(link => link.trim()) ?? null}
+                        name={post.data.coverImage.authorName?.split(",").map(name => name.trim())}
+                        link={post.data.coverImage.authorUrl?.split(",").map(link => link.trim()) ?? null}
                     />
                 }
 

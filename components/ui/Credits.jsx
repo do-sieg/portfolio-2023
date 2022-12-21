@@ -16,7 +16,7 @@ export default function Credits({ text, name, link }) {
         return names.map((name, index) => {
             return (
                 <Fragment key={index}>
-                    {link[index] ?
+                    {link && link[index] ?
                         <a href={links[index]} target="_blank" rel="noreferrer">{name}</a>
                         :
                         <span>{name}</span>}

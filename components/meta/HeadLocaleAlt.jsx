@@ -6,7 +6,7 @@ export default function HeadLocaleAlt({ lang, href }) {
 
     return (
         <Head>
-            <link key={`lang-alt-${lang}`} rel="alternate" hreflang={lang} href={href} />
+            <link key={`lang-alt-${lang}`} rel="alternate" hrefLang={lang} href={href} />
             {lang === locale ?
                 <meta property="og:locale" content={lang} key="og:locale" />
                 :
