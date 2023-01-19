@@ -148,10 +148,22 @@
     background-color: var(--c-back-2);
 }
 
-.pageContainer ul {
+.pageContainer ul, .pageContainer ol {
     margin: 1em 0;
     padding-inline-start: 2.5rem;
+}
+
+.pageContainer ul {
     list-style-type: disc;
+}
+
+.pageContainer ol {
+    list-style-type: decimal;
+}
+
+.pageContainer li::marker {
+    font-weight: var(--font-normal);
+    color: var(--c-secondary);
 }
 
 .promptBox {
