@@ -2,7 +2,7 @@
     "do-blog": {
         "name": "Blog",
         "description": "Un blog où je publie mes derniers articles sur la programmation, les technos, la vie de développeur... et d'autres sujets aussi.",
-        "imagePath": "/images/projects/do-logo.png",
+        "imagePath": "/images/projects/do-blog.jpg",
         "tech": [
             "html",
             "css",
