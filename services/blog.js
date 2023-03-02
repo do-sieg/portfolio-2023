@@ -10,69 +10,6 @@ const BLOG_CATEGORIES = [
 ];
 export const POSTS_PER_PAGE = 5;
 
-function getPosts(locale) {
-    try {
-        const localePath = path.join(process.cwd(), BLOG_PATH, locale);
-        return fs.readdirSync(localePath)
-            .map((filename) => {
-                const markdown = loadMarkdown(path.join(BLOG_PATH, locale, filename));
-                markdown.data.slug = path.basename(filename, ".md");
-                return markdown;
-            })
-            .filter(post => post.data.published === true)
-            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-    } catch (err) {
-        throw err;
-    }
-}
-
-function getDrafts(locale) {
-    try {
-        const localePath = path.join(process.cwd(), BLOG_PATH, locale);
-        return fs.readdirSync(localePath)
-            .map((filename) => {
-                const markdown = loadMarkdown(path.join(BLOG_PATH, locale, filename));
-                markdown.data.slug = path.basename(filename, ".md");
-                return markdown;
-            })
-            .filter(post => post.data.published !== true)
-            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-    } catch (err) {
-        throw err;
-    }
-}
-
-export function getRecentPosts(locale, limit = 1) {
-    try {
-        return getPagePosts(locale, 1, limit);
-    } catch (err) {
-        console.error(err.message);
-        return [];
-    }
-}
-
-export function getPagePosts(locale, page = 1, perPage = 1) {
-    try {
-        const posts = getPosts(locale);
-        const offset = (page - 1) * perPage;
-        return { posts: posts.slice(offset, perPage + offset), count: posts.length };
-    } catch (err) {
-        console.error(err.message);
-        return { posts: [], count: 0 };
-    }
-}
-
-export function getCategoryPagePosts(locale, categoryId, page = 1, perPage = 1) {
-    try {
-        const posts = getCategoryPosts(locale, categoryId);
-        const offset = (page - 1) * perPage;
-        return { posts: posts.slice(offset, perPage + offset), count: posts.length };
-    } catch (err) {
-        console.error(err.message);
-        return { posts: [], count: 0 };
-    }
-}
-
 export function getCategories() {
     return BLOG_CATEGORIES;
 }
@@ -86,18 +23,6 @@ export function getCategoryPaths(locales) {
         paths.push(...BLOG_CATEGORIES.map(category => `/${locale}/blog/category/${category}`));
     }
     return paths;
-}
-
-export function getCategoryPosts(locale, categoryId) {
-    try {
-        if (process.env.NODE_ENV === "development" && categoryId === "draft") {
-            return getDrafts(locale);
-        }
-        return getPosts(locale).filter(post => post.data.category === categoryId);
-    } catch (err) {
-        console.error(err.message);
-        return [];
-    }
 }
 
 export function getPostPaths(locales) {
@@ -124,16 +49,76 @@ export function getPostData(locale, slug) {
     return data;
 }
 
-export function getSimilarPosts(locale, categoryId, currentPostSlug, limit = 10) {
+function getPosts({ locale, categoryId, page = 1, perPage = POSTS_PER_PAGE, searchTerm = "", exclude = [] }) {
     try {
-        return getCategoryPosts(locale, categoryId)
-            .filter(post => post.data.slug !== currentPostSlug)
-            .slice(0, limit);
+        const localePath = path.join(process.cwd(), BLOG_PATH, locale);
+        let posts = fs.readdirSync(localePath)
+            .map((filename) => {
+                const markdown = loadMarkdown(path.join(BLOG_PATH, locale, filename));
+                markdown.data.slug = path.basename(filename, ".md");
+                return markdown;
+            })
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+
+        if (searchTerm) {
+            const titlePosts = posts.filter(post => post.data.title.toLowerCase().includes(searchTerm.toLowerCase()));
+            const descPosts = posts
+                .filter(post => !titlePosts.includes(post))
+                .filter(post => post.data.description.toLowerCase().includes(searchTerm.toLowerCase()));
+            const textPosts = posts
+                .filter(post => ![...titlePosts, ...descPosts].includes(post))
+                .filter(post => post.content.toLowerCase().includes(searchTerm.toLowerCase()));
+            posts = [...titlePosts, ...descPosts, ...textPosts];
+        }
+
+        if (exclude.length > 0) {
+            posts = posts.filter(post => !exclude.includes(post.data.slug));
+        }
+
+        if (process.env.NODE_ENV === "development" && categoryId === "draft") {
+            posts = posts.filter(post => post.data.published !== true);
+        } else {
+            posts = posts.filter(post => post.data.published === true);
+            if (categoryId) {
+                posts = posts.filter(post => post.data.category === categoryId);
+            }
+        }
+
+        const count = posts.length;
+
+        if (page && perPage) {
+            const offset = (page - 1) * perPage;
+            posts = posts.slice(offset, perPage + offset);
+        }
+
+        return { posts, count };
     } catch (err) {
         console.error(err.message);
         return [];
     }
 }
+
+export function getAllPosts(locale, page = 1, perPage = POSTS_PER_PAGE) {
+    return getPosts({ locale, page, perPage });
+}
+
+export function getCategoryPosts(locale, categoryId, page = 1, perPage = POSTS_PER_PAGE) {
+    return getPosts({ locale, categoryId, page, perPage });
+}
+
+export function getRecentPosts(locale, perPage = POSTS_PER_PAGE) {
+    return getPosts({ locale, perPage });
+}
+
+export function getSimilarPosts(locale, categoryId, currentPostSlug, limit = 10) {
+    return getPosts({ locale, categoryId, perPage: limit, exclude: [currentPostSlug] });
+}
+
+export function searchPosts(locale, categoryId, searchTerm, page = 1, perPage = POSTS_PER_PAGE) {
+    return getPosts({ locale, categoryId, searchTerm, page, perPage });
+}
+
+
 
 /*
 
@@ -150,8 +135,6 @@ export async function getPosts({
     exclude = [],
 }) {
     try {
-        // Get all entries from the folder
-        let entries = fs.readdirSync(path.join(process.cwd(), pathname));
 
         // Get metadata from files
         entries = await Promise.all(entries
@@ -167,12 +150,7 @@ export async function getPosts({
 
         // Common filters
         entries = entries
-            .filter(post => process.env.NODE_ENV === "development" || post.data.published)
-            .filter(post => category ? post.data.category === category : true)
             .filter(post => tag ? post.data.tags && post.data.tags.includes(tag) : true)
-            .filter(post => !exclude.includes(post.slug))
-            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
-            .map(post => addDefaultAuthor(post));
 
         // Author filter
         let authorName = "";

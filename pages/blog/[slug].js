@@ -8,8 +8,8 @@ export function getStaticPaths({ locales }) {
 export function getStaticProps({ params, locale }) {
     const post = getPostData(locale, params.slug);
     const similarPostsData = {
-        posts: getSimilarPosts(locale, post.data.category, params.slug, 2),
-        count: getCategoryPosts(locale, post.data.category).length,
+        posts: getSimilarPosts(locale, post.data.category, params.slug, 2).posts,
+        count: getCategoryPosts(locale, post.data.category, 0, 0).count,
     };
     return { props: { post, similarPostsData } };
 }

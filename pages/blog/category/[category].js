@@ -1,12 +1,12 @@
 import Blog from "../../../components/blog/Blog";
-import { getCategories, getCategoryPaths, getCategoryPagePosts, POSTS_PER_PAGE } from "../../../services/blog";
+import { getCategories, getCategoryPaths, getCategoryPosts, POSTS_PER_PAGE } from "../../../services/blog";
 
 export function getStaticPaths({ locales }) {
     return { paths: getCategoryPaths(locales), fallback: false };
 }
 
 export function getStaticProps({ params, locale }) {
-    const { posts, count } = getCategoryPagePosts(locale, params.category, 1, 5);
+    const { posts, count } = getCategoryPosts(locale, params.category, 1, 5);
     return {
         props: {
             categories: getCategories(),

@@ -60,7 +60,11 @@ export default function Post({ post, similarPostsData }) {
                 <Author />
 
                 {post.data.coverImage?.authorName &&
-                    <Credits text={TEXT_PHOTO_CREDITS} name={post.data.coverImage.authorName} link={post.data.coverImage.authorUrl ?? null} />
+                    <Credits
+                        text={TEXT_PHOTO_CREDITS}
+                        name={post.data.coverImage.authorName?.split(",").map(name => name.trim())}
+                        link={post.data.coverImage.authorUrl?.split(",").map(link => link.trim()) ?? null}
+                    />
                 }
 
                 {similarPostsData.posts.length > 0 && (

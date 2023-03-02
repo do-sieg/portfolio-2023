@@ -1,19 +1,24 @@
-.categorySelectorWrapper {
-    width: fit-content;
-    margin: 0 auto 1rem;
-    border-radius: 0.5rem;
+.toolbar {
+    margin: 0 0 2rem;
+    display: flex;
+    gap: 1rem;
     box-shadow: var(--shadow-sm);
-    overflow: hidden;
 }
 
-.categorySelectorWrapper select {
+.toolbar select {
+    flex: 1;
+}
+
+.toolbar input,
+.toolbar select {
     width: 100%;
+    border-radius: 0.5rem;
     box-shadow: var(--shadow-inner);
 }
 
 @media (max-width: 640px) {
-    .categorySelectorWrapper {
-        width: 100%;
+    .toolbar {
+        flex-direction: column;
     }
 }
 

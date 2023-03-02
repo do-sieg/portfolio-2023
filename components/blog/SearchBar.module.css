@@ -1,0 +1,50 @@
+.container {
+    flex: 2;
+    display: flex;
+}
+
+.container button {
+    outline: none;
+}
+
+.inputContainer {
+    position: relative;
+    flex: 1;
+}
+
+.inputContainer input {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    outline: none;
+}
+
+.inputContainer input[type="search"]::-webkit-search-cancel-button,
+.inputContainer input[type="search"]::-webkit-search-decoration {
+    appearance: none;
+}
+
+.clearBtn {
+    position: absolute;
+    top: calc(50% - 1.75rem / 2);
+    right: 0.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.clearBtn svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.searchBtn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

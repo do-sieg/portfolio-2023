@@ -136,7 +136,7 @@
     align-self: center;
 }
 
-.pageContainer input, .pageContainer textarea {
+.pageContainer input, .pageContainer textarea, .pageContainer select {
     padding: 0.5rem;
     border: 1px solid var(--c-back-3);
     border-radius: 0.25rem;
