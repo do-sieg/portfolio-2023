@@ -13,9 +13,9 @@ export default function HeaderBar() {
     return (
         <div className={styles.container}>
             <div className={styles.contactLinks}>
-                <a href={DEV_LINDEKIN} target="_blank" rel="noreferrer"><FaLinkedin /></a>
-                <a href={DEV_GITHUB} target="_blank" rel="noreferrer"><FaGithubSquare /></a>
-                <Link href="/contact"><FaEnvelopeSquare /></Link>
+                <a href={DEV_LINDEKIN} aria-label="LinkedIn" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+                <a href={DEV_GITHUB} aria-label="GitHub" target="_blank" rel="noreferrer"><FaGithubSquare /></a>
+                <Link href="/contact" aria-label="Contact"><FaEnvelopeSquare /></Link>
             </div>
             <div className={styles.userSettings}>
                 <ModeIcon style={{ cursor: "pointer", userSelect: "none" }} onClick={acceptSettings ? toggleDarkMode : resetAcceptSettings} />

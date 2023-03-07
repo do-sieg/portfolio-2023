@@ -23,7 +23,7 @@ export default function MobileMenu({ children }) {
 
     return (
         <>
-            <button className={styles.toggleButton} onClick={handleToggleMenu}>{isMenuOpen ? <FaTimes /> : <FaBars />}</button>
+            <button className={styles.toggleButton} aria-label="Menu" onClick={handleToggleMenu}>{isMenuOpen ? <FaTimes /> : <FaBars />}</button>
             {isMenuOpen && <div className={styles.menuContainer}>{children}</div>}
         </>
     );

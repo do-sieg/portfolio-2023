@@ -14,10 +14,10 @@
     text-transform: uppercase;
     font-size: x-large;
     font-weight: 600;
-    color: var(--gray-400);
+    color: var(--c-primary);
     transition: all 0.2s 0.1s ease-in-out;
 }
 
 .container a.selected {
-    color: var(--c-primary);
+    color: var(--c-secondary);
 }
