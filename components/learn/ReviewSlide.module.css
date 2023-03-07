@@ -49,7 +49,7 @@
 }
 
 .studentName::before {
-    content: "—";
+    content: "— ";
 }
 
 @media (max-width: 640px) {

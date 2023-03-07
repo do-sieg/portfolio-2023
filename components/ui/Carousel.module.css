@@ -57,7 +57,7 @@
     padding: 0.5rem;
     display: flex;
     justify-content: center;
-    gap: 0.25rem;
+    gap: 0.35rem;
 }
 
 .navDots button {
@@ -70,4 +70,10 @@
 
 .navDots button.activeDot {
     opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+    .navDots {
+        display: none;
+    }
 }
