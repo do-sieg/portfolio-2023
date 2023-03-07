@@ -5,6 +5,7 @@
 @font-face {
 	font-family: "Lilita One";
 	src: url("./fonts/LilitaOne-Regular.ttf");
+	font-display: swap;
 }
 
 :root {
