@@ -6,9 +6,19 @@
     animation: fade 0.5s 0.1s forwards, scaleOut 1s;
 }
 
+.small {
+    display: none;
+}
+
 @media (max-width: 640px) {
     .container {
         height: 12rem;
+    }
+    .large {
+        display: none;
+    }
+    .small {
+        display: flex;
     }
 }
 

@@ -12,6 +12,7 @@ import PageCover from "../ui/PageCover";
 import ReviewSlide from "./ReviewSlide";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import coverImg from "../../public/images/page-covers/learn-cover.jpg";
+import coverImgSmall from "../../public/images/page-covers/learn-cover-sm.jpg";
 import globals from "../../styles/globals.module.css";
 import promptStyles from "../ui/Prompts.module.css";
 import styles from "./Learn.module.css";
@@ -34,7 +35,7 @@ export default function Learn() {
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={LEARN_TITLE} />
 
-            <PageCover src={coverImg} alt={LEARN_TITLE} />
+            <PageCover src={coverImg} srcSmall={coverImgSmall} alt={LEARN_TITLE} />
 
             <h1 ref={resetRef} className={globals.heading}>{LEARN_TITLE}</h1>
 
