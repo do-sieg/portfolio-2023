@@ -7,6 +7,7 @@ import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
 import SubjectCard from "./SubjectCard";
 import coverImg from "../../public/images/page-covers/courses-cover.jpg";
+import coverImgSmall from "../../public/images/page-covers/courses-cover-sm.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Courses.module.css";
 
@@ -46,7 +47,7 @@ export default function Courses({ langCourses }) {
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={COURSES_TITLE} />
 
-            <PageCover src={coverImg} alt={COURSES_TITLE} />
+            <PageCover src={coverImg} srcSmall={coverImgSmall} alt={COURSES_TITLE} />
 
             <h1 ref={resetRef} className={globals.heading}>{COURSES_TITLE}</h1>
 

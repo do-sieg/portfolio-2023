@@ -8,6 +8,7 @@ import PageCover from "../ui/PageCover";
 import { PromptGitHub, PromptResume } from "../ui/Prompts";
 import ProjectCard from "./ProjectCard";
 import coverImg from "../../public/images/page-covers/projects-cover.jpg";
+import coverImgSmall from "../../public/images/page-covers/projects-cover-sm.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Projects.module.css";
 
@@ -34,7 +35,7 @@ export default function Projects() {
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={PROJECTS_TITLE} />
 
-            <PageCover src={coverImg} alt={PROJECTS_TITLE} />
+            <PageCover src={coverImg} srcSmall={coverImgSmall} alt={PROJECTS_TITLE} />
 
             <h1 ref={resetRef} className={globals.heading}>{PROJECTS_TITLE}</h1>
 

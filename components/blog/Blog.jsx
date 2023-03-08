@@ -12,6 +12,7 @@ import SearchBar from "./SearchBar";
 import CategorySelector from "./CategorySelector";
 import PostCard from "./PostCard";
 import coverImg from "../../public/images/page-covers/blog-cover.jpg";
+import coverImgSmall from "../../public/images/page-covers/blog-cover-sm.jpg";
 import globals from "../../styles/globals.module.css";
 import styles from "./Blog.module.css";
 
@@ -97,7 +98,7 @@ export default function Blog({ categories = [], posts = [], count = 0, perPage =
         <main className={globals.pageContainer}>
             <HeadMeta name="title" content={currentCategory ? BLOG_TEXT_CATEGORIES[currentCategory] : BLOG_TITLE} />
 
-            <PageCover src={coverImg} alt={BLOG_TITLE} />
+            <PageCover src={coverImg} srcSmall={coverImgSmall} alt={BLOG_TITLE} />
 
             <h1 ref={resetRef} className={globals.heading}>{currentCategory ? BLOG_TEXT_CATEGORIES[currentCategory] : BLOG_TITLE}</h1>
 
