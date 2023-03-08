@@ -7,8 +7,8 @@ import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
 import { PromptGitHub, PromptResume } from "../ui/Prompts";
 import ProjectCard from "./ProjectCard";
-import coverImg from "../../public/images/page-covers/projects-cover.jpg";
-import coverImgSmall from "../../public/images/page-covers/projects-cover-sm.jpg";
+import coverImg from "../../public/images/page-covers/projects-cover.webp";
+import coverImgSmall from "../../public/images/page-covers/projects-cover-sm.webp";
 import globals from "../../styles/globals.module.css";
 import styles from "./Projects.module.css";
 

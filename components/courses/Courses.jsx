@@ -6,8 +6,8 @@ import HeadMeta from "../meta/HeadMeta";
 import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
 import SubjectCard from "./SubjectCard";
-import coverImg from "../../public/images/page-covers/courses-cover.jpg";
-import coverImgSmall from "../../public/images/page-covers/courses-cover-sm.jpg";
+import coverImg from "../../public/images/page-covers/courses-cover.webp";
+import coverImgSmall from "../../public/images/page-covers/courses-cover-sm.webp";
 import globals from "../../styles/globals.module.css";
 import styles from "./Courses.module.css";
 

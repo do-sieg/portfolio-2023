@@ -11,8 +11,8 @@ import PageCover from "../ui/PageCover";
 import SearchBar from "./SearchBar";
 import CategorySelector from "./CategorySelector";
 import PostCard from "./PostCard";
-import coverImg from "../../public/images/page-covers/blog-cover.jpg";
-import coverImgSmall from "../../public/images/page-covers/blog-cover-sm.jpg";
+import coverImg from "../../public/images/page-covers/blog-cover.webp";
+import coverImgSmall from "../../public/images/page-covers/blog-cover-sm.webp";
 import globals from "../../styles/globals.module.css";
 import styles from "./Blog.module.css";
 
