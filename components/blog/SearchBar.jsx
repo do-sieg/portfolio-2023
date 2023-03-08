@@ -31,10 +31,10 @@ export default function SearchBar({ onSearch, onClear, defaultValue = "" }) {
     return (
         <div className={styles.container}>
             <div className={styles.inputContainer}>
-                <input type="search" value={value} onChange={handleChange} onKeyDown={handleKeyDown} />
-                <button className={styles.clearBtn} style={{ display: value === "" ? "none" : "initial" }} onClick={handleClear}><FaTimesCircle /></button>
+                <input type="search" aria-label="Search" value={value} onChange={handleChange} onKeyDown={handleKeyDown} />
+                <button className={styles.clearBtn} style={{ display: value === "" ? "none" : "initial" }} aria-label="Clear" onClick={handleClear}><FaTimesCircle /></button>
             </div>
-            <button className={cn(globals.btn, styles.searchBtn)} onClick={handleSubmit}><FaSearch /></button>
+            <button className={cn(globals.btn, styles.searchBtn)} aria-label="Search" onClick={handleSubmit}><FaSearch /></button>
         </div>
     );
 }
