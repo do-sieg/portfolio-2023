@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { DEV_FULLNAME } from "../../../data/dev";
 import { useLang } from "../../../hooks/lang";
-import profilePic from "../../../public/images/dev-profile-xs.jpg";
+import profilePic from "../../../public/images/dev-profile-xs.webp";
 import styles from "./LessonInfo.module.css";
 
 export default function LessonInfo({ readingTime }) {
