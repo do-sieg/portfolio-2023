@@ -7,7 +7,7 @@ export const DEV_FIRSTNAME = "Daniel";
 export const DEV_LASTNAME = "Orchanian";
 export const DEV_FULLNAME = `${DEV_FIRSTNAME} ${DEV_LASTNAME}`;
 export const DEV_RESUME_PATH = {
-    fr: "/files/CV_Daniel_Orchanian_Dev_2022-09_FR.pdf",
+    fr: "/files/cv-Daniel-Orchanian-dev-fr-2023-1.pdf",
     en: "/files/CV_Daniel_Orchanian_2021-11_EN.pdf",
 };
 export const DEV_EMAIL = "d.orchanian@gmail.com";
