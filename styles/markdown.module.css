@@ -38,6 +38,10 @@
     text-indent: 0;
 }
 
+.container blockquote img {
+    margin: 0;
+}
+
 .container code {
     color: var(--amber-600);
 }

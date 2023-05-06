@@ -5,15 +5,19 @@ date: "2023-04-22"
 category: frontend
 coverImage:
     path: /images/blog/covers/fr/zoning-balloon.webp
-    authorName: Lesly Juarez
-    authorUrl: https://unsplash.com/@jblesly
+    authorName: Lesly Juarez, Jonas Jacobsen
+    authorUrl: https://unsplash.com/@jblesly, https://pexels.com/@jonas-jacobsen-208711/
 published: true
 ---
 
 Il y a quelques jours, j'avais une session avec un étudiant chez **OpenClassrooms** pour un projet d'intégration de maquette, et je lui ai expliqué un concept essentiel en frontend : le "**zoning**".
 
-> "Le zoning?"  
-— Un lecteur intrigué
+> "Cessons ces anglicismes !
+![Zonard](/images/blog/posts/fr/zoning-zonard.webp)
+On dit **zoner** !"  
+— Un galliciste remonté
+
+...
 
 ## Le concept
 
@@ -88,7 +92,9 @@ On peut y voir plusieurs zones et sous-zones :
 - Menu de navigation (2)
   - Icone + Texte
 
-On remarquera que bien qu'il y ait un séparateur, les éléments en violet et jaune contiennent des blocs similaires composés d'une icône et d'un texte. On pourra peut-être décider d'en faire un seul bloc avec un séparateur avant les deux _items_ à droite ?
+On remarquera que bien qu'il y ait un séparateur, les éléments en violet et jaune contiennent des blocs similaires composés d'une icône et d'un texte.
+
+On pourra peut-être décider d'en faire un seul bloc; avec un séparateur avant les deux _items_ à droite ?
 
 ## Une approche atomique
 
@@ -102,15 +108,18 @@ Le zoning me permet dans ces cas de voir quels blocs peuvent être avancés ind�
 
 Le zoning s'applique aussi si vous faites du **no-code**. La plupart des outils no-code vous obligent à passer par des lignes et des colonnes. Il faut donc penser "blocs".
 
-Un exercice très intéressant est de découper un site au hasard avec un schéma similaire à celui que j'ai fait, pour voir comment le design est pensé.
+Un exercice très intéressant consiste à découper un site au hasard avec un schéma similaire à celui que j'ai fait, pour voir comment le design est pensé.
 
 Vous pouvez ensuite inspecter chaque élément et voir les techniques CSS qui ont été appliquées pour tel ou tel effet.
 
 Le zoning est un des **fondamentaux du frontend**. Que vous soyez junior ou backend secrètement intéressé par ces questions, le plus tôt vous l'adopterez, le plus vite vous progresserez.
+
+> "Mince ! On est repérés ! Replions-nous !"  
+— Des devs backend infiltrés
 
 Je ferai prochainement un article sur le zoning et le design responsive.
 
 ---
 
 _Cet article est une version remaniée d'[un de mes posts sur LinkedIn](
-<https://www.linkedin.com/posts/daniel-orchanian_frontend-css-design-activity-7056514694794108928-drx->). N'hésitez pas à m'y suivre si ce type de contenu vous intéresse._
+<https://www.linkedin.com/posts/daniel-orchanian_frontend-css-design-activity-7056514694794108928-drx->). Suivez-moi si ce type de contenu vous intéresse._
