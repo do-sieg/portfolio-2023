@@ -7,7 +7,7 @@ coverImage:
     path: /images/blog/covers/fr/zoning-balloon.webp
     authorName: Lesly Juarez
     authorUrl: https://unsplash.com/@jblesly
-published: false
+published: true
 ---
 
 Il y a quelques jours, j'avais une session avec un étudiant chez **OpenClassrooms** pour un projet d'intégration de maquette, et je lui ai expliqué un concept essentiel en frontend : le "**zoning**".

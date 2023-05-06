@@ -42,7 +42,7 @@
     color: var(--amber-600);
 }
 
-.container pre > code {
+.container pre>code {
     display: block;
     overflow-x: auto;
     padding: 0.5rem 1em;
@@ -50,4 +50,8 @@
     font-size: large;
     background-color: var(--neutral-800);
     color: white;
+}
+
+.container pre+pre {
+    margin-top: 1rem;
 }
