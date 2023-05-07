@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: var(--shadow-sm);
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-primary-2);
 }
 
@@ -44,7 +44,7 @@
 
 .body {
     padding: 0.5rem 1.5rem 0.75rem;
-    font-weight: var(--font-normal);
+    font-weight: 400;
 }
 
 .body::after {

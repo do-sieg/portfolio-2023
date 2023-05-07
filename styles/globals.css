@@ -10,7 +10,7 @@
 
 :root {
 	--headerbar-height: 2.5rem;
-	--header-height: 6.5rem;
+	--header-height: 4.5rem;
 	--c-back: white;
 	--c-back-2: var(--zinc-100);
 	--c-back-3: var(--zinc-200);

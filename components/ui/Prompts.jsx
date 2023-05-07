@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaEnvelope, FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaFileDownload, FaGithub, FaGraduationCap, FaLinkedin } from "react-icons/fa";
 import { DEV_GITHUB, DEV_LINDEKIN, DEV_RESUME_PATH } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
 import styles from "./Prompts.module.css";
@@ -27,6 +27,11 @@ export function PromptResume() {
 export function PromptLinkedIn() {
     const { ACTION_LINKEDIN } = useLang();
     return <a className={styles.container} href={DEV_LINDEKIN} target="_blank" rel="noreferrer"><FaLinkedin />{ACTION_LINKEDIN}</a>;
+}
+
+export function PromptSuperprof() {
+    const { ACTION_SUPERPROF } = useLang();
+    return <a className={styles.container} href={DEV_LINDEKIN} target="_blank" rel="noreferrer"><FaGraduationCap />{ACTION_SUPERPROF}</a>;
 }
 
 export function PromptGitHub() {

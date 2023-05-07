@@ -18,13 +18,13 @@
 
 .title {
     font-size: x-large;
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-secondary);
 }
 
 .description {
     font-size: large;
-    font-weight: var(--font-light);
+    font-weight: 300;
 }
 
 .action {

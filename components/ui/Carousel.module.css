@@ -35,7 +35,7 @@
     position: absolute;
     z-index: 1;
     font-size: x-large;
-    font-weight: var(--font-extrabold);
+    font-weight: 800;
     background-color: transparent;
     transition: all 0.3s 0.1s;
     cursor: pointer;

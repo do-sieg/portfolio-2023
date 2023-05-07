@@ -6,17 +6,19 @@
     text-transform: uppercase;
     font-family: Lilita One;
     font-size: inherit;
-    font-weight: 700;
     user-select: none;
 }
 
 .firstName {
+    line-height: 1;
     font-size: 2em;
+    font-weight: 700;
     color: var(--c-primary);
 }
 
 .lastName {
     font-size: 1em;
+    font-weight: 500;
     /* color: hsl(0, 0%, 100%, 95%); */
     background-color: var(--c-primary);
     color: var(--c-back);

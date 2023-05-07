@@ -1,0 +1,19 @@
+@use "../../styles/text.scss";
+@use "../../styles/font.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+    
+.container svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.container span {
+    font-size: large;
+    font-weight: 400;
+}

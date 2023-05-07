@@ -16,7 +16,7 @@
     border-bottom: 1px solid;
     text-align: center;
     font-size: x-large;
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     filter: var(--drop-shadow-md);
 }
 

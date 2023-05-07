@@ -6,7 +6,7 @@
     background-color: var(--c-back-2);
     box-shadow: var(--shadow-md);
     font-size: medium;
-    font-weight: var(--font-normal);
+    font-weight: 400;
 }
 
 .categoryLink {

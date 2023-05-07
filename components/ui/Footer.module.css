@@ -18,6 +18,6 @@
 }
 
 .copyright {
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-primary);
 }

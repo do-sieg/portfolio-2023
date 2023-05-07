@@ -33,35 +33,26 @@ export const ERR_404_TEXT_MESSAGE = "Page introuvable";
 export const ERR_FORM_REQUIRED = "Ce champ est obligatoire";
 export const ERR_FORM_NOT_VALID_EMAIL = "Veuillez saisir une adresse e-mail valide";
 
-export const HOME_TITLE = "Bienvenue";
-export const HOME_TITLE_DEV = "Je suis développeur...";
-export const HOME_TITLE_TEACH = "Je suis aussi formateur et mentor...";
-export const HOME_TITLE_SKILLS_MAIN = "Compétences principales";
-export const HOME_TITLE_SKILLS_OTHER = "Autres compétences";
-export const HOME_ACTION_PROJECTS = "Mes projets";
-export const HOME_ACTION_SKILLS = "Mes compétences";
-export const HOME_ACTION_LEARN = "Apprendre à coder";
+export const HOME_TITLE_DEV = "Développeur Fullstack";
+export const HOME_TITLE_TEACH = "Formations & Cours";
 export const HOME_TEXT_INTRO_DEV = (
-    <p>... au service des <b>entreprises</b> et en <strong>free-lance</strong>.
-        Mon double parcours m'a appris à répondre à toutes sortes de besoins, pour tous types de projets.</p>
-);
-export const HOME_TEXT_INTRO_HIRE = (
-    <p><b>Vous recrutez</b> ? Vous recherchez un professionnel pour <strong>réaliser un site</strong> ?
-        Je vous offre l'<strong>expertise</strong> pour maximiser <b>vos résultats</b>.</p>
+    <>
+        <p><strong>Je développe des sites et des applications pour les entreprises et les particuliers.</strong></p>
+        <p><b>Une idée de projet ? Mettons-nous en relation !</b></p>
+    </>
 );
 export const HOME_TEXT_INTRO_TEACH = (
-    <p>... en <b>groupe</b> ou lors de <strong>cours particuliers</strong>, en présentiel ou <strong>en ligne</strong>. J'aide mes élèves à réaliser leur potentiel. Consultez le lien ci-dessous pour en savoir plus.</p>
+    <>
+        <p><strong>Je donne également des cours en ligne.</strong></p>
+        <p><b>Bloqué sur un projet ?<br />Venez m'en parler !</b></p>
+    </>
 );
-export const HOME_TEXT_INTRO_SKILLS_MAIN = (
-    <p>Je suis <strong>développeur web fullstack</strong>. Je travaille en <strong>frontend</strong> (HTML, CSS, JavaScript et frameworks) et en <strong>backend</strong> (NodeJS, NextJS), AVEC BIEN SÛR LES <strong>bases de données</strong> (MySQL/MariaDB et MongoDB).</p>
-);
-export const HOME_TEXT_INTRO_SKILLS_OTHER = (
-    <p>D'autres langages, frameworks et outils avec lesquels j'ai travaillé au fil des ans, ou que j'ai découvert récemment.</p>
-);
+export const HOME_FIRST_HOUR_FREE = "1ère heure offerte !";
 
 export const PROJECTS_TITLE = "Mes Projets";
 export const PROJECTS_TITLE_CLIENTS = "Projets clients";
 export const PROJECTS_TITLE_OWN = "Projets personnels";
+export const PROJECTS_TITLE_SCRIPTS = "Scripts";
 export const PROJECTS_TITLE_DEMO = "Démos";
 export const PROJECTS_TITLE_OLD = "Anciens projets";
 export const PROJECTS_ACTION_GITHUB = "Accéder à GitHub";
@@ -69,18 +60,24 @@ export const PROJECTS_TEXT_INTRO = (
     <p>Quelques exemples de mes réalisations, récentes et passées, en tant que free-lance. Vous pouvez également accéder à d'autres projets sur lesquels je travaille actuellement sur mon compte GitHub.</p>
 );
 
-export const LEARN_TITLE = "Apprenez à coder";
-export const LEARN_TITLE_TEACHING = "Formations et cours particuliers";
+export const LEARN_TITLE = "Apprendre ensemble";
+export const LEARN_TITLE_REVIEWS = "Ils m'ont fait confiance";
 export const LEARN_TEXT_INTRO = (
-    <p>
-        En plus de mon activité de développeur, mon autre passion est <strong>l'enseignement</strong>.
-        J'ai travaillé comme enseignant pendant six ans.
-        Je mets à profit cette expérience aujourd'hui pour accompagner les développeurs dans leur parcours.
-    </p>
+    <>
+        <p>
+            Avant de me dédier pleinement au développement, j'ai fait carrière dans l'<b>enseignement</b>.
+        </p>
+        <p>
+            Cette expérience me permet aujourd'hui d'accompagner les développeurs dans leur parcours.
+            Je suis <strong>formateur</strong> sur les langages du web, les frameworks et autres outils.
+        </p>
+    </>
+);
+export const LEARN_TEXT_OPENCLASSROOMS = (
+    <p>Je suis également <b>mentor</b> chez <strong>OpenClassrooms</strong>.</p>
 );
 export const LEARN_TEXT_TEACHING = (
     <>
-        <p>Je suis <strong>formateur</strong> sur les langages du web, les frameworks et autres outils. J'interviens en ligne ou dans le cadre de <strong>formations</strong> en groupe.</p>
         <p>Je donne aussi des <strong>cours particuliers</strong> en fonction de ma disponibilité.</p>
     </>
 );
@@ -89,7 +86,6 @@ export const LEARN_TEXT_CONTACT = (
 );
 
 export const COURSES_TITLE = "Cours de développement";
-export const COURSES_ACTION_LEARN = "Intéressé(e) par des cours particuliers ?";
 export const COURSES_ACTION_ALL_COURSES = "Tous les cours";
 export const COURSES_TEXT_INTRO_1 = (
     <p>Les cours que je mets à disposition ici sont découpés de façon à être <b>concis</b> et <b>aller à l'essentiel</b>. J'essaie d'utiliser un langage clair, tout en expliquant les termes techniques pour que vous puissiez les apprendre en cours de route.</p>

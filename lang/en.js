@@ -11,6 +11,7 @@ export const ACTION_VISIT = "Visit";
 export const ACTION_CONTACT = "Email me";
 export const ACTION_RESUME = "Download my resume";
 export const ACTION_LINKEDIN = "LinkedIn";
+export const ACTION_SUPERPROF = "Superprof";
 export const ACTION_LOAD_MORE = "Load More";
 
 export const TEXT_DEV_JOBS = "Web Developer & Teacher";
@@ -36,35 +37,26 @@ export const ERR_404_TEXT_MESSAGE = "Page not found";
 export const ERR_FORM_REQUIRED = "This field is required";
 export const ERR_FORM_NOT_VALID_EMAIL = "Please enter a valid e-mail adress";
 
-export const HOME_TITLE = "Hi, I'm Daniel.";
-export const HOME_TITLE_DEV = "I'm a web developer...";
-export const HOME_TITLE_TEACH = "I also teach...";
-export const HOME_TITLE_SKILLS_MAIN = "Main Skills";
-export const HOME_TITLE_SKILLS_OTHER = "Other Skills";
-export const HOME_ACTION_PROJECTS = "My Projects";
-export const HOME_ACTION_SKILLS = "My Skills";
-export const HOME_ACTION_LEARN = "Learn Coding";
+export const HOME_TITLE_DEV = "Fullstack Developer";
+export const HOME_TITLE_TEACH = "Training & Courses";
 export const HOME_TEXT_INTRO_DEV = (
-    <p>... working in <b>companies</b> and as a <strong>freelancer</strong>.
-        My experience on both fronts has taught me to meet all kinds of needs, for various projects.</p>
-);
-export const HOME_TEXT_INTRO_HIRE = (
-    <p><b>Hiring</b>? Looking for a professional to <strong>build a website</strong>?
-        I bring you the <strong>expertise</strong> you need to achieve <b>the best results</b>.</p>
+    <>
+        <p><strong>I build websites and apps for companies and individuals.</strong></p>
+        <p><b>Have a project in mind? Let's connect!</b></p>
+    </>
 );
 export const HOME_TEXT_INTRO_TEACH = (
-    <p>... in a <b>classroom</b> or <strong>private sessions</strong>, face-to-face or <strong>online</strong>. I help my students achieve their potential on their way to success. Check the link below to learn more.</p>
+    <>
+        <p><strong>I also give online courses.</strong></p>
+        <p><b>Stuck on a project?<br />Come and tell me about it!</b></p>
+    </>
 );
-export const HOME_TEXT_INTRO_SKILLS_MAIN = (
-    <p>I'm a <strong>fullstack web developer</strong>. I work in both <strong>frontend</strong> (HTML, CSS, JavaScript & frameworks) and <strong>backend</strong> (NodeJS, NextJS), including <strong>databases</strong> (MySQL/MariaDB & MongoDB).</p>
-);
-export const HOME_TEXT_INTRO_SKILLS_OTHER = (
-    <p>Here are other languages, frameworks and tools I have learned over the years, or discovered recently.</p>
-);
+export const HOME_FIRST_HOUR_FREE = "1st hour is free!";
 
 export const PROJECTS_TITLE = "My Projects";
 export const PROJECTS_TITLE_CLIENTS = "Client Projects";
 export const PROJECTS_TITLE_OWN = "Personal Projects";
+export const PROJECTS_TITLE_SCRIPTS = "Scripts";
 export const PROJECTS_TITLE_DEMO = "Demos";
 export const PROJECTS_TITLE_OLD = "Old Projects";
 export const PROJECTS_ACTION_GITHUB = "Check on GitHub";
@@ -73,15 +65,23 @@ export const PROJECTS_TEXT_INTRO = (
     <p>Here are some examples of my work as a freelancer, recent and past. You can also check my GitHub account for other projects I'm currently working on.</p>
 );
 
-export const LEARN_TITLE = "Learn Coding";
-export const LEARN_TITLE_TEACHING = "Teaching & Online Lessons";
+export const LEARN_TITLE = "Learning Together";
+export const LEARN_TITLE_REVIEWS = "They trusted me";
 export const LEARN_TEXT_INTRO = (
-    <p>
-        In addition to being a developer, my other passion is <strong>teaching</strong>.
-        I have been a professional teacher for six years.
-        I apply those skills today to help aspiring developers.
-    </p>
+    <>
+        <p>
+            Before becoming a full time developer, I used to be a <b>teacher</b>.
+        </p>
+        <p>
+            This experience allows me today to help young developers on their learning path.
+            I am a <strong>trainer</strong> on web languages, frameworks and other tools.
+        </p>
+    </>
 );
+export const LEARN_TEXT_OPENCLASSROOMS = (
+    <p>I also work as a <b>mentor</b> at <strong>OpenClassrooms</strong>.</p>
+);
+
 export const LEARN_TEXT_TEACHING = (
     <>
         <p>I conduct <strong>training sessions</strong> on web languages, frameworks and tools. I teach online or in group sessions.</p>
@@ -93,7 +93,6 @@ export const LEARN_TEXT_CONTACT = (
 );
 
 export const COURSES_TITLE = "Development Courses";
-export const COURSES_ACTION_LEARN = "Looking for private lessons?";
 export const COURSES_ACTION_ALL_COURSES = "All Courses";
 export const COURSES_TEXT_INTRO_1 = (
     <p>These courses are broken down to be <b>short</b> and <b>get to the point</b>. I try to use understandable language, but I still explain technical terms so you can learn them as you go on.</p>

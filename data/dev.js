@@ -1,7 +1,7 @@
 import { DiRuby } from "react-icons/di";
-import { FaCss3, FaGitAlt, FaHtml5, FaJsSquare, FaLess, FaNodeJs, FaPaperPlane, FaPhp, FaReact, FaSass, FaSearchengin, FaWordpress } from "react-icons/fa";
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaJsSquare, FaLess, FaNodeJs, FaPaperPlane, FaPhp, FaReact, FaSass, FaSearchengin, FaWordpress } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
-import { SiGodotengine, SiMariadbfoundation, SiMongodb, SiNextdotjs, SiSvelte } from "react-icons/si";
+import { SiGodotengine, SiMariadbfoundation, SiMongodb, SiNextdotjs, SiRedux, SiSvelte } from "react-icons/si";
 
 export const DEV_FIRSTNAME = "Daniel";
 export const DEV_LASTNAME = "Orchanian";
@@ -19,7 +19,7 @@ export const DEV_TEACH_LINKS = {
 
 export const DEV_TECHS = {
     html: { name: "HTML", icon: <FaHtml5 /> },
-    css: { name: "CSS", icon: <FaCss3 /> },
+    css: { name: "CSS", icon: <FaCss3Alt /> },
     js: { name: "JavaScript", icon: <FaJsSquare /> },
     react: { name: "ReactJS", icon: <FaReact /> },
     node: { name: "NodeJS", icon: <FaNodeJs /> },
@@ -27,6 +27,7 @@ export const DEV_TECHS = {
     mysql: { name: "MySQL", icon: <GrMysql /> },
     maria: { name: "MariaDB", icon: <SiMariadbfoundation /> },
     php: { name: "PHP", icon: <FaPhp /> },
+    redux: { name: "Redux", icon: <SiRedux /> },
     ruby: { name: "Ruby", icon: <DiRuby /> },
     svelte: { name: "Svelte", icon: <SiSvelte /> },
     gdscript: { name: "GDScript", icon: <SiGodotengine /> },

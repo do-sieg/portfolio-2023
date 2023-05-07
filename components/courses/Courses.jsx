@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
@@ -17,7 +16,6 @@ export default function Courses({ langCourses }) {
     const {
         TEXT_PHOTO_CREDITS,
         COURSES_TITLE,
-        COURSES_ACTION_LEARN,
         COURSES_TEXT_INTRO_1,
         COURSES_TEXT_INTRO_2,
         COURSES_TEXT_NO_COURSE,
@@ -53,14 +51,11 @@ export default function Courses({ langCourses }) {
 
             <section ref={resetRef}>
                 {COURSES_TEXT_INTRO_1}
-
-                <Link href="/learn" className={styles.learnPrompt}>{COURSES_ACTION_LEARN}</Link>
-                
                 {COURSES_TEXT_INTRO_2}
             </section>
 
             {renderCategories()}
-            
+
             <Credits text={TEXT_PHOTO_CREDITS} name="Olia Danilevich" link="https://www.pexels.com/@olia-danilevich/" />
         </main>
     );

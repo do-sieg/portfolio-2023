@@ -71,13 +71,13 @@
     width: fit-content;
     text-transform: uppercase;
     font-size: large;
-    font-weight: var(--font-normal);
+    font-weight: 400;
     color: var(--c-secondary);
 }
 
 .title {
     font-size: x-large;
-    font-weight: var(--font-normal);
+    font-weight: 400;
     color: var(--c-secondary);
 }
 
@@ -109,7 +109,7 @@
     transform-origin: bottom left;
     text-transform: uppercase;
     font-size: large;
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     background-color: var(--red-600);
     color: white;
 }

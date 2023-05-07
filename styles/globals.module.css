@@ -3,12 +3,13 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 1.75rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
     font-family: inherit;
     font-size: var(--text-lg);
-    font-weight: var(--font-semibold);
+    font-weight: 500;
     box-shadow: var(--shadow-md);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     user-select: none;
     cursor: pointer;
     transition: all 0.2s 0.1s ease-in-out;
@@ -54,7 +55,7 @@
     margin-bottom: 2rem;
     text-align: center;
     font-size: var(--text-5xl);
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-secondary);
     filter: var(--drop-shadow-md);
     animation: fade 0.5s, scaleIn 0.5s;
@@ -65,7 +66,7 @@
     margin-bottom: 1.5rem;
     text-align: center;
     font-size: var(--text-4xl);
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-secondary);
     filter: var(--drop-shadow-md);
     animation: fade 0.5s, scaleIn 0.5s;
@@ -74,7 +75,7 @@
 .inlineSubheading {
     display: inline;
     font-size: var(--text-3xl) !important;
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-secondary);
     filter: var(--drop-shadow-md);
     animation: fade 0.5s, scaleIn 0.5s;
@@ -101,7 +102,7 @@
 .pageContainer p a {
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    font-weight: var(--font-normal);
+    font-weight: 400;
     color: var(--c-link);
     transition: all 0.3s 0.1s;
 }
@@ -166,7 +167,7 @@
 }
 
 .pageContainer li::marker {
-    font-weight: var(--font-normal);
+    font-weight: 400;
     color: var(--c-secondary);
 }
 

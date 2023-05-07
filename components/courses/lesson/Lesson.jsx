@@ -11,6 +11,7 @@ import LessonInfo from "./LessonInfo";
 import globals from "../../../styles/globals.module.css";
 import markdown from "../../../styles/markdown.module.css";
 import styles from "./Lesson.module.css";
+import HomeCardTeach from "../../home/HomeCardTeach";
 
 export default function Lesson({ lesson }) {
     const { locale, asPath } = useRouter();
@@ -42,6 +43,11 @@ export default function Lesson({ lesson }) {
                 </div>
 
                 <div className={markdown.container} dangerouslySetInnerHTML={{ __html: lesson.html }} />
+
+                <hr style={{ margin: "2rem 0" }} />
+
+                <div ref={resetRef}><HomeCardTeach /></div>
+
             </main>
         </>
     );

@@ -22,10 +22,10 @@
 }
 
 .name {
-    font-weight: var(--font-normal);
+    font-weight: 400;
     color: var(--c-secondary);
 }
 
 .data {
-    font-weight: var(--font-light);
+    font-weight: 300;
 }

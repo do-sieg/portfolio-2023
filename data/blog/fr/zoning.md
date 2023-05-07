@@ -1,7 +1,7 @@
 ---
 title: Utiliser le Zoning pour votre design
 description: Ou l'art de penser en rectangles.
-date: "2023-04-22"
+date: "2023-04-25"
 category: frontend
 coverImage:
     path: /images/blog/covers/fr/zoning-balloon.webp

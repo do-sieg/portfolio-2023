@@ -1,5 +1,9 @@
+.container section+section {
+    margin-top: 2rem;
+}
+
 .heroContainer {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     opacity: 0;
     animation: fade 0.5s 0.1s forwards, scaleOut 1s;
 }

@@ -5,7 +5,7 @@
 .remainingCharacters {
     align-self: flex-end;
     font-size: var(--text-base);
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-primary);
 }
 
@@ -20,7 +20,7 @@
 
 .formError {
     font-size: var(--text-base);
-    font-weight: var(--font-normal);
+    font-weight: 400;
     color: var(--red-600);
 }
 

@@ -7,6 +7,7 @@ import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
 import { PromptGitHub, PromptResume } from "../ui/Prompts";
 import ProjectCard from "./ProjectCard";
+import HomeCardDev from "../home/HomeCardDev";
 import coverImg from "../../public/images/page-covers/projects-cover.webp";
 import coverImgSmall from "../../public/images/page-covers/projects-cover-sm.webp";
 import globals from "../../styles/globals.module.css";
@@ -20,6 +21,7 @@ export default function Projects() {
         PROJECTS_TITLE,
         PROJECTS_TITLE_CLIENTS,
         PROJECTS_TITLE_OWN,
+        PROJECTS_TITLE_SCRIPTS,
         PROJECTS_TITLE_DEMO,
         PROJECTS_TITLE_OLD,
         PROJECTS_TEXT_INTRO,
@@ -48,6 +50,8 @@ export default function Projects() {
                 </div>
             </section>
 
+            <section ref={resetRef}><HomeCardDev /></section>
+
             <section ref={resetRef}>
                 <h2 className={globals.subheading}>{PROJECTS_TITLE_CLIENTS}</h2>
                 <div className={styles.cardsContainer}>
@@ -63,6 +67,12 @@ export default function Projects() {
                 <div className={styles.cardsContainer}>
                     <ProjectCard data={projects["do-blog"]} />
                     <ProjectCard data={projects.arpege} />
+                </div>
+            </section>
+
+            <section ref={resetRef}>
+                <h2 className={globals.subheading}>{PROJECTS_TITLE_SCRIPTS}</h2>
+                <div className={styles.cardsContainer}>
                     <ProjectCard data={projects.scriptmanager} />
                     <ProjectCard data={projects.xpal} />
                 </div>

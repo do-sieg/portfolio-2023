@@ -1,11 +1,12 @@
 .container {
     position: relative;
-    padding: 1rem;
+    margin-top: 2rem;
+    padding: 2rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    /* background-color: var(--neutral-100); */
+    background-color: var(--neutral-100);
 }
 
 @media (max-width: 640px) {
@@ -29,12 +30,11 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.25rem;
-    font-style: italic;
 }
 
 .authorName {
     font-size: larger;
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--c-secondary);
 }
 
@@ -43,6 +43,7 @@
 }
 
 .authorDesc p {
-    margin: 0;
+    margin: 1rem 0;
     text-indent: unset !important;
+    font-weight: 400;
 }

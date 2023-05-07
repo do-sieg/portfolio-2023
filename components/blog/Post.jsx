@@ -73,10 +73,6 @@ export default function Post({ post, similarPostsData }) {
 
                 <div className={markdown.container} dangerouslySetInnerHTML={{ __html: statePost.html }} />
 
-                <hr />
-
-                <Author />
-
                 {statePost.data.coverImage?.authorName &&
                     <Credits
                         text={TEXT_PHOTO_CREDITS}
@@ -84,6 +80,8 @@ export default function Post({ post, similarPostsData }) {
                         link={statePost.data.coverImage.authorUrl?.split(",").map(link => link.trim()) ?? null}
                     />
                 }
+
+                <Author />
 
                 {similarPostsData.posts.length > 0 && (
                     <div className={styles.postFooter}>

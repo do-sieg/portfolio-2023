@@ -16,7 +16,7 @@
     align-items: center;
     gap: 2rem;
     font-size: larger;
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     filter: var(--drop-shadow-sm);
 }
 

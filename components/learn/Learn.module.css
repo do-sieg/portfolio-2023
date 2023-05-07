@@ -3,10 +3,20 @@
     font-size: x-large;
 }
 
-.reviewsContainer {
-    margin: 2rem 0;
-    opacity: 0;
-    animation: fade 0.5s 0.1s forwards, scaleIn 1s;
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reviewSlideContainer {
+    padding: 2rem 5rem 2rem;
+}
+
+@media (max-width: 640px) {
+    .reviewSlideContainer {
+        padding: 1rem 0 1rem;
+    }
 }
 
 @keyframes fade {
