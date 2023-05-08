@@ -22,8 +22,9 @@ section:nth-child(odd) .container {
 }
 
 .leftPanel h2 {
+    font-family: var(--font-display);
+    font-weight: unset;
     margin: 0 0 0.5rem;
-    font-size: larger;
 }
 
 .actions {

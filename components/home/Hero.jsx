@@ -11,7 +11,7 @@ export default function Hero() {
             <Image src={profilePic} alt={DEV_FULLNAME} placeholder="blur" priority />
 
             <div className={styles.rightContainer}>
-                <NameLogo firstName={DEV_FIRSTNAME} lastName={DEV_LASTNAME} />
+                <NameLogo firstName={DEV_FIRSTNAME} lastName={DEV_LASTNAME} isHeading />
                 <div className={styles.promptsContainer}>
                     <PromptContact />
                     <PromptResume />

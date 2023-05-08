@@ -10,6 +10,7 @@
 
 :root {
 	--header-height: 4.5rem;
+	--font-display: "Lilita One";
 	--c-back: white;
 	--c-back-2: var(--zinc-100);
 	--c-back-3: var(--zinc-200);

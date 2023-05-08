@@ -12,8 +12,8 @@
 
 .container a {
     text-transform: uppercase;
+    font-family: var(--font-display);
     font-size: x-large;
-    font-weight: 600;
     color: var(--c-primary);
     transition: all 0.2s 0.1s ease-in-out;
 }

@@ -22,6 +22,11 @@
     gap: 1rem;
 }
 
+.rightContainer h1 {
+    font-size: unset;
+    margin: 0;
+}
+
 .promptsContainer {
     display: flex;
     justify-content: center;
