@@ -1,11 +1,10 @@
-import { DEV_LINDEKIN } from "../../data/dev";
 import { useLang } from "../../hooks/lang";
-import { FaLinkedin, FaRocket } from "react-icons/fa";
+import { FaRocket } from "react-icons/fa";
 import { PromptLinkedIn } from "../ui/Prompts";
-import SkillBadge from "./SkillBadge";
-import styles from "./HomeCard.module.css";
+import SkillBadge from "../ui/SkillBadge";
+import styles from "./ActionCard.module.css";
 
-export default function HomeCardDev() {
+export default function ActionCardDev() {
     const { HOME_TITLE_DEV, HOME_TEXT_INTRO_DEV } = useLang();
 
     return (

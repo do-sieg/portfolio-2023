@@ -7,7 +7,7 @@ import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
 import { PromptGitHub, PromptResume } from "../ui/Prompts";
 import ProjectCard from "./ProjectCard";
-import HomeCardDev from "../home/HomeCardDev";
+import ActionCardDev from "../action/ActionCardDev";
 import coverImg from "../../public/images/page-covers/projects-cover.webp";
 import coverImgSmall from "../../public/images/page-covers/projects-cover-sm.webp";
 import globals from "../../styles/globals.module.css";
@@ -50,7 +50,7 @@ export default function Projects() {
                 </div>
             </section>
 
-            <section ref={resetRef}><HomeCardDev /></section>
+            <section ref={resetRef}><ActionCardDev /></section>
 
             <section ref={resetRef}>
                 <h2 className={globals.subheading}>{PROJECTS_TITLE_CLIENTS}</h2>

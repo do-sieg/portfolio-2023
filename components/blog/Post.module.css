@@ -27,7 +27,6 @@
 }
 
 .postFooter {
-    /* margin-top: 2rem; */
     padding-top: 2rem;
     border-top: 2px solid var(--c-back-3);
     display: grid;

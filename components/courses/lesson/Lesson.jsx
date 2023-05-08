@@ -8,10 +8,10 @@ import HeadMeta from "../../meta/HeadMeta";
 import BackLink from "../../ui/BackLink";
 import ReadingProgress from "../../ui/ReadingProgress";
 import LessonInfo from "./LessonInfo";
+import ActionCardTeach from "../../action/ActionCardTeach";
 import globals from "../../../styles/globals.module.css";
 import markdown from "../../../styles/markdown.module.css";
 import styles from "./Lesson.module.css";
-import HomeCardTeach from "../../home/HomeCardTeach";
 
 export default function Lesson({ lesson }) {
     const { locale, asPath } = useRouter();
@@ -46,7 +46,7 @@ export default function Lesson({ lesson }) {
 
                 <hr style={{ margin: "2rem 0" }} />
 
-                <div ref={resetRef}><HomeCardTeach /></div>
+                <div ref={resetRef}><ActionCardTeach /></div>
 
             </main>
         </>

@@ -4,10 +4,10 @@ import { studentReviews } from "../../data/student_reviews";
 import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
-import SkillsList from "../ui/SkillsList";
+import SkillsList from "./SkillsList";
 import Credits from "../ui/Credits";
 import PageCover from "../ui/PageCover";
-import HomeCardTeach from "../home/HomeCardTeach";
+import ActionCardTeach from "../action/ActionCardTeach";
 import ReviewSlide from "./ReviewSlide";
 import coverImg from "../../public/images/page-covers/learn-cover.webp";
 import coverImgSmall from "../../public/images/page-covers/learn-cover-sm.webp";
@@ -44,7 +44,7 @@ export default function Learn() {
                 {LEARN_TEXT_OPENCLASSROOMS}
             </section>
 
-            <section ref={resetRef}><HomeCardTeach /></section>
+            <section ref={resetRef}><ActionCardTeach /></section>
 
             <section ref={resetRef}>
                 <h2 className={globals.subheading}>{LEARN_TITLE_REVIEWS}</h2>

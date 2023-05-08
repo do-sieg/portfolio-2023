@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { DEV_FIRSTNAME, DEV_LASTNAME } from "../../data/dev";
-import { useContext } from "react";
-import MobileMenu from "./MobileMenu";
-import LangSelect from "./LangSelect.jsx";
-import NameLogo from "./NameLogo";
 import Nav from "./Nav.jsx";
+import MobileMenu from "./MobileMenu";
+import LangSelect from "../ui/LangSelect.jsx";
+import NameLogo from "../ui/NameLogo";
+import ThemeIcon from "../ui/ThemeIcon";
 import styles from "./Header.module.css";
-import ThemeIcon from "./ThemeIcon";
 
 export default function Header() {
     return (

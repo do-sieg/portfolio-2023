@@ -14,9 +14,9 @@ export default function Nav() {
         <nav className={styles.container}>
             <ul>
                 <li><Link href="/learn">{NAV_ACTION_LEARN}</Link></li>
-                <li className={styles.newContent}><Link href="/courses">{NAV_ACTION_COURSES}</Link></li>
-                <li><Link href="/projects">{NAV_ACTION_PROJECTS}</Link></li>
-                <li><Link href="/blog">{NAV_ACTION_BLOG}</Link></li>
+                <li><Link href="/courses">{NAV_ACTION_COURSES}</Link></li>
+                <li className={styles.newContent}><Link href="/blog">{NAV_ACTION_BLOG}</Link></li>
+                <li><Link href="/portfolio">{NAV_ACTION_PROJECTS}</Link></li>
             </ul>
         </nav>
     );

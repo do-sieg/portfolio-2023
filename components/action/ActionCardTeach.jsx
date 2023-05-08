@@ -1,13 +1,13 @@
 import { studentReviews } from "../../data/student_reviews";
+import { useEffect, useState } from "react";
 import { useLang } from "../../hooks/lang";
 import { FaGraduationCap } from "react-icons/fa";
 import { PromptSuperprof } from "../ui/Prompts";
-import styles from "./HomeCard.module.css";
 import ReviewSlide from "../learn/ReviewSlide";
-import { useEffect, useState } from "react";
+import styles from "./ActionCard.module.css";
 
 
-export default function HomeCardTeach() {
+export default function ActionCardTeach() {
     const { HOME_TITLE_TEACH, HOME_TEXT_INTRO_TEACH, HOME_FIRST_HOUR_FREE } = useLang();
     const [displayedReview, setDisplayedReview] = useState(null);
     
@@ -18,7 +18,6 @@ export default function HomeCardTeach() {
             studentReviews.matis,
         ][Math.floor(Math.random() * 3)]);
     }, []);
-
 
     return (
         <div className={`${styles.container} ${styles.pink}`}>

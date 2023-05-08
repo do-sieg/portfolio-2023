@@ -4,8 +4,8 @@ import { useResetAnimations } from "../../hooks/animation";
 import { useLang } from "../../hooks/lang";
 import HeadMeta from "../meta/HeadMeta";
 import Hero from "./Hero";
-import HomeCardDev from "./HomeCardDev";
-import HomeCardTeach from "./HomeCardTeach";
+import ActionCardDev from "../action/ActionCardDev";
+import ActionCardTeach from "../action/ActionCardTeach";
 import globals from "../../styles/globals.module.css";
 import styles from "./Home.module.css";
 
@@ -22,8 +22,8 @@ export default function Home() {
                 <Hero />
             </div>
 
-            <section ref={resetRef}><HomeCardDev /></section>
-            <section ref={resetRef}><HomeCardTeach /></section>
+            <section ref={resetRef}><ActionCardDev /></section>
+            <section ref={resetRef}><ActionCardTeach /></section>
         </main>
     );
 }
