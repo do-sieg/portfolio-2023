@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: var(--neutral-100);
+    background-color: var(--c-back-2);
 }
 
 @media (max-width: 640px) {
@@ -36,10 +36,6 @@
     font-size: larger;
     font-weight: 600;
     color: var(--c-secondary);
-}
-
-.authorDesc {
-    color: var(--c-reverse-back-2);
 }
 
 .authorDesc p {

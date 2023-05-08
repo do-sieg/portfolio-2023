@@ -9,10 +9,18 @@
 
 .bar {
     height: inherit;
-    background-color: var(--c-progressbar);
+    background-color: var(--lime-400);
     transition: background-color 0.2s;
 }
 
 .full .bar {
-    background-color: var(--c-progressbar-full);
+    background-color: var(--lime-300);
+}
+
+:global(.dark-mode) .bar {
+    background-color: var(--lime-600);
+}
+
+:global(.dark-mode) .full .bar {
+    background-color: var(--lime-500);
 }

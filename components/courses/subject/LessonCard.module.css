@@ -16,18 +16,20 @@
 }
 
 .heading {
-    padding: 0.75rem 1.5rem 0.5rem;
+    padding: 0.5rem 1.5rem 0.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: var(--shadow-sm);
+    font-size: large;
     font-weight: 600;
-    color: var(--c-primary-2);
+    background-color: var(--c-back-3);
+    color: var(--c-secondary);
 }
 
 .level {
     text-transform: uppercase;
-    font-size: var(--text-base);
+    font-size: medium;
 }
 
 .level.basic {

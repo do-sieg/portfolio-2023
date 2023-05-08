@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { DEV_EMAIL, DEV_LINDEKIN } from "../data/dev";
+import { DEV_LINDEKIN } from "../data/dev";
 
 export const ACTION_BACK = "Retour";
 export const ACTION_SEND = "Envoyer";
@@ -26,7 +26,6 @@ export const TEXT_SEARCH_RESULTS_FOR = (value) => `Résultats de recherche pour 
 
 export const NAV_ACTION_LEARN = "Apprendre";
 export const NAV_ACTION_COURSES = "Cours";
-export const NAV_ACTION_PROJECTS = "Projets";
 
 export const ERR_404_ACTION_HOME = "Revenir à la page d'accueil";
 export const ERR_404_TEXT_MESSAGE = "Page introuvable";
@@ -49,7 +48,7 @@ export const HOME_TEXT_INTRO_TEACH = (
 );
 export const HOME_FIRST_HOUR_FREE = "1ère heure offerte !";
 
-export const PROJECTS_TITLE = "Mes Projets";
+export const PROJECTS_TITLE = "Mon Portfolio";
 export const PROJECTS_TITLE_CLIENTS = "Projets clients";
 export const PROJECTS_TITLE_OWN = "Projets personnels";
 export const PROJECTS_TITLE_SCRIPTS = "Scripts";
@@ -75,14 +74,6 @@ export const LEARN_TEXT_INTRO = (
 );
 export const LEARN_TEXT_OPENCLASSROOMS = (
     <p>Je suis également <b>mentor</b> chez <strong>OpenClassrooms</strong>.</p>
-);
-export const LEARN_TEXT_TEACHING = (
-    <>
-        <p>Je donne aussi des <strong>cours particuliers</strong> en fonction de ma disponibilité.</p>
-    </>
-);
-export const LEARN_TEXT_CONTACT = (
-    <p>Si vous cherchez un professeur, vous pouvez me contacter sur l'une des plate-formes suivantes, ou par e-mail.</p>
 );
 
 export const COURSES_TITLE = "Cours de développement";

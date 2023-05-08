@@ -139,7 +139,7 @@
     },
     "scriptmanager": {
         "name": "ScriptManager",
-        "description": "Un système complet qui permet d'utiliser des fichiers ruby externes comme scripts pour RPG Maker XP, permettant d'exporter, de charger et d'importer ces scripts.",
+        "description": "Un système complet pour RPG Maker XP qui permet d'exporter, de charger et d'importer des scripts à partir de fichiers ruby externes.",
         "imagePath": "/images/projects/rmxp-hd-logo.png",
         "tech": [
             "ruby"

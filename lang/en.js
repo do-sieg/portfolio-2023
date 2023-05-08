@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { DEV_EMAIL, DEV_LINDEKIN } from "../data/dev";
+import { DEV_LINDEKIN } from "../data/dev";
 
 export const ACTION_BACK = "Back";
 export const ACTION_SEND = "Send";
@@ -28,7 +28,7 @@ export const TEXT_SEARCH_RESULTS_FOR = (value) => `Search results for '${value}'
 
 export const NAV_ACTION_LEARN = "Learn";
 export const NAV_ACTION_COURSES = "Courses";
-export const NAV_ACTION_PROJECTS = "Projects";
+export const NAV_ACTION_PROJECTS = "Portfolio";
 export const NAV_ACTION_BLOG = "Blog";
 
 export const ERR_404_TITLE = "404";
@@ -53,7 +53,7 @@ export const HOME_TEXT_INTRO_TEACH = (
 );
 export const HOME_FIRST_HOUR_FREE = "1st hour is free!";
 
-export const PROJECTS_TITLE = "My Projects";
+export const PROJECTS_TITLE = "My Portfolio";
 export const PROJECTS_TITLE_CLIENTS = "Client Projects";
 export const PROJECTS_TITLE_OWN = "Personal Projects";
 export const PROJECTS_TITLE_SCRIPTS = "Scripts";
@@ -80,16 +80,6 @@ export const LEARN_TEXT_INTRO = (
 );
 export const LEARN_TEXT_OPENCLASSROOMS = (
     <p>I also work as a <b>mentor</b> at <strong>OpenClassrooms</strong>.</p>
-);
-
-export const LEARN_TEXT_TEACHING = (
-    <>
-        <p>I conduct <strong>training sessions</strong> on web languages, frameworks and tools. I teach online or in group sessions.</p>
-        <p>I also provide <strong>private lessons</strong> depending on my availability.</p>
-    </>
-);
-export const LEARN_TEXT_CONTACT = (
-    <p>If you are looking for a teacher, you can contact me on one of the following platforms, or by e-mail.</p>
 );
 
 export const COURSES_TITLE = "Development Courses";
