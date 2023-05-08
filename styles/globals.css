@@ -9,7 +9,6 @@
 }
 
 :root {
-	--headerbar-height: 2.5rem;
 	--header-height: 4.5rem;
 	--c-back: white;
 	--c-back-2: var(--zinc-100);
@@ -30,12 +29,6 @@
 	--c-link: var(--orange-400);
 	--c-link-hover: var(--orange-300);
 	--c-btn-back: var(--zinc-700);
-}
-
-@media (max-width: 640px) {
-	:root {
-		--headerbar-height: 2rem;
-	}
 }
 
 html,

@@ -91,6 +91,13 @@ section:nth-child(odd) .container {
     gap: 1.5rem 2rem;
 }
 
+@media (max-width: 1024px) {
+    .sideContent .skillGrid svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
 .blue {
     background-color: var(--sky-100);
     background-image: linear-gradient(135deg, var(--sky-200), var(--sky-100));

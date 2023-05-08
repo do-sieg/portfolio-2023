@@ -1,7 +1,6 @@
 .container {
     position: sticky;
-    top: var(--headerbar-height);
-    ;
+    top: 0;
     z-index: 10;
     height: var(--header-height);
     max-height: var(--header-height);
@@ -9,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     background-color: hsl(0, 0%, 100%, 70%);
     backdrop-filter: blur(1rem);
     box-shadow: var(--shadow-lg);
@@ -30,7 +30,16 @@
     justify-content: space-between;
 }
 
-.mobileNav > nav, .mobileNav > div {
+.mobileUserSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.mobileNav>nav,
+.mobileUserSettings>div,
+.mobileUserSettings>svg {
     display: flex;
     padding: 0;
 }

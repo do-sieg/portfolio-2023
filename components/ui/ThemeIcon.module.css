@@ -1,0 +1,14 @@
+.container {
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+}

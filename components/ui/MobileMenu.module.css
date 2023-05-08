@@ -20,7 +20,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    height: calc(100vh - var(--header-height) - var(--headerbar-height));
+    height: calc(100vh - var(--header-height));
     background-color: var(--c-back);
 }
 

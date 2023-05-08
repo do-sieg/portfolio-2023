@@ -3,6 +3,13 @@
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
+    transition: padding 0.3s;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 1rem 2rem;
+    }
 }
 
 @media (max-width: 768px) {
