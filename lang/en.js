@@ -140,6 +140,7 @@ export const BLOG_TEXT_CATEGORIES = {
     frontend: "Frontend",
     javascript: "JavaScript",
     jobs: "Jobs",
+    project_management: "Project Management",
 }
 export const BLOG_TEXT_READ_MORE_CATEGORY = (categoryId) => <>More in <Link href={`/blog/category/${categoryId}`}>{BLOG_TEXT_CATEGORIES[categoryId]}</Link></>;
 export const BLOG_TEXT_SEE_ALL_POSTS = (n) => `${n} post${n > 1 ? "s" : ""}`;

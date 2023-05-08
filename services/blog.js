@@ -8,6 +8,7 @@ const BLOG_CATEGORIES = [
     "frontend",
     "javascript",
     "jobs",
+    "project_management",
 ];
 export const POSTS_PER_PAGE = 5;
 

@@ -34,7 +34,7 @@
     margin: 0;
 }
 
-.container blockquote p:first-of-type {
+.container li p:first-of-type, .container blockquote p:first-of-type {
     text-indent: 0;
 }
 
