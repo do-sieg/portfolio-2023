@@ -83,4 +83,12 @@ export const studentReviews = {
         },
         score: 5,
     },
+    "fernand": {
+        name: "Fernand",
+        long: {
+            fr: "Daniel a une très bonne pédagogie. Et réussi à communiquer les clés nécessaires pour transmettre ses connaissances. Disponible au delà des attentes, il est très engagé avec son élève.",
+            en: "Daniel has a very good pedagogy. He succeeds in transmitting the necessary keys to pass on his knowledge. Available beyond expectations, he is very engaged with his student.",
+        },
+        score: 5,
+    },
 }
