@@ -1,6 +1,6 @@
 ---
 title: Être fan
-description: Êtes-vous un développeur ? Ou juste un fan ?
+description: Si je code, si je code... c'est pour...
 date: "2023-05-24"
 category: development
 coverImage:
@@ -13,7 +13,7 @@ Rien de très technique aujourd'hui...
 > "Rooooooh !"  
 — Les lecteurs qui n'ont pas cru le titre
 
-... puisque nous allons parler du développement en général. Du métier de développeur surtout.
+... puisque nous allons parler du développement en général. Du métier de développeur/développeuse surtout.
 
 Récemment, j'ai posté quelque chose de très court sur le fait que j'en ai marre de voir **MongoDB** (une base de donnée non-relationnelle) sur des projets qui sont **pensés tout en relationnel**, et les dégâts qu'une telle décision peut engendrer.
 
@@ -109,6 +109,8 @@ C'est ça, **être pro**.
 Lancer des confettis à chaque fois que ReactJS/NextJS annonce un nouveau hook, défendre le fait de jeter son code parce que les devs de ces outils ont (encore) décidé de tout changer, vénérer chaque mot qui sort de la bouche de **Dan Abramov**...
 
 Ça, c'est **être fan**.
+
+Et vous ? Êtes-vous développeur ? Ou juste un fan ?
 
 > PS : Je précise parce qu'il le faut : je n'ai rien contre **Dan Abramov** ni contre **MongoDB**, que j'utilise très souvent.  
 > ...  
